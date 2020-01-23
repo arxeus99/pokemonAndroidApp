@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         Pokemon nidorino = new Pokemon(33,"Nidorino",
                 "Sus cuernos contienen veneno. Si se introducen en el cuerpo del enemigo, soltarán su tóxica carga.", veneno);
         Pokemon nidoking = new Pokemon(34, "Nidoking",
-            "Duro como el acero, posee una poderosa carga. Sus cuernos son tan duros como el diamante.", new TipoDual(veneno,tierra));
+                "Duro como el acero, posee una poderosa carga. Sus cuernos son tan duros como el diamante.", new TipoDual(veneno,tierra));
         Pokemon clefairy = new Pokemon(35, "Clefairy",
                 "Su aspecto jovial y vivaracho lo hace adorable. Piensan que son raros, ya que no son muy comunes.", hada);
         Pokemon clefable = new Pokemon(36, "Clefable",
@@ -231,10 +231,126 @@ public class MainActivity extends AppCompatActivity {
                 "Su concha puede evitar cualquier ataque. El débil cuerpo sólo está expuesto cuando está abierta.", agua);
         Pokemon cloyster = new Pokemon(91,"Cloyster",
                 "Utiliza su concha para protegerse. Dicen que es más dura que el diamante. También lanza espinas.", new TipoDual(agua,hielo));
-
-
-
-
+        Pokemon gastly = new Pokemon(92,"Gastly",
+                "Solo aparece en edificios en ruinas. No tiene forma real, ya que parece que está hecho de gas.", new TipoDual(fantastma,veneno));
+        Pokemon haunter = new Pokemon(93,"Haunter",
+                "Toma la vida de su adversario a lengüetazos. Esto produce mareos hasta que la víctima fallece.", new TipoDual(fantastma,veneno));
+        Pokemon gengar = new Pokemon(94,"Gengar",
+                "Sabrás que un Gengar está cerca cuando sufras de sudores fríos. Intentará echarte un hechizo.", new TipoDual(fantastma,veneno));
+        Pokemon onix = new Pokemon(95,"Onix",
+                "Cava a gran velocidad en busca de comida. Los túneles que deja son usados por los Diglett.", new TipoDual(roca,tierra));
+        Pokemon drowzee = new Pokemon(96,"Drowzee",
+                "Si duermes cerca de uno todo el tiempo, en alguna ocasión podrás ver sueños que se haya comido antes.", psiquico);
+        Pokemon hypno = new Pokemon(97,"Hypno",
+                "Intenta evitar cualquier tipo de contacto visual con este Pokémon. Puede hipnotizar con su péndulo.", psiquico);
+        Pokemon krabby = new Pokemon(98,"Krabby",
+                "Sus pinzas son armas perfectas. En alguna ocasión pueden romperse en combate, pero crecerán rápido.", agua);
+        Pokemon klinger = new Pokemon(99,"Klinger",
+                "Una de sus pinzas crece más que la otra, y es dura como el acero. De todos modos, pesa demasiado.", agua);
+        Pokemon voltrob = new Pokemon(100,"Voltrob",
+                "Se dice que se camufla como una Poké Ball. Al más mínimo estímulo se autodestruirá.", electrico);
+        Pokemon eletrode = new Pokemon(101,"Eletrode",
+                "Almacena energía eléctrica en su cuerpo. El más leve shock puede provocar una gran explosión.",electrico);
+        Pokemon exeggcute = new Pokemon(102,"Exeggcute",
+                "Sus cabezas se atraen unas a otras, y giran entre sí. Debe tener seis para equilibrarse.", new TipoDual(planta,psiquico));
+        Pokemon exeggutor = new Pokemon(103,"Exeggutor",
+                "Este Pokémon es muy ruidoso. Esto es debido a que cada una de sus cabezas hace lo que quiere.", new TipoDual(planta,psiquico));
+        Pokemon cubone = new Pokemon(104,"Cubone",
+                "Siempre lleva el cráneo de su difunta madre. Su grito hace eco y parece una triste melodía.", tierra);
+        Pokemon marowak = new Pokemon(105,"Marowak",
+                "Pequeño y débil, este Pokémon siempre va acompañado de su palo de hueso de Pokémon.", tierra);
+        Pokemon hitmonlee = new Pokemon(106,"Hitmonlee",
+                "Cuando da patadas al enemigo, la planta de sus pies se vuelve tan dura como el diamante.", lucha);
+        Pokemon hitmonchan = new Pokemon(107,"Hitmonchan",
+                "Sus golpes se asemejan a una taladradora. Puede atravesar un muro de hormigón como si nada.", lucha);
+        Pokemon lickitung = new Pokemon(108,"Lickitung",
+                "Su lengua mide casi dos metros y se mueve libremente. Sus lametazos pueden causar parálisis.", normal);
+        Pokemon koffing = new Pokemon(109,"Koffing",
+                "A veces puede explotar sin avisar, ya que en lugares calurosos su gas interno se expande.", veneno);
+        Pokemon weezing = new Pokemon(110,"Weezing",
+                "Este Pokémon vive absorbiendo gases venenosos, gérmenes, y el polvo que existe en la basura.", veneno);
+        Pokemon rhyhorn = new Pokemon(111,"Rhyhorn",
+                "Este Pokémon no tiene muchas luces. Una vez inicia la carga, no para hasta que cae dormido.", new TipoDual(tierra,roca));
+        Pokemon rhydon = new Pokemon(112,"Rhydon",
+                "Camina sobre sus patas traseras, y muestra signos de inteligencia. Es capaz de aguantar lava hirviendo.", new TipoDual(tierra,roca));
+        Pokemon chansey = new Pokemon(113,"Chansey",
+                "Este amable Pokémon es capaz de compartir sus nutrientes huevos con un Pokémon herido.", normal);
+        Pokemon tangela = new Pokemon(114,"Tangela",
+                "Se camufla tras una gran masa de enredaderas azules. Se dice que nunca dejan de crecer.", planta);
+        Pokemon kangaskhan = new Pokemon(115,"Kangaskhan",
+                "Cuida de su cría en la bolsa de su tripa. No evitará ninguna pelea para protegerla.", normal);
+        Pokemon horsea = new Pokemon(116,"Horsea",
+                "Si se siente en peligro, arrojará un potente chorro de agua, o de una tinta especial, por su boca.", agua);
+        Pokemon seadra = new Pokemon(117,"Seadra",
+                "Tocar su aleta trasera causa parálisis. Se engancha al coral para mantenerse mientras duerme.", agua);
+        Pokemon goldeen = new Pokemon(118,"Goldeen",
+                "En su época de puesta de huevos, suelen ser vistos nadando por ríos contracorriente en grandes grupos.", agua);
+        Pokemon seaking = new Pokemon(119,"Seaking",
+                "Este Pokémon hace sus nidos tallando cantos de riachuelo con el cuerno de su cabeza.", agua);
+        Pokemon staryu = new Pokemon(120,"Staryu",
+                "Mientras Su parte central se mantenga intacta, crecerá de nuevo aunque haya sido destrozado.", agua);
+        Pokemon starmie = new Pokemon(121,"Starmie",
+                "Su zona central es conocida como el núcleo. Se piensa que se comunica mediante colores", new TipoDual(agua,psiquico));
+        Pokemon mr_mime = new Pokemon(122,"Mr.Mime",
+                "Siempre practica la misma pantomima. Hace creer al enemigo que existe algo que no es real.", new TipoDual(psiquico,hada));
+        Pokemon scyther = new Pokemon(123,"Scyther",
+                "Se agazapa en la hierba alta para saltar sobre su enemigo con sus guadañas. Se mueve como un ninja.", new TipoDual(bicho,volador));
+        Pokemon jynx = new Pokemon(124,"Jynx",
+                "Parece moverse como si estuviera bailando un ritmo de su propia creación. Menea mucho sus caderas.", new TipoDual(hielo,psiquico));
+        Pokemon electabuzz = new Pokemon(125,"Electabuzz",
+                "Cuando hay un apagón, es más que posible que este Pokémon se haya comido la energía.", electrico);
+        Pokemon magmar = new Pokemon(126,"Magmar",
+                "Nacen en volcanes activos. Su cuerpo parece una gran bola de fuego ya que están en llamas.", fuego);
+        Pokemon pinsir = new Pokemon(127,"Pinsir",
+                "Atrapa a su presa con sus pinzas, y aprieta fuerte. No se puede mover si hace mucho frío.", bicho);
+        Pokemon tauros = new Pokemon(128,"Tauros",
+                "Un rudo Pokémon repleto de energía vital. Cuando corre, no para hasta que choca con algo.", normal);
+        Pokemon magikarp = new Pokemon(129,"Magikarp",
+                "Famoso por ser poco fiable. Puede encontrarse nadando en mares, lagos, ríos y charcos", agua);
+        Pokemon gyarados = new Pokemon(130,"Gyarados",
+                "Este Pokémon es enormemente destructivo. En la antigüedad, era conocido por destruir ciudades.", new TipoDual(agua,volador));
+        Pokemon lapras = new Pokemon(131,"Lapras",
+                "PEste espíritu gentil es capaz de leer la mente. Puede llevar a la gente a través del mar.", new TipoDual(agua,hielo));
+        Pokemon ditto = new Pokemon(132,"Ditto",
+                "Cuando se fija en un enemigo, su cuerpo se transforma en una copia perfecta del mismo.", normal);
+        Pokemon eevee = new Pokemon(133,"Eevee",
+                "Su código genético es muy inestable. Puede evolucionar en diversas razas de Pokémon.", normal);
+        Pokemon vaporeon = new Pokemon(134,"Vaporeon",
+                "Su estructura celular se parece a las moléculas de agua. Es invisible cuando está en el agua", agua);
+        Pokemon jolteon = new Pokemon(135,"Jolteon",
+                "Un Pokémon muy sensible. Se entristece o enfada con mucha facilidad, lo que le da energía.", electrico);
+        Pokemon flareon = new Pokemon(136,"Flareon",
+                "El cuerpo de este Pokémon posee una cámara ígnea. Cuando exhala aire, éste está a 3.000º Celsius.", fuego);
+        Pokemon porygon = new Pokemon(137,"Porygon",
+                "La gente dice que se trata del único Pokémon que puede volar por el espacio. Aún no lo ha logrado.", normal);
+        Pokemon omanyte = new Pokemon(138,"Omanyte",
+                "Este antiguo Pokémon fue recuperado de un fósil. Nada muy bien gracias al movimiento de sus 10 tentáculos.", new TipoDual(roca,agua));
+        Pokemon omastar = new Pokemon(139,"Omastar",
+                "Picos afilados rodean su boca.Su concha es demasiado grande como para que se mueva libremente.", new TipoDual(roca,agua));
+        Pokemon kabuto = new Pokemon(140,"Kabuto",
+                "Este Pokémon fue recuperado desde un fósil. Usa los ojos de su espalda al ocultarse en el lecho marino.", new TipoDual(roca,agua));
+        Pokemon kabutops = new Pokemon(141,"Kabutops",
+                "Este Pokémon es un hábil y rápido nadador. Atrapa a su presa para drenar sus fluidos vitales.", new TipoDual(roca,agua));
+        Pokemon aerodactyl = new Pokemon(142,"Aerodactyl",
+                "Este Pokémon salvaje, extinto hace siglos, fue resucitado usando ADN tomado de un ámbar.", new TipoDual(roca,volador));
+        Pokemon snorlax = new Pokemon(143,"Snorlax",
+                "Come cualquier cosa. Incluso la comida pasada de fecha. Su estómago nunca se llena.", normal);
+        Pokemon articuno = new Pokemon(144,"Articuno",
+                "Un legendario pájaro Pokémon. Congela el agua que encuentra en el aire para generar nieve.", new TipoDual(hielo,volador));
+        Pokemon zapdos = new Pokemon(145,"Zapdos",
+                "ste legendario pájaro Pokémon sólo aparece cuando el cielo se torna oscuro y caen rayos.", new TipoDual(electrico,volador));
+        Pokemon moltres = new Pokemon(146,"Moltres",
+                "Un legendario pájaro Pokémon. Cuando aletea sus flamígeras alas, la oscura noche se torna roja.", new TipoDual(fuego,volador));
+        Pokemon dratini = new Pokemon(147,"Dratini",
+                "La existencia de este Pokémon ha sido confirmada recientemente por un pescador que cogió uno.", dragon);
+        Pokemon dragonair = new Pokemon(148,"Dragonair",
+                "De acuerdo con un testigo, un aura de extraña forma lo rodea, dándole un misterioso y místico aspecto.", dragon);
+        Pokemon dragonite = new Pokemon(149,"Dragonite",
+                "Se dice que este Pokémon vive en algún lugar del mar, y que vuela. De todos modos, sólo es un rumor.", new TipoDual(dragon,volador));
+        Pokemon mewtwo = new Pokemon(150,"MewTwo",
+                "Su ADN es casi el mismo que el de Mew. De todos modos, su tamaño y disposición son diferentes.", psiquico);
+        Pokemon mew = new Pokemon(151,"Mew",
+                "Cuando es mirado a través de un microscopio, puede observarse el delicado pelo de este Pokémon.", psiquico);
     }
 
     public void añadirVoid(View view) {
