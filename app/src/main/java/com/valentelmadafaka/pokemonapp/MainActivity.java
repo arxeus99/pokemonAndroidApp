@@ -12,10 +12,11 @@ import com.valentelmadafaka.pokemonapp.model.Pokemon;
 import com.valentelmadafaka.pokemonapp.model.Tipo;
 import com.valentelmadafaka.pokemonapp.model.TipoDual;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     DBInterface db;
-    Pokemon bulbasur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void inicializar(){
+    public ArrayList<Pokemon> inicializar(){
 
         Tipo bicho = new Tipo(1, "bicho");
         Tipo siniestro = new Tipo(2, "siniestro");
@@ -49,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
         Tipo agua = new Tipo(18,"agua");
 
 
+        ArrayList<Pokemon> pokemons = new ArrayList<>();
 
-        bulbasur = new Pokemon(1, "Bulbasur",
+        Pokemon bulbasur = new Pokemon(1, "Bulbasur",
                 "Puede sobrevivir largo tiempo sin probar bocado. Guarda energia en el bublo de su espalda.",new TipoDual(planta,veneno));
+        pokemons.add(bulbasur);
         Pokemon ivysaur =  new Pokemon(2, "Ivysaur",
                 "Su bulbo crece cuando absorbe energía. Desprende un fuerte aroma cuando florece.", new TipoDual(planta,veneno));
         Pokemon venusaur = new Pokemon(3, "Venusaur",
