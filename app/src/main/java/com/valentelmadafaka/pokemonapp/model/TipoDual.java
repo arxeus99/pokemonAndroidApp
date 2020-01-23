@@ -10,9 +10,7 @@ public class TipoDual {
         this.tipo2 = tipo2;
     }
 
-    public Tipo getTipo1() {
-        return tipo1;
-    }
+    public Tipo getTipo1() { return tipo1; }
 
     public void setTipo1(Tipo tipo1) {
         this.tipo1 = tipo1;

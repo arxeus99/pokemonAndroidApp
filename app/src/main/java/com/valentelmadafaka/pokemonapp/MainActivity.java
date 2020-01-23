@@ -2,6 +2,7 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -354,16 +355,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void añadirVoid(View view) {
-        db = new DBInterface(this);
-        db.obre();
-        if (db.insereixContacte(bulbasur.getNombre(), bulbasur.getDescripcion(), bulbasur.getTipoDual(), bulbasur.getTipo()) != -1) {
-            Toast.makeText(this, "Afegit correctament",
-                    Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Error a l’afegir",
-                    Toast.LENGTH_SHORT).show();
-        }
-        db.tanca();
-        finish();
+        startActivity(new Intent(view.getContext(), AnyadirActivity.class));
     }
 }

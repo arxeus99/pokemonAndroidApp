@@ -16,6 +16,7 @@ public class Pokemon {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.tipoDual = null;
         this.tipo = tipo;
     }
 
@@ -32,6 +33,7 @@ public class Pokemon {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipoDual = tipoDual;
+        this.tipo = null;
         this.img = img;
     }
 

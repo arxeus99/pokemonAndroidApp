@@ -15,13 +15,13 @@ public class DBInterface  {
     public static final String CLAU_NOM = "nom";
     public static final String CLAU_DESCRIPCIO = "descripcion";
     public static final String CLAU_DUAL = "dual";
-    public static final String CLAU_TIPO = "tipo(s)";
+    public static final String CLAU_TIPO = "tipos";
     public static final String TAG = "DBInterface";
     public static final String BD_NOM = "PokemonApp";
     public static final String BD_TAULA = "pokemons";
     public static final int VERSIO = 1;
     public static final String BD_CREATE ="create table " + BD_TAULA + "( "
-            + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +"text not null, " + CLAU_DESCRIPCIO + " text not null, "
+            + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
             + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null);";
     private final Context context;
     private AjudaDB ajuda;
