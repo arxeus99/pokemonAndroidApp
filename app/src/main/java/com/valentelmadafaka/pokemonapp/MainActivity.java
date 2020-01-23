@@ -123,7 +123,108 @@ public class MainActivity extends AppCompatActivity {
                 "Utiliza sus misteriosos ojos para engañar a su enemigo. También cantará para dormirlo.", new TipoDual(normal,hada));
         Pokemon wigglytuff = new Pokemon(40, "Wigglytuff",
                 "Su cuerpo es muy elástico. Cuando inhala aire profundamente, puede inflarse sin límite.", new TipoDual(normal,hada));
-
+        Pokemon zubat = new Pokemon(41, "Zubat",
+                "Emite sonidos ultrasónicos mientras vuela. Los utiliza como sónar para evitar obstáculos.", new TipoDual(veneno, volador));
+        Pokemon golbat = new Pokemon(42, "Golbat",
+                "Ataca de manera violenta sin avisar. Utiliza sus afilados colmillos para chupar sangre.", new TipoDual(veneno,volador));
+        Pokemon oddish = new Pokemon(43, "Oddish",
+                "Suele ser confundido con un puñado de semillas. Si lo extraes del suelo, gritará.", new TipoDual(planta,veneno));
+        Pokemon glooom = new Pokemon(44, "Gloom",
+                "¡Huele bastante mal! De todas formas, 1 de cada 1000 personas aprecian su fétido olor.", new TipoDual(planta,veneno));
+        Pokemon vileplume = new Pokemon(45, "Vileplume",
+                "Aletea sus pétalos de flores para propagar su venenoso polen. El sonido que emite es agudo.", new TipoDual(planta,veneno));
+        Pokemon paras = new Pokemon(46, "Paras",
+                "Escarba bajo el suelo para roer las raíces de los árboles. Sus setas absorben sus energías.", new TipoDual(bicho,planta));
+        Pokemon parasect = new Pokemon(47, "Parasect",
+                "El parásito absorbe la energía con las setas de la espalda, que lo controlan.", new TipoDual(bicho,planta));
+        Pokemon venonat = new Pokemon(48, "Venonat",
+                "Sus grandes ojos actúan como radares. En lugares claros, verás montones de pequeños ojos.", new TipoDual(bicho,veneno));
+        Pokemon venomoth = new Pokemon(49, "Venomoth",
+                "Es difícil quitar el polvo de sus alas. También posee un veneno que se desprende al contacto.", new TipoDual(bicho,veneno));
+        Pokemon diglett = new Pokemon(50, "Diglett",
+                "Prefiere los lugares oscuros. Pasa el tiempo bajo tierra, aunque aparece en cuevas.", tierra);
+        Pokemon dugtrio = new Pokemon(51, "Dugtrio",
+                "Un grupo de trillizos que cava a 90 KPH. Por ello, creen que se trata de un terremoto.", tierra);
+        Pokemon meowth = new Pokemon(52,"Meowth",
+                "Parece que son más activos por la noche. Adoran las cosas redondas y brillantes.", normal);
+        Pokemon persian = new Pokemon(53, "Persian",
+                "¡La gema en su frente brilla por sí misma! Camina con la elegancia de una reina.", normal);
+        Pokemon psyduck = new Pokemon(54, "Psyduck",
+                "Siempre tiene dolores de cabeza. Posee poderes mentales, pero no sabes cuándo los usará.", agua);
+        Pokemon golduck = new Pokemon(55, "Golduck",
+                "Sus delgados y largos miembros acaban en anchas aletas. Las usan para nadar en los lagos.", agua);
+        Pokemon mankey = new Pokemon(56, "Mankey",
+                "Este ágil Pokémon vive en los arboles. Se enfada fácilmente y no dudará en atacar a todos.", lucha);
+        Pokemon primeapoe = new Pokemon(57,"Primeape",
+                "Sólo se calma cuando nadie está cerca. Llegar a ver ese momento es realmente difícil.", lucha);
+        Pokemon growlithe = new Pokemon(58, "Growlithe",
+                "Este Pokémon es muy amistoso. Aun así, gruñirá a cualquiera que invada su territorio.", fuego);
+        Pokemon arcanine = new Pokemon(59,"Arcanine",
+                "Es un Pokémon legendario en China. Allí, adoran la gracia y belleza que exhibe al correr.", fuego);
+        Pokemon poliwag = new Pokemon(60, "Poliwag",
+                "La dirección de la espiral en el vientre cambia según el área. Prefiere nadar a correr.", agua);
+        Pokemon poliwhirl = new Pokemon(61, "Poliwhirl",
+                "Cuando lo atacan, usa la espiral del vientre para dormir al rival. Aprovecha para escapar entonces.", agua);
+        Pokemon poliwrath = new Pokemon(62, "Poliwrath",
+                "Es capaz de nadar usando todos los músculos de su cuerpo. Podrá adelantar incluso a un campeón.", new TipoDual(agua,lucha));
+        Pokemon abra = new Pokemon(63, "Abra",
+                "Duerme 18 horas al día. Si siente peligro, se teletransporta a un lugar seguro, aun durmiendo.", psiquico);
+        Pokemon kadabra = new Pokemon(64, "Kadabra",
+                "Muchas cosas raras suceden si está cerca. Por ejemplo, hace que los relojes vayan al revés.", psiquico);
+        Pokemon alakazam = new Pokemon(65, "Alakazam",
+                "Este Pokémon lo recuerda todo. Nunca olvida lo que aprende. Es un Pokémon muy listo.", psiquico);
+        Pokemon machop = new Pokemon(66, "Machop",
+                "Muy poderoso a pesar de su pequeño tamaño. Su maestría en artes marciales lo hace muy duro.", lucha);
+        Pokemon machoke = new Pokemon(67, "Machoke",
+                "El cinturón que rodea su cintura retiene toda su energía. Sin él, este Pokémon sería implacable.", lucha);
+        Pokemon machamp = new Pokemon(68,"Machamp",
+                "Con sólo un brazo puede mover montañas. Usando los cuatro, este Pokémon puede ser terrible.", lucha);
+        Pokemon bellsprout = new Pokemon(69, "Bellsprout",
+                "Prefiere los lugares calientes y húmedos. Atrapa pequeños insectos con sus ramas para devorarlos.", new TipoDual(planta,veneno));
+        Pokemon weepinbell = new Pokemon(70,"Weepinbell",
+                "Cuando está hambriento, ataca a todo lo que se mueva. Su pobre presa se derrite en fuertes ácidos.", new TipoDual(planta,veneno));
+        Pokemon victreebel = new Pokemon(71, "Victreebel",
+                "Engaña a su presa con un dulce aroma a miel. Una vez atrapada, la presa perderá hasta sus huesos.", new TipoDual(planta,veneno));
+        Pokemon tentacool = new Pokemon(72,"Tentacool",
+                "A veces puede ser encontrado seco y medio enterrado en una playa. Al lanzarlo otra vez al mar revivirá.", new TipoDual(agua,veneno));
+        Pokemon tentacruel = new Pokemon(73, "Tentacruel",
+                "Puede controlar libremente sus 80 tentáculos. Éstos debilitan a la presa con su poderoso veneno.", new TipoDual(agua,veneno));
+        Pokemon geodude = new Pokemon(74,"Geodude",
+                "Se encuentran normalmente en los caminos de montaña. Si te cruzas con uno, se enfadará.", new TipoDual(roca,tierra));
+        Pokemon graveler = new Pokemon(75,"Graveler",
+                "Se le suele ver rodando por las montañas. Los obstáculos no los evita. ¡Los arrolla!", new TipoDual(roca,tierra));
+        Pokemon golem = new Pokemon(76,"Golem",
+                "Cuando pierde su piel, su cuerpo se vuelve blando y blanquecino. Si esto ocurre, se esconderá.", new TipoDual(roca,tierra));
+        Pokemon ponyta = new Pokemon(77, "Ponyta",
+                "Es capaz de saltar muy alto. Con sus pezuñas y sus robustas patas, absorbe el impacto.", fuego);
+        Pokemon rapidash = new Pokemon(78,"Rapidash",
+                "Le encanta correr. Si ve algo más rápido que él, intentará alcanzarlo a toda velocidad.", fuego);
+        Pokemon slowpoke = new Pokemon(79, "Slowpoke",
+                "Es increíblemente lento y perezoso. Le encanta dormir sin preocuparse ni del tiempo ni de lo que ocurra.", new TipoDual(agua, psiquico));
+        Pokemon slowbro = new Pokemon(80, "Slowbro",
+                "Vive tranquilo en el mar. Si el Shellder de su cola se cae, vuelve a ser un Slowpoke otra vez.", new TipoDual(agua,psiquico));
+        Pokemon magnemite = new Pokemon(81, "Magnemite",
+                "Puede desafiar a la gravedad desde su nacimiento. Flota en el aire gracias a ondas electromagnéticas.", new TipoDual(electrico,acero));
+        Pokemon magneton = new Pokemon(82, "Magneton",
+                "Genera extrañas señales de radio. Es capaz de elevar la temperatura 3º centígrados.", new TipoDual(electrico,acero));
+        Pokemon farfetchd = new Pokemon(83, "Farfetch'd",
+                "Vive cerca de las plantas. Son raramente vistos, así que se piensa que se están extinguiendo.", new TipoDual(normal,volador));
+        Pokemon doduo = new Pokemon(84, "Doduo",
+                "Sus cortas alas lo hacen volar con dificultad. De todos modos, puede correr a gran velocidad.", new TipoDual(normal,volador));
+        Pokemon dodrio = new Pokemon(85, "Dodrio",
+                "Una de las dos cabezas de Doduo se divide para formar un nuevo PkMn. Es capaz de correr a 40 KPH.", new TipoDual(normal,volador));
+        Pokemon seel = new Pokemon(86, "Seel",
+                "A este Pokémon le encanta el frío. Le encanta nadar en climas polares, sea cual sea la temperatura.", agua);
+        Pokemon dewgong = new Pokemon(87, "Dewgong",
+                "Su cuerpo es como una bola de nieve. Inmune al frío intenso, nada rápidamente en aguas heladas.", new TipoDual(agua, hielo));
+        Pokemon grimer = new Pokemon(88, "Grimer",
+                "Está hecho de fango endurecido. Huele a pútrido. ¡Por donde pasa, no crece la hierba!", veneno);
+        Pokemon muk = new Pokemon(89, "Muk",
+                "Huele tan mal que puede provocar desmayos. Ha degenerado tanto, que ya ni él mismo se huele.", veneno);
+        Pokemon shellder = new Pokemon(90, "Shellder",
+                "Su concha puede evitar cualquier ataque. El débil cuerpo sólo está expuesto cuando está abierta.", agua);
+        Pokemon cloyster = new Pokemon(91,"Cloyster",
+                "Utiliza su concha para protegerse. Dicen que es más dura que el diamante. También lanza espinas.", new TipoDual(agua,hielo));
 
     }
 }
