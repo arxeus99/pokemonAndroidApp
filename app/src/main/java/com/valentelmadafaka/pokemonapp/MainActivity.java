@@ -57,154 +57,229 @@ public class MainActivity extends AppCompatActivity {
         pokemons.add(bulbasur);
         Pokemon ivysaur =  new Pokemon(2, "Ivysaur",
                 "Su bulbo crece cuando absorbe energía. Desprende un fuerte aroma cuando florece.", new TipoDual(planta,veneno));
+        pokemons.add(ivysaur);
         Pokemon venusaur = new Pokemon(3, "Venusaur",
                 "La flor de su espalda recoge los rayos del sol. Los transforma en energía.", new TipoDual(planta,veneno));
+        pokemons.add(venusaur);
         Pokemon charmander = new Pokemon(4, "Charmander",
                 "La llama en la punta de su cola chisporrotea al arder. Sólo se oye en lugares silenciosos.", fuego);
+        pokemons.add(charmander);
         Pokemon charmeleon = new Pokemon(5, "Charmeleon",
                 "Las duras luchas excitan a este Pokémon. Entonces, lanzará llamaradas blanco-azuladas.", fuego);
+        pokemons.add(charmeleon);
         Pokemon charizard = new Pokemon (6, "Charizard",
                 "Cuando lanza una descarga de fuego súper caliente, la roja llama de su cola brilla más intensamente.", new TipoDual(fuego,volador));
+        pokemons.add(charizard);
         Pokemon squirtle = new Pokemon(7, "Squirtle",
                 "Lanza agua a su presa desde el agua. Se esconde en su concha cuando se siente en peligro.", agua);
+        pokemons.add(squirtle);
         Pokemon wartortle = new Pokemon(8, "Wartortle",
                 "Si es golpeado, esconderá su cabeza. Aun así, su cola puede seguir golpeando.", agua);
+        pokemons.add(wartortle);
         Pokemon blastoise = new Pokemon(9, "Blastoise",
                 "Cuando ataca a un enemigo, su descarga de agua es aún más potente que una manga de bombero.", agua);
+        pokemons.add(blastoise);
         Pokemon caterpie = new Pokemon(10, "Caterpie",
                 "Si tocas los receptores de su cabeza, soltará un terrible olor para protegerse.", bicho);
+        pokemons.add(caterpie);
         Pokemon metapod = new Pokemon(11, "Metapod",
                 "Endurece su concha para protegerse. De todos modos, un gran impacto puede afectarle.", bicho);
+        pokemons.add(metapod);
         Pokemon butterfree = new Pokemon(12,"Butterfree",
                 "Sus alas están cubiertas de polvos venenosos. Como repelen el agua, puede volar bajo la lluvia.",new TipoDual(bicho, volador));
+        pokemons.add(butterfree);
         Pokemon weedle = new Pokemon(13, "Weedle",
                 "Cuidado con el aguijón venenoso de su cabeza. Se esconde en la hierba y arbustos mientras come.", new TipoDual(bicho,veneno));
+        pokemons.add(weedle);
         Pokemon kakuna = new Pokemon(14,"Kakuna",
                 "Sólo puede moverse un poco. Cuando está en peligro, envenena a su enemigo con su aguijón.", new TipoDual(bicho,veneno));
+        pokemons.add(kakuna);
         Pokemon beedrill = new Pokemon(15, "Beedrill",
                 "Tiene 3 aguijones venenosos en sus patas y cola. Suele pinchar a sus enemigos repetidas veces.", new TipoDual(bicho,veneno));
+        pokemons.add(beedrill);
         Pokemon pidgey = new Pokemon(16, "Pidgey",
                 "Son muy dóciles. Si son atacados, suelen lanzar arena en lugar de repeler el ataque.", new TipoDual(normal,volador));
+        pokemons.add(pidgey);
         Pokemon pidgeotto = new Pokemon(17, "Pidgeotto",
                 "Este Pokémon está repleto de vitalidad. Suele volar por su territorio en busca de presas.", new TipoDual(normal,volador));
+        pokemons.add(pidgeotto);
         Pokemon pidgeot = new Pokemon(18, "Pidgeot",
                 "Este Pokémon vuela a velocidad Mach 2. Sus grandes garras son armas muy peligrosas.", new TipoDual(normal,volador));
+        pokemons.add(pidgeot);
         Pokemon rattata = new Pokemon(19, "Rattata",
                 "Muerde cualquier cosa con sus colmillos. Si ves uno, seguro que encuentras 40 más en la zona.", normal);
+        pokemons.add(rattata);
         Pokemon raticate = new Pokemon(20, "Raticate",
                 "Sus patas son palmeadas. Sirven de aletas, por lo que puede nadar por ríos en busca de presa.", normal);
+        pokemons.add(raticate);
         Pokemon spearow = new Pokemon(21,"Spearow",
                 "Es incapaz de volar a gran altura, pero es muy rápido, lo que le permite protegerse.", new TipoDual(normal,volador));
+        pokemons.add(spearow);
         Pokemon fearow = new Pokemon(22, "Fearow",
                 "Este Pokémon es conocido desde hace muchos años. Si siente peligro volará lejos inmediatamente.", new TipoDual(normal,volador));
+        pokemons.add(fearow);
         Pokemon ekans = new Pokemon(23, "Ekans",
                 "Cuanto más viejo, más crece este Pokémon. Por la noche, descansa en las ramas de los árboles.", veneno);
+        pokemons.add(ekans);
         Pokemon arbok = new Pokemon(24,"Arbok",
                 "Los espantosos dibujos de su piel han sido estudiados. Seis variaciones han sido confirmadas.", veneno);
+        pokemons.add(arbok);
         Pokemon pikachu = new Pokemon(25, "Pikachu",
                 "Mantiene su cola en alto para vigilar. Si das un tirón a su cola, querrá morderte.", electrico);
+        pokemons.add(pikachu);
         Pokemon raichu = new Pokemon(26, "Raichu",
                 "Cuando la electricidad del cuerpo crece, se vuelve irritable. También brilla en la oscuridad.", electrico);
+        pokemons.add(raichu);
         Pokemon sandshrew = new Pokemon(27, "Sandshrew",
                 "Su cuerpo es muy seco. Cuando hace frío por la noche, su piel aparece cubierta con un fino rocío.", tierra);
+        pokemons.add(sandshrew);
         Pokemon sandslash = new Pokemon(28, "Sandslash",
                 "Es muy hábil al golpear a sus enemigos con sus garras. Si se rompen, crecerán en un solo día.", tierra);
+        pokemons.add(sandslash);
         Pokemon nidoranH = new Pokemon(29, "Nidoran♀",
                 "A este Pokémon no le gusta luchar. Pero cuidado, sus pequeños cuernos segregan veneno.", veneno);
+        pokemons.add(nidoranH);
         Pokemon nidorina = new Pokemon(30, "Nidorina",
                 "Cuando descansa profundamente, sus cuernos se contraen. Esto prueba que está relajado", veneno);
+        pokemons.add(nidorina);
         Pokemon nidoqueen = new Pokemon(31, "Nidoqueen",
                 "Grandes escamas recubren el duro cuerpo de este Pokémon. Éstas crecen cíclicamente.", new TipoDual(veneno, tierra));
+        pokemons.add(nidoqueen);
         Pokemon nidoranM = new Pokemon(32, "Nidoran♂",
                 "Sus largas orejas se mantienen siempre alerta. Si siente peligro, atacará con su venenoso cuerno.", veneno);
+        pokemons.add(nidoranH);
         Pokemon nidorino = new Pokemon(33,"Nidorino",
                 "Sus cuernos contienen veneno. Si se introducen en el cuerpo del enemigo, soltarán su tóxica carga.", veneno);
+        pokemons.add(nidorino);
         Pokemon nidoking = new Pokemon(34, "Nidoking",
                 "Duro como el acero, posee una poderosa carga. Sus cuernos son tan duros como el diamante.", new TipoDual(veneno,tierra));
+        pokemons.add(nidoking);
         Pokemon clefairy = new Pokemon(35, "Clefairy",
                 "Su aspecto jovial y vivaracho lo hace adorable. Piensan que son raros, ya que no son muy comunes.", hada);
+        pokemons.add(clefairy);
         Pokemon clefable = new Pokemon(36, "Clefable",
                 "Protege bastante bien su propio entorno. Es una especie de hada, raramente vista por los humanos.", hada);
+        pokemons.add(clefable);
         Pokemon vulpix = new Pokemon(37, "Vulpix",
                 "Su piel y colas son preciosas. Cuando crecen las colas, se dividen formando nuevas colas.", fuego);
+        pokemons.add(vulpix);
         Pokemon ninetales = new Pokemon(38, "Ninetales",
                 "De acuerdo con una antigua leyenda, este Pokémon es la reencarnación de 9 nobles santos.", fuego);
+        pokemons.add(ninetales);
         Pokemon jigglypuff = new Pokemon(39, "Jigglypuff",
                 "Utiliza sus misteriosos ojos para engañar a su enemigo. También cantará para dormirlo.", new TipoDual(normal,hada));
+        pokemons.add(jigglypuff);
         Pokemon wigglytuff = new Pokemon(40, "Wigglytuff",
                 "Su cuerpo es muy elástico. Cuando inhala aire profundamente, puede inflarse sin límite.", new TipoDual(normal,hada));
+        pokemons.add(wigglytuff);
         Pokemon zubat = new Pokemon(41, "Zubat",
                 "Emite sonidos ultrasónicos mientras vuela. Los utiliza como sónar para evitar obstáculos.", new TipoDual(veneno, volador));
+        pokemons.add(zubat);
         Pokemon golbat = new Pokemon(42, "Golbat",
                 "Ataca de manera violenta sin avisar. Utiliza sus afilados colmillos para chupar sangre.", new TipoDual(veneno,volador));
+        pokemons.add(golbat);
         Pokemon oddish = new Pokemon(43, "Oddish",
                 "Suele ser confundido con un puñado de semillas. Si lo extraes del suelo, gritará.", new TipoDual(planta,veneno));
+        pokemons.add(oddish);
         Pokemon glooom = new Pokemon(44, "Gloom",
                 "¡Huele bastante mal! De todas formas, 1 de cada 1000 personas aprecian su fétido olor.", new TipoDual(planta,veneno));
+        pokemons.add(glooom);
         Pokemon vileplume = new Pokemon(45, "Vileplume",
                 "Aletea sus pétalos de flores para propagar su venenoso polen. El sonido que emite es agudo.", new TipoDual(planta,veneno));
+        pokemons.add(vileplume);
         Pokemon paras = new Pokemon(46, "Paras",
                 "Escarba bajo el suelo para roer las raíces de los árboles. Sus setas absorben sus energías.", new TipoDual(bicho,planta));
+        pokemons.add(paras);
         Pokemon parasect = new Pokemon(47, "Parasect",
                 "El parásito absorbe la energía con las setas de la espalda, que lo controlan.", new TipoDual(bicho,planta));
+        pokemons.add(parasect);
         Pokemon venonat = new Pokemon(48, "Venonat",
                 "Sus grandes ojos actúan como radares. En lugares claros, verás montones de pequeños ojos.", new TipoDual(bicho,veneno));
+        pokemons.add(venonat);
         Pokemon venomoth = new Pokemon(49, "Venomoth",
                 "Es difícil quitar el polvo de sus alas. También posee un veneno que se desprende al contacto.", new TipoDual(bicho,veneno));
+        pokemons.add(venomoth);
         Pokemon diglett = new Pokemon(50, "Diglett",
                 "Prefiere los lugares oscuros. Pasa el tiempo bajo tierra, aunque aparece en cuevas.", tierra);
+        pokemons.add(diglett);
         Pokemon dugtrio = new Pokemon(51, "Dugtrio",
                 "Un grupo de trillizos que cava a 90 KPH. Por ello, creen que se trata de un terremoto.", tierra);
+        pokemons.add(dugtrio);
         Pokemon meowth = new Pokemon(52,"Meowth",
                 "Parece que son más activos por la noche. Adoran las cosas redondas y brillantes.", normal);
+        pokemons.add(meowth);
         Pokemon persian = new Pokemon(53, "Persian",
                 "¡La gema en su frente brilla por sí misma! Camina con la elegancia de una reina.", normal);
+        pokemons.add(persian);
         Pokemon psyduck = new Pokemon(54, "Psyduck",
                 "Siempre tiene dolores de cabeza. Posee poderes mentales, pero no sabes cuándo los usará.", agua);
+        pokemons.add(psyduck);
         Pokemon golduck = new Pokemon(55, "Golduck",
                 "Sus delgados y largos miembros acaban en anchas aletas. Las usan para nadar en los lagos.", agua);
+        pokemons.add(golduck);
         Pokemon mankey = new Pokemon(56, "Mankey",
                 "Este ágil Pokémon vive en los arboles. Se enfada fácilmente y no dudará en atacar a todos.", lucha);
+        pokemons.add(mankey);
         Pokemon primeapoe = new Pokemon(57,"Primeape",
                 "Sólo se calma cuando nadie está cerca. Llegar a ver ese momento es realmente difícil.", lucha);
+        pokemons.add(primeapoe);
         Pokemon growlithe = new Pokemon(58, "Growlithe",
                 "Este Pokémon es muy amistoso. Aun así, gruñirá a cualquiera que invada su territorio.", fuego);
+        pokemons.add(growlithe);
         Pokemon arcanine = new Pokemon(59,"Arcanine",
                 "Es un Pokémon legendario en China. Allí, adoran la gracia y belleza que exhibe al correr.", fuego);
+        pokemons.add(arcanine);
         Pokemon poliwag = new Pokemon(60, "Poliwag",
                 "La dirección de la espiral en el vientre cambia según el área. Prefiere nadar a correr.", agua);
+        pokemons.add(poliwag);
         Pokemon poliwhirl = new Pokemon(61, "Poliwhirl",
                 "Cuando lo atacan, usa la espiral del vientre para dormir al rival. Aprovecha para escapar entonces.", agua);
+        pokemons.add(poliwhirl);
         Pokemon poliwrath = new Pokemon(62, "Poliwrath",
                 "Es capaz de nadar usando todos los músculos de su cuerpo. Podrá adelantar incluso a un campeón.", new TipoDual(agua,lucha));
+        pokemons.add(poliwrath);
         Pokemon abra = new Pokemon(63, "Abra",
                 "Duerme 18 horas al día. Si siente peligro, se teletransporta a un lugar seguro, aun durmiendo.", psiquico);
+        pokemons.add(abra);
         Pokemon kadabra = new Pokemon(64, "Kadabra",
                 "Muchas cosas raras suceden si está cerca. Por ejemplo, hace que los relojes vayan al revés.", psiquico);
+        pokemons.add(kadabra);
         Pokemon alakazam = new Pokemon(65, "Alakazam",
                 "Este Pokémon lo recuerda todo. Nunca olvida lo que aprende. Es un Pokémon muy listo.", psiquico);
+        pokemons.add(alakazam);
         Pokemon machop = new Pokemon(66, "Machop",
                 "Muy poderoso a pesar de su pequeño tamaño. Su maestría en artes marciales lo hace muy duro.", lucha);
+        pokemons.add(machop);
         Pokemon machoke = new Pokemon(67, "Machoke",
                 "El cinturón que rodea su cintura retiene toda su energía. Sin él, este Pokémon sería implacable.", lucha);
+        pokemons.add(machoke);
         Pokemon machamp = new Pokemon(68,"Machamp",
                 "Con sólo un brazo puede mover montañas. Usando los cuatro, este Pokémon puede ser terrible.", lucha);
+        pokemons.add(machamp);
         Pokemon bellsprout = new Pokemon(69, "Bellsprout",
                 "Prefiere los lugares calientes y húmedos. Atrapa pequeños insectos con sus ramas para devorarlos.", new TipoDual(planta,veneno));
+        pokemons.add(bellsprout);
         Pokemon weepinbell = new Pokemon(70,"Weepinbell",
                 "Cuando está hambriento, ataca a todo lo que se mueva. Su pobre presa se derrite en fuertes ácidos.", new TipoDual(planta,veneno));
+        pokemons.add(weepinbell);
         Pokemon victreebel = new Pokemon(71, "Victreebel",
                 "Engaña a su presa con un dulce aroma a miel. Una vez atrapada, la presa perderá hasta sus huesos.", new TipoDual(planta,veneno));
+        pokemons.add(victreebel);
         Pokemon tentacool = new Pokemon(72,"Tentacool",
                 "A veces puede ser encontrado seco y medio enterrado en una playa. Al lanzarlo otra vez al mar revivirá.", new TipoDual(agua,veneno));
+        pokemons.add(tentacool);
         Pokemon tentacruel = new Pokemon(73, "Tentacruel",
                 "Puede controlar libremente sus 80 tentáculos. Éstos debilitan a la presa con su poderoso veneno.", new TipoDual(agua,veneno));
+        pokemons.add(tentacruel);
         Pokemon geodude = new Pokemon(74,"Geodude",
                 "Se encuentran normalmente en los caminos de montaña. Si te cruzas con uno, se enfadará.", new TipoDual(roca,tierra));
+        pokemons.add(geodude);
         Pokemon graveler = new Pokemon(75,"Graveler",
                 "Se le suele ver rodando por las montañas. Los obstáculos no los evita. ¡Los arrolla!", new TipoDual(roca,tierra));
+        pokemons.add(graveler);
         Pokemon golem = new Pokemon(76,"Golem",
                 "Cuando pierde su piel, su cuerpo se vuelve blando y blanquecino. Si esto ocurre, se esconderá.", new TipoDual(roca,tierra));
+        pokemons.add(golem);
         Pokemon ponyta = new Pokemon(77, "Ponyta",
                 "Es capaz de saltar muy alto. Con sus pezuñas y sus robustas patas, absorbe el impacto.", fuego);
         Pokemon rapidash = new Pokemon(78,"Rapidash",
@@ -355,6 +430,8 @@ public class MainActivity extends AppCompatActivity {
                 "Su ADN es casi el mismo que el de Mew. De todos modos, su tamaño y disposición son diferentes.", psiquico);
         Pokemon mew = new Pokemon(151,"Mew",
                 "Cuando es mirado a través de un microscopio, puede observarse el delicado pelo de este Pokémon.", psiquico);
+
+        return pokemons;
     }
 
     public void añadirVoid(View view) {
