@@ -5,11 +5,13 @@ import java.util.Objects;
 
 public class Tipo {
 
-    private int id;
+    private String id;
     private String nombre;
     private byte[] icon;
 
-    public Tipo(int id, String nombre) {
+    public Tipo(){ }
+
+    public Tipo(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
@@ -23,11 +25,11 @@ public class Tipo {
                 '}';
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,7 +49,7 @@ public class Tipo {
         this.icon = icon;
     }
 
-    public Tipo(int id, String nombre, byte[] icon) {
+    public Tipo(String id, String nombre, byte[] icon) {
         this.id = id;
         this.nombre = nombre;
         this.icon = icon;

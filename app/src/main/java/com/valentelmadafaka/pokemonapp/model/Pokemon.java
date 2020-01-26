@@ -1,18 +1,15 @@
 package com.valentelmadafaka.pokemonapp.model;
 
-import java.util.Arrays;
-import java.util.Objects;
-
 public class Pokemon {
 
-    private int id;
+    private String id;
     private String nombre;
     private String descripcion;
     private Tipo tipo;
     private TipoDual tipoDual;
-    private byte[] img;
+    private String img;
 
-    public Pokemon(int id, String nombre, String descripcion, Tipo tipo) {
+    public Pokemon(String id, String nombre, String descripcion, Tipo tipo) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -20,7 +17,7 @@ public class Pokemon {
         this.tipo = tipo;
     }
 
-    public Pokemon(int id, String nombre, String descripcion, Tipo tipo, byte[] img) {
+    public Pokemon(String id, String nombre, String descripcion, Tipo tipo, String img) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -28,7 +25,7 @@ public class Pokemon {
         this.img = img;
     }
 
-    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual, byte[] img) {
+    public Pokemon(String id, String nombre, String descripcion, TipoDual tipoDual, String img) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -37,18 +34,18 @@ public class Pokemon {
         this.img = img;
     }
 
-    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual) {
+    public Pokemon(String id, String nombre, String descripcion, TipoDual tipoDual) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipoDual = tipoDual;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -84,11 +81,11 @@ public class Pokemon {
         this.tipoDual = tipoDual;
     }
 
-    public byte[] getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(byte[] img) {
+    public void setImg(String img) {
         this.img = img;
     }
 }
