@@ -99,7 +99,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTotsElsTipus() {
-        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM},
+        return bd.query(BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM},
                 null,null, null, null, null);
     }
 }
