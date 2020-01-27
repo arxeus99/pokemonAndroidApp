@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Pokemon;
 import com.valentelmadafaka.pokemonapp.model.PokemonsArray;
-import com.valentelmadafaka.pokemonapp.model.PokemonsArray2;
 import com.valentelmadafaka.pokemonapp.model.Tipo;
 import com.valentelmadafaka.pokemonapp.model.TipoDual;
 
@@ -90,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        PokemonsArray2 pokemonsArray2 = new PokemonsArray2(this, R.layout.pokemon_pokedex, pokemons);
+        PokemonsArray pokemonsArray = new PokemonsArray(this, R.layout.pokemon_pokedex, pokemons);
         ListView listView = findViewById(R.id.list_view);
-        listView.setAdapter(pokemonsArray2);
+        listView.setAdapter(pokemonsArray);
 
     }
 

@@ -28,20 +28,20 @@ public class PokemonsArray extends ArrayAdapter<Pokemon> {
     public View getView(int position, View convertView, ViewGroup parent){
         Pokemon pokemon = pokemonList.get(position);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.pokemon_llista, null);
-        TextView nom = (TextView) view.findViewById(R.id.nom);
-        TextView tipus = (TextView) view.findViewById(R.id.tipus);
-        TextView descripcio = (TextView) view.findViewById(R.id.descripcio);
-        ImageView imatge = (ImageView) view.findViewById(R.id.imatge);
+        View view = inflater.inflate(R.layout.pokemon_pokedex, null);
+        TextView numero = (TextView) view.findViewById(R.id.Numero);
+        TextView nombre = (TextView) view.findViewById(R.id.Nombre);
+        TextView tipos = (TextView) view.findViewById(R.id.Tipos);
+        ImageView imagen = (ImageView) view.findViewById(R.id.Imagen);
 
-        nom.setText(pokemon.getNombre());
+        numero.setText(pokemon.getId());
+        nombre.setText(pokemon.getNombre());
         if(pokemon.getTipoDual() == null)
-            tipus.setText(pokemon.getTipo().getNombre());
+            tipos.setText(pokemon.getTipo().getNombre());
         else
-            tipus.setText(pokemon.getTipoDual().getTipo1().getNombre()+", "+pokemon.getTipoDual().getTipo2().getNombre());
-        descripcio.setText(pokemon.getDescripcion());
+            tipos.setText(pokemon.getTipoDual().getTipo1().getNombre()+", "+pokemon.getTipoDual().getTipo2().getNombre());
         int imageID = context.getResources().getIdentifier(pokemon.getImg(), "drawable", context.getPackageName());
-        imatge.setImageResource(imageID);
+        imagen.setImageResource(imageID);
         return view;
     }
 }
