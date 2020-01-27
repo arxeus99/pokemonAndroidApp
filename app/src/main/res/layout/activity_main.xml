@@ -6,9 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            app:srcCompat="@drawable/pokemonlogo" />
+
+        <Button
+            android:id="@+id/pokedex"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="runPokedex"
+            android:text="Pokedex"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Pokedex" />
+
+        <Button
+            android:id="@+id/ficha"
+            android:layout_width="323dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ficha De Entrenador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Ficha De Entrenador" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="217dp"
+            android:src="@drawable/pokeball" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
