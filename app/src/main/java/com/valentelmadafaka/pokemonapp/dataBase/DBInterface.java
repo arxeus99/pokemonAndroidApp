@@ -18,16 +18,20 @@ public class DBInterface  {
     public static final String CLAU_DUAL = "dual";
     public static final String CLAU_TIPO = "tipos";
     public static final String CLAU_IMG = "imagen";
+    public static final String CLAU_EQUIPO = "equipo_pokemon";
     public static final String TAG = "DBInterface";
     public static final String BD_NOM = "PokemonApp";
     public static final String BD_TAULA_POKEMONS = "pokemons";
     public static final String BD_TAULA_TIPOS = "tipos";
+    public static final String BD_TAULA_ENTRENADOR = "entrenador";
     public static final int VERSIO = 1;
     public static final String BD_CREATE_POKEMON ="create table if not exists " + BD_TAULA_POKEMONS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
             + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, "+CLAU_IMG+" text not null);";
+    public static final String BD_CREATE_ENTRENADOR = "crete table if not exists "+BD_TAULA_ENTRENADOR+"( "+CLAU_ID+" integer primary key autoincrement, "+CLAU_NOM+" text not null, "+CLAU_IMG+", text not null, "+
+                CLAU_EQUIPO+" text not null);";
     private final Context context;
     private AjudaDB ajuda;
     private SQLiteDatabase bd;
@@ -74,6 +78,13 @@ public class DBInterface  {
         return bd.insert(BD_TAULA_TIPOS,null, initialValues);
     }
 
+    public long insereixEntrenador(String nom, String img){
+        ContentValues initialValues = new ContentValues();
+        initialValues.put(CLAU_NOM, nom);
+        initialValues.put(CLAU_IMG, img);
+        return bd.insert(BD_CREATE_ENTRENADOR, null, initialValues);
+    }
+
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[] {CLAU_ID,
                         CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG},CLAU_ID + " = " + IDFila, null, null, null, null,
@@ -91,6 +102,21 @@ public class DBInterface  {
             mCursor.moveToFirst();
         }
         return mCursor;
+    }
+
+    public Cursor obtenirEntrendaor(){
+        return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, null, null, null, null, null);
+    }
+
+    public boolean existsTaulaEntrenador(){
+        Cursor cursor = bd.rawQuery("SELECT name FROM sqlite_master WHERE type= ? AND name= ?", new String[] {"table" , BD_TAULA_ENTRENADOR});
+        if(!cursor.moveToFirst()){
+            cursor.close();
+            return false;
+        }
+        int count = cursor.getInt(0);
+        cursor.close();
+        return count > 0;
     }
 
     public Cursor obtenirTotsElsPokemon() {

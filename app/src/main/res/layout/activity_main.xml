@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:text="Ficha De Entrenador"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="Ficha De Entrenador" />
+            android:onClick="runFicha" />
 
         <ImageView
             android:id="@+id/imageView"

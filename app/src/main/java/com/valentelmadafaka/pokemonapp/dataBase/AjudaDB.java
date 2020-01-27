@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import static com.valentelmadafaka.pokemonapp.dataBase.DBInterface.BD_CREATE_ENTRENADOR;
 import static com.valentelmadafaka.pokemonapp.dataBase.DBInterface.BD_CREATE_POKEMON;
 import static com.valentelmadafaka.pokemonapp.dataBase.DBInterface.BD_CREATE_TIPOS;
 import static com.valentelmadafaka.pokemonapp.dataBase.DBInterface.BD_NOM;
@@ -23,6 +24,7 @@ public class AjudaDB extends SQLiteOpenHelper {
         try {
             db.execSQL(BD_CREATE_POKEMON);
             db.execSQL(BD_CREATE_TIPOS);
+            db.execSQL(BD_CREATE_ENTRENADOR);
         } catch (SQLException e) {
             e.printStackTrace();
         }

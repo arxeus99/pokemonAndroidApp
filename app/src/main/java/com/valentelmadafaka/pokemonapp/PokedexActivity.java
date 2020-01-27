@@ -27,22 +27,7 @@ public class PokedexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pokedex);
         db = new DBInterface(this);
         db.obre();
-//        for(Pokemon p : inicializarPokemons()){
-//            String img = "i"+p.getId();
-//            p.setImg(img);
-//            if (db.insereixPokemon(p.getNombre(), p.getDescripcion(), p.getTipoDual(), p.getTipo(), p.getImg()) == -1) {
-//                Toast.makeText(this, "Error a l’afegir",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//        for(Tipo t : inicalizarTipos()){
-//            if(db.insereixTipus(t.getNombre(), t.getIcon()) == -1){
-//                Toast.makeText(this, "Error a l’afegir",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//        Toast.makeText(this, "FIN",
-//                Toast.LENGTH_SHORT).show();
+//
 
 
         Cursor c = db.obtenirTotsElsTipus();

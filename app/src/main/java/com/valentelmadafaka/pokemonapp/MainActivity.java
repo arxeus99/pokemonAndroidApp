@@ -21,11 +21,30 @@ public class MainActivity extends AppCompatActivity {
 
     DBInterface db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        db = new DBInterface(this);
+//        db.obre();
+//        for(Pokemon p : inicializarPokemons()){
+//            String img = "i"+p.getId();
+//            p.setImg(img);
+//            if (db.insereixPokemon(p.getNombre(), p.getDescripcion(), p.getTipoDual(), p.getTipo(), p.getImg()) == -1) {
+//                Toast.makeText(this, "Error a l’afegir",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//        for(Tipo t : inicalizarTipos()){
+//            if(db.insereixTipus(t.getNombre(), t.getIcon()) == -1){
+//                Toast.makeText(this, "Error a l’afegir",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//        Toast.makeText(this, "FIN",
+//                Toast.LENGTH_SHORT).show();
+//        db.tanca();
 
     }
 
@@ -559,5 +578,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void runPokedex(View view) {
         startActivity(new Intent(this, PokedexActivity.class));
+    }
+
+    public void runFicha(View view){
+        startActivity(new Intent(this, FichaActivity.class));
     }
 }
