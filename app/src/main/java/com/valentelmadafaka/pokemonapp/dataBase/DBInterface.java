@@ -17,6 +17,7 @@ public class DBInterface  {
     public static final String CLAU_DESCRIPCIO = "descripcion";
     public static final String CLAU_DUAL = "dual";
     public static final String CLAU_TIPO = "tipos";
+    public static final String CLAU_IMG = "imagen";
     public static final String TAG = "DBInterface";
     public static final String BD_NOM = "PokemonApp";
     public static final String BD_TAULA_POKEMONS = "pokemons";
@@ -24,7 +25,7 @@ public class DBInterface  {
     public static final int VERSIO = 1;
     public static final String BD_CREATE_POKEMON ="create table if not exists " + BD_TAULA_POKEMONS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
-            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null);";
+            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null);";
     private final Context context;
@@ -51,7 +52,7 @@ public class DBInterface  {
         return this.bd;
     }
 
-    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo) {
+    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo, String imagen) {
         ContentValues initialValues = new ContentValues();
         initialValues.put(CLAU_NOM, nom);
         initialValues.put(CLAU_DESCRIPCIO, descripcion);
@@ -62,6 +63,7 @@ public class DBInterface  {
             initialValues.put(CLAU_DUAL, "1");
             initialValues.put(CLAU_TIPO, tipoDual.getTipo1().getId()+","+tipoDual.getTipo2().getId());
         }
+        initialValues.put(CLAU_IMG, imagen);
         return bd.insert(BD_TAULA_POKEMONS,null, initialValues);
     }
 
@@ -92,7 +94,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTotsElsPokemon() {
-        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO},
+        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG},
                 null,null, null, null, null);
     }
 

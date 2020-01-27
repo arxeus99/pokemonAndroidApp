@@ -40,7 +40,7 @@ public class PokemonsArray extends ArrayAdapter<Pokemon> {
         else
             tipus.setText(pokemon.getTipoDual().getTipo1().getNombre()+", "+pokemon.getTipoDual().getTipo2().getNombre());
         descripcio.setText(pokemon.getDescripcion());
-        int imageID = context.getResources().getIdentifier("p1", "drawable", context.getPackageName());
+        int imageID = context.getResources().getIdentifier(pokemon.getImg(), "drawable", context.getPackageName());
         imatge.setImageResource(imageID);
         return view;
     }

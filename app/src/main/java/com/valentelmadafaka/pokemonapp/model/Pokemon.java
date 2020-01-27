@@ -9,6 +9,35 @@ public class Pokemon {
     private TipoDual tipoDual;
     private String img;
 
+    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual, String img){
+        this.id = id+"";
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tipoDual = tipoDual;
+        this.img = img;
+    }
+    public Pokemon(int id, String nombre, String descripcion, Tipo tipo, String img){
+        this.id = id+"";
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tipoDual = null;
+        this.tipo = tipo;
+        this.img = img;
+    }
+    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual){
+        this.id = id+"";
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tipoDual = tipoDual;
+    }
+    public Pokemon(int id, String nombre, String descripcion, Tipo tipo){
+        this.id = id+"";
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tipoDual = null;
+        this.tipo = tipo;
+    }
+
     public Pokemon(String id, String nombre, String descripcion, Tipo tipo) {
         this.id = id;
         this.nombre = nombre;
