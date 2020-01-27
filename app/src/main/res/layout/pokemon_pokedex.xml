@@ -17,14 +17,14 @@
 
         <TextView
             android:id="@+id/Numero"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="32dp"
             android:text="Numero" />
 
         <ImageView
             android:id="@+id/Imagen"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -33,11 +33,17 @@
             android:layout_height="32dp"
             android:text="Nombre" />
 
-        <TextView
-            android:id="@+id/Tipos"
-            android:layout_width="193dp"
-            android:layout_height="32dp"
-            android:text="Tipos" />
+        <ImageView
+            android:id="@+id/Tipo1"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/Tipo2"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            tools:srcCompat="@tools:sample/avatars" />
 
     </TableRow>
 </LinearLayout>

@@ -27,7 +27,7 @@ public class DBInterface  {
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
             + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
-            + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null);";
+            + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, "+CLAU_IMG+" text not null);";
     private final Context context;
     private AjudaDB ajuda;
     private SQLiteDatabase bd;
@@ -67,15 +67,16 @@ public class DBInterface  {
         return bd.insert(BD_TAULA_POKEMONS,null, initialValues);
     }
 
-    public long insereixTipus(String nom){
+    public long insereixTipus(String nom, String img){
         ContentValues initialValues = new ContentValues();
         initialValues.put(CLAU_NOM, nom);
+        initialValues.put(CLAU_IMG, img);
         return bd.insert(BD_TAULA_TIPOS,null, initialValues);
     }
 
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[] {CLAU_ID,
-                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO},CLAU_ID + " = " + IDFila, null, null, null, null,
+                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG},CLAU_ID + " = " + IDFila, null, null, null, null,
                 null);
         if(mCursor != null) {
             mCursor.moveToFirst();
@@ -84,8 +85,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTipus(long IDFila) throws SQLException {
-        Cursor mCursor = bd.query(true, BD_TAULA_TIPOS, new String[] {CLAU_ID,
-                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO},CLAU_ID + " = " + IDFila, null, null, null, null,
+        Cursor mCursor = bd.query(true, BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG},CLAU_ID + " = " + IDFila, null, null, null, null,
                 null);
         if(mCursor != null) {
             mCursor.moveToFirst();
@@ -99,7 +99,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTotsElsTipus() {
-        return bd.query(BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM},
+        return bd.query(BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG},
                 null,null, null, null, null);
     }
 }

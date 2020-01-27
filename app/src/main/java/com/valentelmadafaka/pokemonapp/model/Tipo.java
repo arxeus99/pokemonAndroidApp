@@ -7,7 +7,7 @@ public class Tipo {
 
     private String id;
     private String nombre;
-    private byte[] icon;
+    private String icon;
 
     public Tipo(){ }
 
@@ -21,7 +21,7 @@ public class Tipo {
         return "Tipo{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", icon=" + Arrays.toString(icon) +
+                ", icon=" + icon +
                 '}';
     }
 
@@ -41,15 +41,15 @@ public class Tipo {
         this.nombre = nombre;
     }
 
-    public byte[] getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(byte[] icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public Tipo(String id, String nombre, byte[] icon) {
+    public Tipo(String id, String nombre, String icon) {
         this.id = id;
         this.nombre = nombre;
         this.icon = icon;

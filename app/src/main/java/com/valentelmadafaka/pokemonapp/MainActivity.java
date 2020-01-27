@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Pokemon;
@@ -35,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        }
 //        for(Tipo t : inicalizarTipos()){
-//            if(db.insereixTipus(t.getNombre()) == -1){
+//            if(db.insereixTipus(t.getNombre(), t.getIcon()) == -1){
 //                Toast.makeText(this, "Error a l’afegir",
 //                        Toast.LENGTH_SHORT).show();
 //            }
 //        }
-//        Toast.makeText(this, "FIN",
-//                Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "FIN",
+                Toast.LENGTH_SHORT).show();
 
 
         Cursor c = db.obtenirTotsElsTipus();
         c.moveToFirst();
         while(!c.isAfterLast()){
-            Tipo tipo = new Tipo(c.getString(0), c.getString(1));
+            Tipo tipo = new Tipo(c.getString(0), c.getString(1),c.getString(2));
             tipos.add(tipo);
             c.moveToNext();
         }
@@ -96,24 +97,24 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<Tipo> inicalizarTipos(){
         ArrayList<Tipo> tipos = new ArrayList<>();
 
-        Tipo bicho = new Tipo("1", "bicho");
-        Tipo siniestro = new Tipo("2", "siniestro");
-        Tipo dragon = new Tipo("3", "dragon");
-        Tipo electrico = new Tipo("4","electrico");
-        Tipo hada = new Tipo("5", "hada");
-        Tipo lucha = new Tipo("6","lucha");
-        Tipo fuego = new Tipo("7", "fuego");
-        Tipo volador = new Tipo("8", "volador");
-        Tipo fantastma = new Tipo("9", "fantasma");
-        Tipo planta = new Tipo("10", "planta");
-        Tipo tierra = new Tipo("11", "tierra");
-        Tipo hielo = new Tipo("12", "hielo");
-        Tipo normal = new Tipo("13","normal");
-        Tipo veneno = new Tipo("14", "veneno");
-        Tipo psiquico = new Tipo("15", "psiquico");
-        Tipo roca = new Tipo("16", "roca");
-        Tipo acero = new Tipo("17", "acero");
-        Tipo agua = new Tipo("18","agua");
+        Tipo bicho = new Tipo("1", "bicho", "t1");
+        Tipo siniestro = new Tipo("2", "siniestro", "t2");
+        Tipo dragon = new Tipo("3", "dragon", "t3");
+        Tipo electrico = new Tipo("4","electrico", "t4");
+        Tipo hada = new Tipo("5", "hada", "t5");
+        Tipo lucha = new Tipo("6","lucha", "t6");
+        Tipo fuego = new Tipo("7", "fuego", "t7");
+        Tipo volador = new Tipo("8", "volador", "t8");
+        Tipo fantastma = new Tipo("9", "fantasma", "t9");
+        Tipo planta = new Tipo("10", "planta", "t10");
+        Tipo tierra = new Tipo("11", "tierra", "t11");
+        Tipo hielo = new Tipo("12", "hielo", "t12");
+        Tipo normal = new Tipo("13","normal", "t13");
+        Tipo veneno = new Tipo("14", "veneno", "t14");
+        Tipo psiquico = new Tipo("15", "psiquico", "t15");
+        Tipo roca = new Tipo("16", "roca", "t16");
+        Tipo acero = new Tipo("17", "acero", "t17");
+        Tipo agua = new Tipo("18","agua", "t18");
 
         tipos.add(bicho);
         tipos.add(siniestro);
@@ -142,24 +143,24 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<Pokemon> inicializarPokemons(){
 
 
-        Tipo bicho = new Tipo("1", "bicho");
-        Tipo siniestro = new Tipo("2", "siniestro");
-        Tipo dragon = new Tipo("3", "dragon");
-        Tipo electrico = new Tipo("4","electrico");
-        Tipo hada = new Tipo("5", "hada");
-        Tipo lucha = new Tipo("6","lucha");
-        Tipo fuego = new Tipo("7", "fuego");
-        Tipo volador = new Tipo("8", "volador");
-        Tipo fantastma = new Tipo("9", "fantasma");
-        Tipo planta = new Tipo("10", "planta");
-        Tipo tierra = new Tipo("11", "tierra");
-        Tipo hielo = new Tipo("12", "hielo");
-        Tipo normal = new Tipo("13","normal");
-        Tipo veneno = new Tipo("14", "veneno");
-        Tipo psiquico = new Tipo("15", "psiquico");
-        Tipo roca = new Tipo("16", "roca");
-        Tipo acero = new Tipo("17", "acero");
-        Tipo agua = new Tipo("18","agua");
+        Tipo bicho = new Tipo("1", "bicho", "t1");
+        Tipo siniestro = new Tipo("2", "siniestro", "t2");
+        Tipo dragon = new Tipo("3", "dragon", "t3");
+        Tipo electrico = new Tipo("4","electrico", "t4");
+        Tipo hada = new Tipo("5", "hada", "t5");
+        Tipo lucha = new Tipo("6","lucha", "t6");
+        Tipo fuego = new Tipo("7", "fuego", "t7");
+        Tipo volador = new Tipo("8", "volador", "t8");
+        Tipo fantastma = new Tipo("9", "fantasma", "t9");
+        Tipo planta = new Tipo("10", "planta", "t10");
+        Tipo tierra = new Tipo("11", "tierra", "t11");
+        Tipo hielo = new Tipo("12", "hielo", "t12");
+        Tipo normal = new Tipo("13","normal", "t13");
+        Tipo veneno = new Tipo("14", "veneno", "t14");
+        Tipo psiquico = new Tipo("15", "psiquico", "t15");
+        Tipo roca = new Tipo("16", "roca", "t16");
+        Tipo acero = new Tipo("17", "acero", "t17");
+        Tipo agua = new Tipo("18","agua", "t18");
 
 
         ArrayList<Pokemon> pokemons = new ArrayList<>();
