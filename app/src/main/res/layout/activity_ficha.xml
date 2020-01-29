@@ -6,109 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".FichaActivity">
 
-    <TableLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </TableRow>
-
-        <TableRow
+        <ListView
+            android:id="@+id/list_view2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imagen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+        </ListView>
 
-            <TableLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/pokemon1"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <ImageView
-                        android:id="@+id/pokemon2"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <ImageView
-                        android:id="@+id/pokemon3"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/pokemon4"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <ImageView
-                        android:id="@+id/pokemon5"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <ImageView
-                        android:id="@+id/pokemon6"
-                        android:layout_width="77dp"
-                        android:layout_height="64dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
-
-        </TableRow>
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="46dp">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/borrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BORRAR FICHA"
+                android:layout_weight="1"
+                android:text="Borrar Ficha"
                 android:onClick="borrarVoid"/>
-        </TableRow>
-    </TableLayout>
+
+            <Button
+                android:id="@+id/crear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Crear Ficha"
+                android:onClick="crearNuevaVoid"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

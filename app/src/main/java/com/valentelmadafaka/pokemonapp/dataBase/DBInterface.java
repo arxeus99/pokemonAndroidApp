@@ -15,7 +15,7 @@ public class DBInterface  {
     public static final String CLAU_ID = "_id";
     public static final String CLAU_NOM = "nom";
     public static final String CLAU_DESCRIPCIO = "descripcion";
-    public static final String CLAU_IMGG = "Imagen Grande";
+    public static final String CLAU_IMGG = "imagen_grande";
     public static final String CLAU_DUAL = "dual";
     public static final String CLAU_TIPO = "tipos";
     public static final String CLAU_IMG = "imagen";
@@ -115,37 +115,25 @@ public class DBInterface  {
         return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, null, null, null, null, null);
     }
 
-    public boolean isEntrenadorEmpty(){
-        Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_ENTRENADOR, null);
+    public boolean isEntrenadorEmpty() {
+        Cursor cursor = bd.rawQuery("SELECT count(*) FROM " + BD_TAULA_ENTRENADOR, null);
         cursor.moveToFirst();
         int count = cursor.getInt(0);
-        if(count>0){
-            return false;
-        }else{
-            return true;
-        }
+        return count < 1;
     }
 
     public boolean isPokemonEmpty(){
         Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_POKEMONS, null);
         cursor.moveToFirst();
         int count = cursor.getInt(0);
-        if(count>0){
-            return false;
-        }else{
-            return true;
-        }
+            return count<1;
     }
 
     public boolean isTiposEmpty(){
         Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_TIPOS, null);
         cursor.moveToFirst();
         int count = cursor.getInt(0);
-        if(count>0){
-            return false;
-        }else{
-            return true;
-        }
+            return count<1;
     }
 
     public Cursor obtenirTotsElsPokemon() {

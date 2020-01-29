@@ -11,11 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Entrenador;
+import com.valentelmadafaka.pokemonapp.model.EntrenadorsArray;
 import com.valentelmadafaka.pokemonapp.model.Pokemon;
 import com.valentelmadafaka.pokemonapp.model.Tipo;
 import com.valentelmadafaka.pokemonapp.model.TipoDual;
@@ -82,10 +84,11 @@ public class FichaActivity extends AppCompatActivity {
         }
         if(!db.isEntrenadorEmpty()){
             setContentView(R.layout.activity_ficha);
-            Entrenador entrenador = new Entrenador();
+            ArrayList<Entrenador> entrenadors = new ArrayList<>();
             c = db.obtenirEntrendaor();
             c.moveToFirst();
             while (!c.isAfterLast()){
+                Entrenador entrenador = new Entrenador();
                 entrenador.setNombre(c.getString(1));
                 entrenador.setImagen(c.getString(2));
                 String[] equipo = c.getString(3).split(",");
@@ -112,31 +115,12 @@ public class FichaActivity extends AppCompatActivity {
                 }
                 Pokemon[] equipoPokemon = {p1,p2,p3,p4,p5,p6};
                 entrenador.setEquipo(equipoPokemon);
+                entrenadors.add(entrenador);
                 c.moveToNext();
             }
-            TextView nombreEntrenador = (TextView) findViewById(R.id.name);
-            nombreEntrenador.setText(entrenador.getNombre());
-            ImageView imageView = (ImageView) findViewById(R.id.imagen);
-            int imageID = getApplicationContext().getResources().getIdentifier(entrenador.getImagen(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon1);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[0].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon2);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[1].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon3);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[2].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon4);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[3].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon5);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[4].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
-            imageView = (ImageView) findViewById(R.id.pokemon6);
-            imageID = getApplicationContext().getResources().getIdentifier(entrenador.getEquipo()[5].getImg(), "drawable", getApplicationContext().getPackageName());
-            imageView.setImageResource(imageID);
+            ListView listView = findViewById(R.id.list_view2);
+            EntrenadorsArray entrenadorsArray = new EntrenadorsArray(this, R.layout.ficha_entrenador, entrenadors);
+            listView.setAdapter(entrenadorsArray);
         }else{
             setContentView(R.layout.cuestionario_layout);
             nombre = (EditText) findViewById(R.id.nombreet);
@@ -242,5 +226,33 @@ public class FichaActivity extends AppCompatActivity {
         db.obre();
         db.esborraEntrenador();
         db.tanca();
+    }
+
+    public void crearNuevaVoid(View view) {
+        setContentView(R.layout.cuestionario_layout);
+        nombre = (EditText) findViewById(R.id.nombreet);
+        ArrayList<String> nombresPokemon = new ArrayList<>();
+        for(Pokemon p: pokemons){
+            nombresPokemon.add(p.getNombre());
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, nombresPokemon);
+        pokemon1 = (AutoCompleteTextView)findViewById(R.id.pokemon1tv);
+        pokemon2 = (AutoCompleteTextView)findViewById(R.id.pokemon2tv);
+        pokemon3 = (AutoCompleteTextView)findViewById(R.id.pokemon3tv);
+        pokemon4 = (AutoCompleteTextView)findViewById(R.id.pokemon4tv);
+        pokemon5 = (AutoCompleteTextView)findViewById(R.id.pokemon5tv);
+        pokemon6 = (AutoCompleteTextView)findViewById(R.id.pokemon6tv);
+        pokemon1.setAdapter(adapter);
+        pokemon2.setAdapter(adapter);
+        pokemon3.setAdapter(adapter);
+        pokemon4.setAdapter(adapter);
+        pokemon5.setAdapter(adapter);
+        pokemon6.setAdapter(adapter);
+
+        imageView = (ImageView) findViewById(R.id.picture);
+        picture = "tr1";
+        int imageID = getApplicationContext().getResources().getIdentifier(picture, "drawable", getApplicationContext().getPackageName());
+        imageView.setImageResource(imageID);
+
     }
 }
