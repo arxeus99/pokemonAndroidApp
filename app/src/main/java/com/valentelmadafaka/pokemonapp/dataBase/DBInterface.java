@@ -15,6 +15,7 @@ public class DBInterface  {
     public static final String CLAU_ID = "_id";
     public static final String CLAU_NOM = "nom";
     public static final String CLAU_DESCRIPCIO = "descripcion";
+    public static final String CLAU_IMGG = "Imagen Grande";
     public static final String CLAU_DUAL = "dual";
     public static final String CLAU_TIPO = "tipos";
     public static final String CLAU_IMG = "imagen";
@@ -27,7 +28,7 @@ public class DBInterface  {
     public static final int VERSIO = 1;
     public static final String BD_CREATE_POKEMON ="create table if not exists " + BD_TAULA_POKEMONS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
-            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null);";
+            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null, "+CLAU_IMGG+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_ENTRENADOR = "create table if not exists "+BD_TAULA_ENTRENADOR+"( "+CLAU_ID+" integer primary key autoincrement, "+CLAU_NOM+" text not null, "+CLAU_IMG+" text not null, "+
@@ -56,7 +57,7 @@ public class DBInterface  {
         return this.bd;
     }
 
-    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo, String imagen) {
+    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo, String imagen, String imagenG) {
         ContentValues initialValues = new ContentValues();
         initialValues.put(CLAU_NOM, nom);
         initialValues.put(CLAU_DESCRIPCIO, descripcion);
@@ -68,6 +69,7 @@ public class DBInterface  {
             initialValues.put(CLAU_TIPO, tipoDual.getTipo1().getId()+","+tipoDual.getTipo2().getId());
         }
         initialValues.put(CLAU_IMG, imagen);
+        initialValues.put(CLAU_IMGG, imagenG);
         return bd.insert(BD_TAULA_POKEMONS,null, initialValues);
     }
 
@@ -92,7 +94,7 @@ public class DBInterface  {
 
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[] {CLAU_ID,
-                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG},CLAU_ID + " = " + IDFila, null, null, null, null,
+                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG},CLAU_ID + " = " + IDFila, null, null, null, null,
                 null);
         if(mCursor != null) {
             mCursor.moveToFirst();
@@ -147,7 +149,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTotsElsPokemon() {
-        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG},
+        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG},
                 null,null, null, null, null);
     }
 

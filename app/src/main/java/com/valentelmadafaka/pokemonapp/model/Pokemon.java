@@ -8,23 +8,26 @@ public class Pokemon {
     private Tipo tipo;
     private TipoDual tipoDual;
     private String img;
+    private String imgg;
 
     public Pokemon(){}
 
-    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual, String img){
+    public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual, String img, String imgg){
         this.id = id+"";
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipoDual = tipoDual;
         this.img = img;
+        this.imgg = imgg;
     }
-    public Pokemon(int id, String nombre, String descripcion, Tipo tipo, String img){
+    public Pokemon(int id, String nombre, String descripcion, Tipo tipo, String img, String imgg){
         this.id = id+"";
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipoDual = null;
         this.tipo = tipo;
         this.img = img;
+        this.imgg = imgg;
     }
     public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual){
         this.id = id+"";
@@ -48,21 +51,23 @@ public class Pokemon {
         this.tipo = tipo;
     }
 
-    public Pokemon(String id, String nombre, String descripcion, Tipo tipo, String img) {
+    public Pokemon(String id, String nombre, String descripcion, Tipo tipo, String img, String imgg) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipo = tipo;
         this.img = img;
+        this.imgg = imgg;
     }
 
-    public Pokemon(String id, String nombre, String descripcion, TipoDual tipoDual, String img) {
+    public Pokemon(String id, String nombre, String descripcion, TipoDual tipoDual, String img, String imgg) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipoDual = tipoDual;
         this.tipo = null;
         this.img = img;
+        this.imgg = imgg;
     }
 
     public Pokemon(String id, String nombre, String descripcion, TipoDual tipoDual) {
@@ -118,5 +123,13 @@ public class Pokemon {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getImgg() {
+        return imgg;
+    }
+
+    public void setImgg(String imgg) {
+        this.imgg = imgg;
     }
 }

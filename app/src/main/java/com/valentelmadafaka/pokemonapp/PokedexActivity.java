@@ -53,7 +53,7 @@ public class PokedexActivity extends AppCompatActivity {
                         tipo = t;
                     }
                 }
-                Pokemon p = new Pokemon(c.getString(0), c.getString(1), c.getString(2), tipo, c.getString(5));
+                Pokemon p = new Pokemon(c.getString(0), c.getString(1), c.getString(2), tipo, c.getString(5), c.getString(6));
                 pokemons.add(p);
             }else{
                 Tipo tipo1 = new Tipo();
@@ -66,7 +66,7 @@ public class PokedexActivity extends AppCompatActivity {
                         tipo2 = t;
                     }
                 }
-                Pokemon p = new Pokemon(c.getString(0), c.getString(1),c.getString(2), new TipoDual(tipo1, tipo2), c.getString(5));
+                Pokemon p = new Pokemon(c.getString(0), c.getString(1),c.getString(2), new TipoDual(tipo1, tipo2), c.getString(5), c.getString(6));
                 pokemons.add(p);
             }
             c.moveToNext();

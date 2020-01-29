@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         if(db.isPokemonEmpty()){
             for(Pokemon p : inicializarPokemons()){
                 String img = "i"+p.getId();
+                String imgg = "p"+p.getId();
                 p.setImg(img);
-                if (db.insereixPokemon(p.getNombre(), p.getDescripcion(), p.getTipoDual(), p.getTipo(), p.getImg()) == -1) {
+                p.setImgg(imgg);
+                if (db.insereixPokemon(p.getNombre(), p.getDescripcion(), p.getTipoDual(), p.getTipo(), p.getImg(), p.getImgg()) == -1) {
                     Toast.makeText(this, "Error a l’afegir",
                             Toast.LENGTH_SHORT).show();
                 }
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Pokemon> pokemons = new ArrayList<>();
 
         Pokemon bulbasur = new Pokemon(1, "Bulbasur",
-                "Puede sobrevivir largo tiempo sin probar bocado. Guarda energia en el bublo de su espalda.",new TipoDual(planta,veneno), "p1");
+                "Puede sobrevivir largo tiempo sin probar bocado. Guarda energia en el bublo de su espalda.",new TipoDual(planta,veneno));
         pokemons.add(bulbasur);
         Pokemon ivysaur =  new Pokemon(2, "Ivysaur",
                 "Su bulbo crece cuando absorbe energía. Desprende un fuerte aroma cuando florece.", new TipoDual(planta,veneno));

@@ -58,7 +58,7 @@ public class Pokemon_Info extends AppCompatActivity {
             tipo1 = "t" + parts[0];
             tipo2 = "t" + parts[1];
         }
-        img = c.getString(5);
+        img = c.getString(6);
         db.tanca();
         idn.setText(Long.toString(idPokemon));
         nombreP.setText(nombre);
