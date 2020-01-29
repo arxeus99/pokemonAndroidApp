@@ -6,12 +6,16 @@ import android.content.Context;
 import android.database.Cursor;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -84,11 +88,12 @@ public class FichaActivity extends AppCompatActivity {
         }
         if(!db.isEntrenadorEmpty()){
             setContentView(R.layout.activity_ficha);
-            ArrayList<Entrenador> entrenadors = new ArrayList<>();
+            final ArrayList<Entrenador> entrenadors = new ArrayList<>();
             c = db.obtenirEntrendaor();
             c.moveToFirst();
             while (!c.isAfterLast()){
                 Entrenador entrenador = new Entrenador();
+                entrenador.setId(c.getString(0));
                 entrenador.setNombre(c.getString(1));
                 entrenador.setImagen(c.getString(2));
                 String[] equipo = c.getString(3).split(",");
@@ -118,9 +123,114 @@ public class FichaActivity extends AppCompatActivity {
                 entrenadors.add(entrenador);
                 c.moveToNext();
             }
-            ListView listView = findViewById(R.id.list_view2);
-            EntrenadorsArray entrenadorsArray = new EntrenadorsArray(this, R.layout.ficha_entrenador, entrenadors);
+            final ListView listView = findViewById(R.id.list_view2);
+            final EntrenadorsArray entrenadorsArray = new EntrenadorsArray(this, R.layout.ficha_entrenador, entrenadors);
             listView.setAdapter(entrenadorsArray);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                    PopupMenu popup = new PopupMenu(FichaActivity.this, view);
+                    popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
+
+                    popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+                            switch (item.getTitle().toString()){
+                                case "Editar":{
+                                    setContentView(R.layout.cuestionario_layout);
+                                    Button actualizar = (Button)findViewById(R.id.button);
+                                    actualizar.setText("Actualizar");
+
+                                    nombre = (EditText) findViewById(R.id.nombreet);
+                                    ArrayList<String> nombresPokemon = new ArrayList<>();
+                                    for(Pokemon p: pokemons){
+                                        nombresPokemon.add(p.getNombre());
+                                    }
+                                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(FichaActivity.this, android.R.layout.simple_dropdown_item_1line, nombresPokemon);
+                                    final Entrenador e = entrenadors.get(position);
+                                    pokemon1 = (AutoCompleteTextView)findViewById(R.id.pokemon1tv);
+                                    pokemon2 = (AutoCompleteTextView)findViewById(R.id.pokemon2tv);
+                                    pokemon3 = (AutoCompleteTextView)findViewById(R.id.pokemon3tv);
+                                    pokemon4 = (AutoCompleteTextView)findViewById(R.id.pokemon4tv);
+                                    pokemon5 = (AutoCompleteTextView)findViewById(R.id.pokemon5tv);
+                                    pokemon6 = (AutoCompleteTextView)findViewById(R.id.pokemon6tv);
+                                    pokemon1.setAdapter(adapter);
+                                    pokemon2.setAdapter(adapter);
+                                    pokemon3.setAdapter(adapter);
+                                    pokemon4.setAdapter(adapter);
+                                    pokemon5.setAdapter(adapter);
+                                    pokemon6.setAdapter(adapter);
+                                    pokemon1.setText(e.getEquipo()[0].getNombre());
+                                    pokemon2.setText(e.getEquipo()[1].getNombre());
+                                    pokemon3.setText(e.getEquipo()[2].getNombre());
+                                    pokemon4.setText(e.getEquipo()[3].getNombre());
+                                    pokemon5.setText(e.getEquipo()[4].getNombre());
+                                    pokemon6.setText(e.getEquipo()[5].getNombre());
+                                    imageView = (ImageView) findViewById(R.id.picture);
+                                    picture = e.getImagen();
+                                    int imageID = getApplicationContext().getResources().getIdentifier(picture, "drawable", getApplicationContext().getPackageName());
+                                    imageView.setImageResource(imageID);
+                                    nombre.setText(e.getNombre());
+                                    actualizar.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Pokemon p1 = new Pokemon();
+                                            Pokemon p2 = new Pokemon();
+                                            Pokemon p3 = new Pokemon();
+                                            Pokemon p4 = new Pokemon();
+                                            Pokemon p5 = new Pokemon();
+                                            Pokemon p6 = new Pokemon();
+                                            for(Pokemon p: pokemons){
+                                                if(p.getNombre().equals(pokemon1.getText().toString())){
+                                                    p1 = p;
+                                                }else if(p.getNombre().equals(pokemon2.getText().toString())){
+                                                    p2 = p;
+                                                }else if(p.getNombre().equals(pokemon3.getText().toString())){
+                                                    p3 = p;
+                                                }else if(p.getNombre().equals(pokemon4.getText().toString())){
+                                                    p4 = p;
+                                                }else if(p.getNombre().equals(pokemon5.getText().toString())){
+                                                    p5 = p;
+                                                }else if(p.getNombre().equals(pokemon6.getText().toString())){
+                                                    p6 = p;
+                                                }
+                                            }
+                                            Pokemon[] equipo = {p1,p2,p3,p4,p5,p6};
+                                            String equipoPokemon = "";
+                                            for(Pokemon p: equipo){
+                                                if(equipoPokemon.isEmpty()){
+                                                    equipoPokemon = p.getId();
+                                                }else{
+                                                    equipoPokemon = equipoPokemon+","+p.getId();
+                                                }
+
+                                            }
+                                            db.obre();
+                                            db.actualitzarEntrenador(e.getId(), nombre.getText().toString(), equipoPokemon, picture);
+                                            db.tanca();
+                                            Toast.makeText(FichaActivity.this,"Entrenador actualizado", Toast.LENGTH_SHORT).show();
+                                            finish();
+                                        }
+                                    });
+                                    break;
+                                }
+                                case "Borrar":{
+                                    db.obre();
+                                    db.esborraEntrenador(entrenadors.get(position).getId());
+                                    Toast.makeText(FichaActivity.this,"Entrenador borrado", Toast.LENGTH_SHORT).show();
+                                    db.tanca();
+                                    finish();
+                                    break;
+                                }
+                            }
+                            return true;
+                        }
+                    });
+
+                    popup.show();
+                }
+            });
         }else{
             setContentView(R.layout.cuestionario_layout);
             nombre = (EditText) findViewById(R.id.nombreet);
@@ -146,6 +256,7 @@ public class FichaActivity extends AppCompatActivity {
             picture = "tr1";
             int imageID = getApplicationContext().getResources().getIdentifier(picture, "drawable", getApplicationContext().getPackageName());
             imageView.setImageResource(imageID);
+
 
         }
 
@@ -218,15 +329,10 @@ public class FichaActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         db.tanca();
-        MainActivity.entrenador = true;
+        Toast.makeText(FichaActivity.this,"Entrenador creado", Toast.LENGTH_SHORT).show();
         finish();
     }
 
-    public void borrarVoid(View view) {
-        db.obre();
-        db.esborraEntrenador();
-        db.tanca();
-    }
 
     public void crearNuevaVoid(View view) {
         setContentView(R.layout.cuestionario_layout);

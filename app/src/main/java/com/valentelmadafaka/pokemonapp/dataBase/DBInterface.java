@@ -2,6 +2,7 @@ package com.valentelmadafaka.pokemonapp.dataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SearchRecentSuggestionsProvider;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -88,8 +89,8 @@ public class DBInterface  {
         return bd.insert(BD_TAULA_ENTRENADOR, null, initialValues);
     }
 
-    public boolean esborraEntrenador() {
-        return bd.delete(BD_TAULA_ENTRENADOR, null, null) > 0;
+    public boolean esborraEntrenador(String IDFila) {
+        return bd.delete(BD_TAULA_ENTRENADOR, CLAU_ID+" = "+ IDFila, null) > 0;
     }
 
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
@@ -144,5 +145,13 @@ public class DBInterface  {
     public Cursor obtenirTotsElsTipus() {
         return bd.query(BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG},
                 null,null, null, null, null);
+    }
+
+    public boolean actualitzarEntrenador(String IDFila, String nom, String equipo, String img) {
+        ContentValues args = new ContentValues();
+        args.put(CLAU_NOM, nom);
+        args.put(CLAU_EQUIPO, equipo);
+        args.put(CLAU_IMG, img);
+        return bd.update(BD_TAULA_ENTRENADOR, args, CLAU_ID + " = " + IDFila, null) > 0;
     }
 }

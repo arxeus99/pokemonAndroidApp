@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     DBInterface db;
 
-    public static boolean entrenador = true;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

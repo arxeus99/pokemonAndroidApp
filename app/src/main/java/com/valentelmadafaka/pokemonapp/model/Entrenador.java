@@ -4,6 +4,7 @@ public class Entrenador {
     private String nombre;
     private String imagen;
     private Pokemon[] equipo;
+    private String id;
 
     public Entrenador(String nombre, String imagen, Pokemon[] equipo) {
         this.nombre = nombre;
@@ -36,5 +37,13 @@ public class Entrenador {
 
     public void setEquipo(Pokemon[] equipo) {
         this.equipo = equipo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
