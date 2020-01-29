@@ -36,6 +36,8 @@ public class Pokemon_Info extends AppCompatActivity {
         TextView nombreP = findViewById(R.id.NombrePokemon);
         ImageView pokemonI = findViewById(R.id.ImagenPokemon);
         TextView desc = findViewById(R.id.DescripcionPokemon);
+        ImageView type1 = findViewById(R.id.Tipo1);
+        ImageView type2 = findViewById(R.id.Tipo2);
 
         idPokemon = Long.parseLong(id);
         db = new DBInterface(this);
@@ -44,17 +46,18 @@ public class Pokemon_Info extends AppCompatActivity {
         idPokemon = c.getLong(0);
         nombre = c.getString(1);
         descripcion = c.getString(2);
-        /*if(c.getString(3).equals(0)){
+        String cant = c.getString(3);
+        if(c.getString(3).equals("0")){
             //solo un tipo
-            tipo1 = c.getString(4);
+            tipo1 = "t" + c.getString(4);
             tipo2 = null;
         }else{
             //dos tipos
             String t = c.getString(4);
             String[] parts = t.split(",");
-            tipo1 = parts[0];
-            tipo2 = parts[1];
-        }*/
+            tipo1 = "t" + parts[0];
+            tipo2 = "t" + parts[1];
+        }
         img = c.getString(5);
         db.tanca();
         idn.setText(Long.toString(idPokemon));
@@ -63,6 +66,16 @@ public class Pokemon_Info extends AppCompatActivity {
         Resources res = getResources();
         int resID = res.getIdentifier(img , "drawable", getPackageName());
         pokemonI.setImageResource(resID);
+        if(cant.equals("0")) {
+            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+            type1.setImageResource(t1);
+        } else {
+            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+            type1.setImageResource(t1);
+            int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+            type2.setImageResource(t2);
+        }
+
 
     }
 }
