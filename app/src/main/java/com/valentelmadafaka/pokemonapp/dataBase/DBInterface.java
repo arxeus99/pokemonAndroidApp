@@ -109,8 +109,8 @@ public class DBInterface  {
         return mCursor;
     }
 
-    public Cursor obtenirEntrendaor(long IDFila){
-        return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, CLAU_ID+" = "+IDFila, null, null, null, null);
+    public Cursor obtenirEntrendaor(){
+        return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, null, null, null, null, null);
     }
 
     public boolean isEntrenadorEmpty(){

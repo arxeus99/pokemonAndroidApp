@@ -83,7 +83,7 @@ public class FichaActivity extends AppCompatActivity {
         if(!db.isEntrenadorEmpty()){
             setContentView(R.layout.activity_ficha);
             Entrenador entrenador = new Entrenador();
-            c = db.obtenirEntrendaor(1);
+            c = db.obtenirEntrendaor();
             c.moveToFirst();
             while (!c.isAfterLast()){
                 entrenador.setNombre(c.getString(1));
