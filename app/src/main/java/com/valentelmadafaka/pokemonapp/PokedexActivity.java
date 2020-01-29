@@ -2,9 +2,13 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
@@ -27,6 +31,7 @@ public class PokedexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pokedex);
         db = new DBInterface(this);
         db.obre();
+
 //
 
 
@@ -76,5 +81,15 @@ public class PokedexActivity extends AppCompatActivity {
         PokemonsArray pokemonsArray = new PokemonsArray(this, R.layout.pokemon_pokedex, pokemons);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(pokemonsArray);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String idPokemon = ((TextView) view.findViewById(R.id.Numero)).getText().toString();
+                Intent info = new Intent(PokedexActivity.this, Pokemon_Info.class);
+                info.putExtra("id", idPokemon);
+                startActivity(info);
+            }
+        });
     }
 }
