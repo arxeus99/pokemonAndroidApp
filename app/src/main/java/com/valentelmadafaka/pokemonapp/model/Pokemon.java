@@ -9,6 +9,8 @@ public class Pokemon {
     private TipoDual tipoDual;
     private String img;
 
+    public Pokemon(){}
+
     public Pokemon(int id, String nombre, String descripcion, TipoDual tipoDual, String img){
         this.id = id+"";
         this.nombre = nombre;

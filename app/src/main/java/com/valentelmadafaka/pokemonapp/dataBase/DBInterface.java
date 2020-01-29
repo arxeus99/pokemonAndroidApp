@@ -30,7 +30,7 @@ public class DBInterface  {
             + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, "+CLAU_IMG+" text not null);";
-    public static final String BD_CREATE_ENTRENADOR = "crete table if not exists "+BD_TAULA_ENTRENADOR+"( "+CLAU_ID+" integer primary key autoincrement, "+CLAU_NOM+" text not null, "+CLAU_IMG+", text not null, "+
+    public static final String BD_CREATE_ENTRENADOR = "create table if not exists "+BD_TAULA_ENTRENADOR+"( "+CLAU_ID+" integer primary key autoincrement, "+CLAU_NOM+" text not null, "+CLAU_IMG+" text not null, "+
                 CLAU_EQUIPO+" text not null);";
     private final Context context;
     private AjudaDB ajuda;
@@ -78,11 +78,16 @@ public class DBInterface  {
         return bd.insert(BD_TAULA_TIPOS,null, initialValues);
     }
 
-    public long insereixEntrenador(String nom, String img){
+    public long insereixEntrenador(String nom, String img, String pokemons){
         ContentValues initialValues = new ContentValues();
         initialValues.put(CLAU_NOM, nom);
         initialValues.put(CLAU_IMG, img);
-        return bd.insert(BD_CREATE_ENTRENADOR, null, initialValues);
+        initialValues.put(CLAU_EQUIPO, pokemons);
+        return bd.insert(BD_TAULA_ENTRENADOR, null, initialValues);
+    }
+
+    public boolean esborraEntrenador() {
+        return bd.delete(BD_TAULA_ENTRENADOR, null, null) > 0;
     }
 
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
@@ -104,19 +109,41 @@ public class DBInterface  {
         return mCursor;
     }
 
-    public Cursor obtenirEntrendaor(){
-        return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, null, null, null, null, null);
+    public Cursor obtenirEntrendaor(long IDFila){
+        return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, CLAU_ID+" = "+IDFila, null, null, null, null);
     }
 
-    public boolean existsTaulaEntrenador(){
-        Cursor cursor = bd.rawQuery("SELECT name FROM sqlite_master WHERE type= ? AND name= ?", new String[] {"table" , BD_TAULA_ENTRENADOR});
-        if(!cursor.moveToFirst()){
-            cursor.close();
-            return false;
-        }
+    public boolean isEntrenadorEmpty(){
+        Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_ENTRENADOR, null);
+        cursor.moveToFirst();
         int count = cursor.getInt(0);
-        cursor.close();
-        return count > 0;
+        if(count>0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean isPokemonEmpty(){
+        Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_POKEMONS, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        if(count>0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean isTiposEmpty(){
+        Cursor cursor = bd.rawQuery("SELECT count(*) FROM "+BD_TAULA_TIPOS, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        if(count>0){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public Cursor obtenirTotsElsPokemon() {
