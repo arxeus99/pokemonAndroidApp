@@ -11,6 +11,9 @@ public class Entrenador {
         this.equipo = equipo;
     }
 
+    public Entrenador(){
+
+    }
     public String getNombre() {
         return nombre;
     }
