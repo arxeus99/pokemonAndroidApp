@@ -576,6 +576,65 @@ public class MainActivity extends AppCompatActivity {
         Pokemon mew = new Pokemon(151,"Mew",
                 "Cuando es mirado a través de un microscopio, puede observarse el delicado pelo de este Pokémon.", psiquico);
         pokemons.add(mew);
+        Pokemon chikorita = new Pokemon(152, "Chikorita",
+                "Al luchar, Chikorita agita la hoja que tiene para mantener a raya al rival. Pero, al mismo tiempo, libera una suave fragancia que apacigua el encuentro y crea un ambiente agradable y de amistad.", planta);
+        pokemons.add(chikorita);
+        Pokemon bayleef = new Pokemon(153, "Bayleef",
+                "Bayleef tiene un collar de hojas alrededor del cuello y un brote de un árbol en cada una de ellas. La fragancia que desprenden estos brotes anima a la gente.", planta);
+        pokemons.add(bayleef);
+        Pokemon meganium = new Pokemon(154, "Meganium",
+                "La fragancia de la flor de Meganium aplaca y suaviza los ánimos. Al luchar, este Pokémon libera mayor cantidad de esencia para disminuir el ánimo de combate de su oponente.", planta);
+        pokemons.add(meganium);
+        Pokemon cyndaquil = new Pokemon(155, "Cyndaquil",
+                "Cyndaquil se protege soltando llamas por el lomo. Cuando está enfadado, las llamas son fieras, pero, si está cansado, solo consigue echar algunas chispas que no llegan a cuajar en una completa combustión.", fuego);
+        pokemons.add(cyndaquil);
+        Pokemon quilava = new Pokemon(156, "Quilava",
+                "Quilava mantiene a sus rivales a raya con la intensidad de sus llamas y las ráfagas de aire ígneo que producen. También aprovecha su espectacular agilidad para esquivar ataques a la vez que abrasa al rival con sus llamas.", fuego);
+        pokemons.add(quilava);
+        Pokemon typhlosion = new Pokemon(157, "Typhlosion",
+                "Typhlosion se oculta tras un trémulo haz de calor que crea mediante sus intensas y sofocantes llamaradas. Este Pokémon causa explosiones de fuego que reducen todo a cenizas.", fuego);
+        pokemons.add(typhlosion);
+        Pokemon totodile = new Pokemon(158, "Totodile",
+                "Totodile tiene cuerpo pequeño, pero fuertes mandíbulas. A veces, piensa que solo está dando un mordisquito y hace unas heridas bastante considerables.", agua);
+        pokemons.add(totodile);
+        Pokemon croconaw = new Pokemon(159, "Croconaw",
+                "Una vez que Croconaw le ha clavado los colmillos a su presa, es imposible que escape porque los tiene hacia adentro como si fueran anzuelos. Cuando Croconaw hinca los dientes, no hay escapatoria.", agua);
+        pokemons.add(croconaw);
+        Pokemon feraligatr = new Pokemon(160, "Feraligatr",
+                "Feraligatr intimida a sus oponentes abriendo las grandes fauces que tiene. En combate, golpea el suelo bruscamente con las gruesas y fuertes patas traseras que tiene para cargar contra su rival a una velocidad de vértigo.", agua);
+        pokemons.add(feraligatr);
+        Pokemon sentret = new Pokemon(161, "Sentret",
+                "Sentret no duerme a menos que otro haga guardia. El que hace de centinela lo despertará al mínimo signo de peligro. Cuando este Pokémon se separa de su manada, es incapaz de echarse a dormir, presa del miedo.", normal);
+        pokemons.add(sentret);
+        Pokemon furret = new Pokemon(162, "Furret",
+                "Furret es de constitución muy delgada. En combate le resulta útil porque puede escabullirse con habilidad por cualquier huequito y escapar. A pesar de que tiene patas cortas, es ágil y veloz.", normal);
+        pokemons.add(furret);
+        Pokemon hoothoot = new Pokemon(163, "Hoothoot",
+                "Hoothoot tiene un órgano interno que identifica y percibe la rotación de la tierra. Gracias a este órgano, el Pokémon ulula todos los días a la misma hora.", new TipoDual(normal,volador));
+        pokemons.add(hoothoot);
+        Pokemon noctowl = new Pokemon(164, "Noctowl",
+                "Noctowl no falla a la hora de cazar a su presa en la oscuridad. El éxito se lo debe a una vista privilegiada, que le permite ver donde apenas hay luz, y a las ligeras y flexibles alas que tiene, que no hacen ruido alguno al volar.", new TipoDual(normal, volador));
+        pokemons.add(noctowl);
+        Pokemon ledyba = new Pokemon(165, "Ledyba",
+                "Ledyba segrega un fluido aromático por los seis puntos de unión que tiene entre las patas y el cuerpo. A través de este fluido se comunica con otros y les informa acerca de sus sentimientos variando la esencia.", new TipoDual(bicho,volador));
+        pokemons.add(ledyba);
+        Pokemon ledian = new Pokemon(166, "Ledian",
+                "Dicen que en zonas en las que el aire está limpio, en las que se ven las estrellas, hay enormes poblaciones de Ledian. La razón es muy sencilla: este Pokémon usa la luz de las estrellas como fuente de energía.", new TipoDual(bicho,volador));
+        pokemons.add(ledian);
+        Pokemon spinarak = new Pokemon(167, "Spinarak",
+                "La tela que teje Spinarak puede considerarse como su segundo sistema nervioso. Dicen que puede adivinar qué tipo de presa ha caído en su red con solo observar las leves vibraciones de los hilos de la tela.", new TipoDual(bicho, veneno));
+        pokemons.add(spinarak);
+        Pokemon ariados = new Pokemon(168, "Ariados",
+                "Ariados tiene unas patas con forma de garfio que le permiten correr por techos y superficies verticales. Este Pokémon oprime al rival con una tela de araña fina y resistente.", new TipoDual(bicho, veneno));
+        pokemons.add(ariados);
+        Pokemon crobat = new Pokemon(169, "Crobat",
+                "Cuando este Pokémon vuela batiendo solo las alas delanteras o traseras, es porque lleva volando bastante tiempo. Cuando se cansa, Crobat alterna las alas.", new TipoDual(veneno, volador));
+        Pokemon chinchou = new Pokemon(170, "Chinchou",
+                "Chinchou libera cargas eléctricas positivas y negativas a través de las dos antenas que tiene para que su rival pierda el conocimiento. Asimismo, usa los destellos de electricidad para comunicarse con otros.", new TipoDual(agua,electrico));
+        pokemons.add(chinchou);
+        Pokemon lanturn = new Pokemon(171, "Lanturn",
+                "A Lanturn lo llaman la Estrella del Fondo del Mar por la antena iluminada que tiene. Este Pokémon produce luz creando una reacción química entre una bacteria y los fluidos corporales de la antena.", new TipoDual(agua,veneno));
+        
 
         return pokemons;
     }

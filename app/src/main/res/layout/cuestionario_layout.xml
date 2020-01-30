@@ -5,171 +5,181 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre " />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Nombre " />
+        <EditText
+            android:id="@+id/nombreet"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/nombreet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Name" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon1tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon1tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon2tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon2tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon3tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon3tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon4tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon4tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon5tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon5tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Pokemon " />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon " />
+        <AutoCompleteTextView
+            android:id="@+id/pokemon6tv"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/pokemon6tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="imagen" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="imagen" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/button2"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="leftVoid"
+            android:text="←"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:text="left"
-                android:onClick="leftVoid"/>
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/i1" />
 
-            <ImageView
-                android:id="@+id/picture"
-                android:layout_width="199dp"
-                android:layout_height="111dp"
-                android:src="@drawable/i1" />
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="rightVoid"
+            android:text="→"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:text="right"
-                android:onClick="rightVoid"/>
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="crearVoid"
+            android:text="CREAR" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CREAR"
-                android:onClick="crearVoid"/>
-        </TableRow>
-    </TableLayout>
 </LinearLayout>
