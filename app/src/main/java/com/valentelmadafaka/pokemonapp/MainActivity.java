@@ -16,6 +16,7 @@ import com.valentelmadafaka.pokemonapp.model.Tipo;
 import com.valentelmadafaka.pokemonapp.model.TipoDual;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -634,7 +635,249 @@ public class MainActivity extends AppCompatActivity {
         pokemons.add(chinchou);
         Pokemon lanturn = new Pokemon(171, "Lanturn",
                 "A Lanturn lo llaman la Estrella del Fondo del Mar por la antena iluminada que tiene. Este Pokémon produce luz creando una reacción química entre una bacteria y los fluidos corporales de la antena.", new TipoDual(agua,veneno));
-        
+        pokemons.add(lanturn);
+        Pokemon pichu = new Pokemon(172, "Pichu",
+                "A Pichu le resulta más fácil cargarse de electricidad en días de nubarrones o cuando sopla un aire muy seco. Es posible oír la electricidad estática que emana de este Pokémon.", electrico);
+        pokemons.add(pichu);
+        Pokemon cleffa = new Pokemon(173, "Cleffa",
+                "Cuando hay lluvia de estrellas, a los Cleffa se les puede ver danzando en círculos durante toda la noche. Solo paran cuando rompe el día; entonces, dejan de bailar y calman su sed con el rocío de la mañana.", hada);
+        pokemons.add(cleffa);
+        Pokemon igglybuff = new Pokemon(174, "Igglypuff",
+                "Las cuerdas vocales de Igglybuff no están suficientemente desarrolladas. Si tuviera que cantar mucho, se haría daño en la garganta. Este Pokémon suele hacer gárgaras con agua pura de manantial.", new TipoDual(normal, hada));
+        pokemons.add(igglybuff);
+        Pokemon togepi = new Pokemon(175, "Togepi",
+                "Togepi usa los sentimientos positivos de compasión y alegría que desprenden las personas y los Pokémon. Este Pokémon almacena sentimientos de felicidad en su interior y después los comparte con otros.", hada);
+        pokemons.add(togepi);
+        Pokemon togetic = new Pokemon(176, "Togetic",
+                "Dicen que Togetic es un Pokémon que trae buena suerte y que, si detecta a alguien que es puro de corazón, sale para compartir su alegría con él.", new TipoDual(normal, volador));
+        pokemons.add(togetic);
+        Pokemon natu = new Pokemon(177, "Natu",
+                "Natu no puede volar porque las alas no le han crecido lo suficiente. Si alguien cruza la mirada con él, se la devolverá fijamente, aunque, si hace el mínimo movimiento, huirá dando saltitos para ponerse a salvo.", new TipoDual(psiquico, volador));
+        pokemons.add(natu);
+        Pokemon xatu = new Pokemon(178, "Xatu",
+                "Xatu permanece de pie inmóvil y tranquilo en el mismo sitio durante todo el día. Se cree que no se mueve por temor a lo que ha visto que ocurrirá en el futuro.", new TipoDual(psiquico, volador));
+        pokemons.add(xatu);
+        Pokemon mareep = new Pokemon(179,"Mareep",
+                "Mareep tiene un pelaje lanudo suave que produce carga estática por el roce. Cuanto más se carga de electricidad estática, más brilla la bombilla que tiene en el extremo de la cola.", electrico);
+        pokemons.add(mareep);
+        Pokemon flaaffy = new Pokemon(180, "Flaaffy",
+                "La calidad de la lana de Flaaffy varía para poder generar mucha electricidad estática con muy poca cantidad de lana. Las zonas suaves de la piel en las que no tiene pelaje están protegidas contra la electricidad.", electrico);
+        pokemons.add(flaaffy);
+        Pokemon ampharos = new Pokemon(181, "Ampharos",
+                "Ampharos desprende tanta luz que es posible verle hasta desde el espacio. Antes, la gente usaba su luz como sistema de comunicación para enviarse señales.", electrico);
+        pokemons.add(ampharos);
+        Pokemon bellossom = new Pokemon(182, "Bellossom",
+                "Cuando Bellossom se expone a gran cantidad de luz solar, le empiezan a girar las hojas que le rodean. La danza de este Pokémon es famosa en las zonas del sur.", planta);
+        pokemons.add(bellossom);
+        Pokemon marill = new Pokemon(183, "Marill",
+                "La cola de Marill contiene un aceite que hace las veces de chaleco salvavidas. Si ves una moviéndose en el agua, seguro que debajo hay un Marill medio sumergido buscando plantas acuáticas para comer.", new TipoDual(agua,hada));
+        pokemons.add(marill);
+        Pokemon azumarill = new Pokemon(184, "Azumarill",
+                "Azumarill puede hacer burbujas de aire si ve a algún Pokémon que esté a punto de ahogarse. Estas burbujas de aire son básicas para que los Pokémon puedan seguir respirando.", new TipoDual(agua, hada));
+        pokemons.add(azumarill);
+        Pokemon sudowoodo = new Pokemon(185, "Sudowoodo",
+                "Sudowoodo se camufla adoptando la imagen de un árbol para que no le ataque ningún enemigo. El problema viene en invierno, ya que las extremidades superiores tienen color verde y es fácil identificarle.",  roca);
+        pokemons.add(sudowoodo);
+        Pokemon politoed = new Pokemon(186, "Politoed",
+                "El mechón rizado de Politoed confirma su condición de rey. Dicen que cuanto más le crece y más se le riza, mayor es el respeto que recibe de sus súbditos.", agua);
+        pokemons.add(politoed);
+        Pokemon hoppip = new Pokemon(187, "Hoppip",
+                "Este Pokémon flota en el aire y se deja llevar. Cuando percibe que el viento va a cambiar a fuerte, Hoppip entrelaza sus hojas con otros Hoppip para hacer resistencia y evitar salir volando por la fuerza de la corriente.", new TipoDual(planta, volador));
+        pokemons.add(hoppip);
+        Pokemon skiplooom = new Pokemon (188, "Skiploom",
+                "Skiploom florece cuando la temperatura llega a 18 °C. La apertura de los pétalos varía según la temperatura que haga. Por este motivo, la gente lo usa a veces a modo de termómetro.", new TipoDual(planta,volador));
+        pokemons.add(skiplooom);
+        Pokemon jumpluff = new Pokemon(189, "Jumpluff",
+                "Jumpluff se vale de los cálidos vientos del sur para volar a tierras lejanas. Si llega a zonas de aire frío en pleno vuelo, descenderá y tomará tierra.", new TipoDual(planta, volador));
+        pokemons.add(jumpluff);
+        Pokemon aipom = new Pokemon(190, "Aipom",
+                "La cola de Aipom termina en una especie de mano a la que, con un poco de cabeza, se le puede dar muy buen uso. Pero hay un problema: como se ha acostumbrado a usarla mucho, las de verdad se le han vuelto algo torponas.", normal);
+        pokemons.add(aipom);
+        Pokemon sunkern = new Pokemon(191, "Sunkern",
+                "Sunkern intenta moverse lo menos posible para conservar todos los nutrientes que ha guardado en su interior y poder evolucionar. Ni come siquiera; se alimenta solo del rocío de la mañana.", planta);
+        pokemons.add(sunkern);
+        Pokemon sunflora = new Pokemon(192, "Sunflora",
+                "Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.", planta);
+        pokemons.add(sunflora);
+        Pokemon yanma = new Pokemon(193, "Yanma",
+                "Yanma tiene un ángulo de visión de 360° sin mover los ojos. Es un gran volador, experto en hacer repentinas paradas y cambios de dirección en el aire. Aprovecha la habilidad que tiene de volar para lanzarse sobre su presa.", new TipoDual(bicho, volador));
+        pokemons.add(yanma);
+        Pokemon wooper = new Pokemon(194, "Wooper",
+                "Wooper suele vivir en el agua, pero es posible también verle en tierra en busca de comida. Cuando está en terreno firme, se cubre con una película viscosa tóxica.", new TipoDual(agua, tierra));
+        pokemons.add(wooper);
+        Pokemon quagsire = new Pokemon(195, "Quagsire",
+                "Quagsire caza dejando las fauces abiertas en el agua y esperando a que su presa entre sin darse cuenta. Como se queda quieto, el Pokémon no pasa mucha hambre.", new TipoDual(agua, tierra));
+        pokemons.add(quagsire);
+        Pokemon espeon = new Pokemon(196, "Espeon",
+                "Espeon es tremendamente leal al Entrenador al que considera digno de ello. Dicen que este Pokémon desarrolló sus poderes adivinatorios para evitar que su Entrenador sufra daño alguno.", psiquico);
+        pokemons.add(espeon);
+        Pokemon umbreon = new Pokemon(197, "Umbreon",
+                "Umbreon evolucionó tras haber estado expuesto a ondas lunares. Suele esconderse en la oscuridad en silencio y esperar a que su presa se mueva. Cuando se lanza al ataque, le brillan los anillos del cuerpo.", siniestro);
+        pokemons.add(umbreon);
+        Pokemon murkrow = new Pokemon(198, "Murkrow",
+                "Murkrow ha sido temido y repudiado por todos por ser supuestamente fuente de mala suerte. Este Pokémon siente debilidad por todo lo que brilla y resplandece. A las mujeres les roba los anillos.", new TipoDual(siniestro, volador));
+        pokemons.add(murkrow);
+        Pokemon slowking = new Pokemon(199, "Slowking",
+                "Slowking dedica cada día tiempo a investigar, en un intento por resolver los misterios del mundo. Aunque, según parece, a este Pokémon se le olvida todo lo que ha aprendido si se separa del Shellder que lleva en la cabeza.", new TipoDual(agua, psiquico));
+        pokemons.add(slowking);
+        Pokemon misdreavus = new Pokemon(200, "Misdreavus",
+                "Misdreavus asusta a la gente con un chillido escalofriante y sollozante. Y, al parecer, usa las esferas rojas para absorber los sentimientos de miedo de los enemigos y usarlos como alimento.", fantastma);
+        pokemons.add(misdreavus);
+        Pokemon unown = new Pokemon(201, "Unown",
+                "Estos Pokémon tienen forma de caracteres antiguos. No se sabe qué surgió primero, si la vieja escritura o los distintos Unown. Esta cuestión sigue siendo objeto de estudio, pero aún no se ha averiguado nada.", psiquico);
+        pokemons.add(unown);
+        Pokemon wobbuffet = new Pokemon(202, "Wobbuffet",
+                "Si dos o más Wobbuffet se encuentran, se volverán competitivos e intentarán superarse en resistencia. Pero también puede que intenten aguantar sin comer; algo que los Entrenadores deben tener muy en cuenta.", psiquico);
+        pokemons.add(wobbuffet);
+        Pokemon girafarig = new Pokemon(203, "Girafarig",
+                "Girafarig tiene un cerebro también en la cabeza de la cola que reacciona atacando ante olores y sonidos. Cuando alguien se acerca a este Pokémon por la espalda, puede provocar que la cabeza trasera se abalance y lo muerda.", new TipoDual(normal,psiquico));
+        pokemons.add(girafarig);
+        Pokemon pineco = new Pokemon(204, "Pineco",
+                "Pineco permanece colgado de la rama de un árbol esperando pacientemente a su presa. Si alguien sacude el árbol en el que está mientras come y le molesta, se tira al suelo y explota sin dar ningún tipo de aviso.", bicho);
+        pokemons.add(pineco);
+        Pokemon forrefest = new Pokemon(205, "Forrefest",
+                "Forretress se esconde dentro de su concha de acero reforzada. Solo la abre cuando va a atrapar a su presa, pero ocurre tan rápido que no da tiempo de ver su interior.", new TipoDual(bicho, acero));
+        pokemons.add(forrefest);
+        Pokemon dunsparce =  new Pokemon(206, "Dusnparce",
+                "La cola de Dunsparce es un taladro que usa para enterrarse en el suelo de espaldas. De todos es sabido que este Pokémon hace su nido a gran profundidad y con una forma muy compleja.", normal);
+        pokemons.add(dunsparce);
+        Pokemon gligar = new Pokemon(207, "Gligar",
+                "Gligar planea por el aire sin hacer ningún ruido, como si fuera patinando. Este Pokémon se agarra a la cara de su rival con las patas traseras, con forma de garra, y las pinzas de las delanteras y le inyecta veneno por el aguijón.", new TipoDual(tierra, volador));
+        pokemons.add(gligar);
+        Pokemon steelix = new Pokemon(208, "Steelix",
+                "Steelix vive a mayor profundidad aún que Onix. Se le conoce por su tendencia a excavar hacia el interior del planeta. Hay datos que muestran que este Pokémon ha llegado a alcanzar 1 km de profundidad.", new TipoDual(acero, tierra));
+        pokemons.add(steelix);
+        Pokemon snubbull = new Pokemon(209, "Snubbull",
+                "Al tener los colmillos por fuera, Snubbull da miedo y espanta a los Pokémon pequeños, que huyen aterrados. Parece que a él le da un poco de pena que salgan huyendo.", hada);
+        pokemons.add(snubbull);
+        Pokemon grandbull = new Pokemon(210, "Grandbull",
+                "Granbull tiene la mandíbula inferior demasiado desarrollada y colmillos enormes y pesados que le obligan a inclinar la cabeza hacia atrás para compensar el peso. Si no se le asusta, no muerde.", hada);
+        pokemons.add(grandbull);
+        Pokemon qwilfish  = new Pokemon(211, "Qwilfish",
+                "Qwilfish bebe agua y se hincha, y a continuación usa la presión del agua que ha tragado para lanzar púas tóxicas por todo el cuerpo. Para este Pokémon nadar es una especie de desafío.", new TipoDual(agua,veneno));
+        pokemons.add(qwilfish);
+        Pokemon scizor = new Pokemon(212, "Scizor",
+                "Scizor tiene un cuerpo duro como el acero que no es fácil de alterar con ningún ataque común. Este Pokémon bate las alas para regular la temperatura corporal.", new TipoDual(bicho, acero));
+        pokemons.add(scizor);
+        Pokemon shuckle = new Pokemon(213, "Shuckle",
+                "Shuckle permanece escondido bajo las rocas en silencio y, cuando se pone a comer las bayas que almacena, se encierra en el caparazón. Las bayas se mezclan con sus fluidos corporales y originan zumo.", new TipoDual(bicho, roca));
+        pokemons.add(shuckle);
+        Pokemon heracross = new Pokemon(214, "Heracross",
+                "Heracross carga en línea recta contra el enemigo, se le queda encajado por debajo, lo agarra y lo lanza con ayuda del fuerte cuerno que tiene. Este Pokémon tiene fuerza hasta para echar abajo un árbol descomunal.", new TipoDual(bicho, lucha));
+        pokemons.add(heracross);
+        Pokemon sneasel = new Pokemon(215, "Sneasel",
+                "Sneasel trepa por los árboles agarrándose a la corteza con las garras curvas que tiene. Este Pokémon busca nidos desprovistos de vigilancia paterna para robar los huevos y comérselos.", new TipoDual(siniestro,hielo));
+        pokemons.add(sneasel);
+        Pokemon teddiursa = new Pokemon(216, "Teddiursa",
+                "A Teddiursa le encanta chuparse las palmas impregnadas de dulce miel. Este Pokémon fabrica su propia miel mezclando frutos y el polen que recoge Beedrill.", normal);
+        pokemons.add(teddiursa);
+        Pokemon ursaring = new Pokemon(217, "Ursaring",
+                "En los bosques habitados por Ursaring, dicen que abundan los arroyos y árboles gigantes en los que guardan su alimento. Este Pokémon se dedica todos los días a pasear por el bosque para buscar comida y guardarla.", normal);
+        pokemons.add(ursaring);
+        Pokemon slugma = new Pokemon(218, "Slugma",
+                "Por el sistema circulatorio de Slugma corre magma líquido. Si este Pokémon se enfriara, el magma perdería el calor y se solidificaría, por lo que se resquebrajaría por completo, perdería algunos trozos y reduciría su tamaño.", fuego);
+        pokemons.add(slugma);
+        Pokemon magcargo = new Pokemon(219, "Magcargo",
+                "La coraza de Magcargo es en realidad su propia piel que quedó endurecida al enfriarse. Está muy resquebrajada y es muy frágil; se desharía solo con tocarla. Este Pokémon debe sumergirse en magma para recuperar su forma.", new TipoDual(fuego, roca));
+        pokemons.add(magcargo);
+        Pokemon swinub = new Pokemon(220, "Swinub",
+                "Swinub busca el alimento frotando el hocico contra el suelo. Su comida preferida es una seta que crece bajo la hierba marchita. A veces, al frotar, descubre fuentes termales.", new TipoDual(hielo, tierra));
+        pokemons.add(swinub);
+        Pokemon piloswine = new Pokemon(221, "Piloswine",
+                "Piloswine está cubierto por un pelaje tupido y de largas cerdas que le permite soportar el frío polar. Este Pokémon usa los colmillos para desenterrar los alimentos que hayan podido quedar bajo el hielo.", new TipoDual(hielo, tierra));
+        pokemons.add(piloswine);
+        Pokemon corsola = new Pokemon(222, "Corsola",
+                "Las ramas de Corsola brillan con belleza hasta en siete colores cuando les da el sol. Si se le rompe alguna, el Pokémon la regenera en tan solo una noche.", new TipoDual(agua, roca));
+        pokemons.add(corsola);
+        Pokemon remoraid = new Pokemon(223, "Remoraid",
+                "Remoraid traga agua y usa los abdominales para lanzarla a gran velocidad contra una presa que esté en el aire. Cuando está a punto de evolucionar, este Pokémon nada en los ríos corriente abajo.", agua);
+        pokemons.add(remoraid);
+        Pokemon octillery = new Pokemon(224, "Octillery",
+                "Octillery se apodera de su enemigo con los tentáculos y lo deja inmovilizado antes de propinarle el golpe final. Si el enemigo resulta ser demasiado fuerte, Octillery expulsará tinta para escapar.", agua);
+        pokemons.add(octillery);
+        Pokemon delibird = new Pokemon(225, "Delibird",
+                "Delibird usa la cola a modo de saco para llevar su alimento. En una ocasión, un famoso escalador consiguió alcanzar la cima más alta del mundo gracias a que uno de estos Pokémon compartió sus alimentos con él.", new TipoDual(hielo, volador));
+        pokemons.add(delibird);
+        Pokemon mantine = new Pokemon(226, "Mantine",
+                "En los días que hace sol, es posible ver bancos de Mantine saltando con elegancia por entre las olas del mar. A estos Pokémon no les molestan los Remoraid que se les pegan.", new TipoDual(agua, volador));
+        pokemons.add(mantine);
+        Pokemon skarmory = new Pokemon(227, "Skaromry",
+                "Skarmory está totalmente encerrado en el interior de una fuerte coraza protectora. En vuelo, puede llegar a alcanzar los 300 km/h y usa las afiladas alas que tiene para azotar al rival.", new TipoDual(acero, volador));
+        pokemons.add(skarmory);
+        Pokemon hondour = new Pokemon(228, "Hondour",
+                "Houndour sale a cazar con el resto de la manada con total coordinación. Estos Pokémon se comunican unos con otros usando una serie de aullidos para acorralar a su presa. El compañerismo que existe entre ellos es incomparable.", new TipoDual(siniestro, fuego));
+        pokemons.add(hondour);
+        Pokemon houndoom = new Pokemon(229, "Houndoom",
+                "En la manada de Houndoom, el que tiene los cuernos más arqueados hacia atrás tiene un mayor papel de liderazgo. Estos Pokémon suelen elegir al jefe en duelo.", new TipoDual(siniestro, fuego));
+        pokemons.add(houndoom);
+        Pokemon kingdra = new Pokemon(230, "Kingdra",
+                "Kingdra vive en lo más profundo del océano, donde no habita ninguna otra especie. Siempre se ha pensado que su bostezo causaba las corrientes en remolino que se dan en el océano.", new TipoDual(agua, dragon));
+        pokemons.add(kingdra);
+        Pokemon phanpy = new Pokemon(231, "Phanpy",
+                "Phanpy cava un agujero profundo para hacer su nido en el suelo, en la ribera de los ríos, y marca con la trompa la zona para que el resto vea que ese terreno ya está ocupado.", tierra);
+        pokemons.add(phanpy);
+        Pokemon donphan = new Pokemon(232, "Donphan",
+                "A Donphan le encanta enrollarse como una pelota y cargar contra el enemigo rodando a toda velocidad. Una vez que ha comenzado a rodar, no es fácil pararlo.", tierra);
+        pokemons.add(donphan);
+        Pokemon porygon2 = new Pokemon(233, "Porygon2",
+                "Porygon2 fue creado por el hombre gracias a los avances de la ciencia. Esta obra humana ha sido provista de inteligencia artificial que le permite aprender gestos y sensaciones nuevas por su cuenta.", normal);
+        pokemons.add(porygon2);
+        Pokemon stantler = new Pokemon(234, "Stantler",
+                "Hace tiempo, se comerciaba con la magnífica cornamenta de Stantler. Se vendía como obra de arte a alto precio. Los interesados en cornamentas de valor incalculable empezaron a cazarlos y casi provocan su extinción.", normal);
+        pokemons.add(stantler);
+        Pokemon smeargle = new Pokemon(235, "Smeargle",
+                "Smeargle marca los límites de su territorio liberando un fluido corporal por el extremo de la cola. En la actualidad se han encontrado más de 5000 tipos de marcas distintas dejadas por este Pokémon.", normal);
+        pokemons.add(smeargle);
+        Pokemon tyrogue = new Pokemon(236, "Tyrogue",
+                "Tyrogue se pone demasiado nervioso si no lo sacan a entrenarse cada día. Su Entrenador debe establecer y mantener ciertos métodos de entrenamiento durante la cría.", lucha);
+        pokemons.add(tyrogue);
+        Pokemon hitmontop = new Pokemon(237, "Hitmontop",
+                "Hitmontop hace el pino con la cabeza y se pone a girar rápido al tiempo que reparte patadas. Esta es una técnica ofensiva y defensiva a la vez. Este Pokémon se desplaza más rápido girando sobre sí que caminando.", lucha);
+        pokemons.add(hitmontop);
+        Pokemon smoochum = new Pokemon(238, "Smoochum",
+                "Smoochum va corriendo por todos lados, pero se cae también con frecuencia. Y, en cuanto tiene ocasión, se mira en algún sitio para ver si se ha manchado la cara.", new TipoDual(hielo, psiquico));
+        pokemons.add(smoochum);
+        Pokemon elekid = new Pokemon(239, "Elekid",
+                "Elekid acumula electricidad. Si entra en contacto con algo de metal y descarga accidentalmente toda la electricidad almacenada, empieza a agitar los brazos en círculo para volver a cargarse.", electrico);
+        pokemons.add(elekid);
+        Pokemon magby = new Pokemon(240, "Magby",
+                "El estado de salud de Magby se puede determinar observando el fuego que emana al respirar. Si las llamas que echa por la boca son amarillas, está bien. Pero, si además de las llamas sale humo negro, está cansado.", fuego);
+        pokemons.add(magby);
+        Pokemon miltank = new Pokemon(241, "Miltank",
+                "Miltank da al día 20 l de una leche dulce que es la delicia de pequeños y mayores. Aquellos que no pueden tomarla, se decantan por los yogures.", normal);
+        pokemons.add(miltank);
+        Pokemon blissey = new Pokemon(242, "Blissey",
+                "Blissey es capaz de sentir la tristeza a través del sedoso pelaje. Si detecta que alguien está apenado, irá hasta donde esté y compartirá un Huevo Suerte para devolverle la sonrisa.", normal);
+        pokemons.add(blissey);
+        Pokemon raikou = new Pokemon(243, "Raikou",
+                "Raikou tiene la velocidad del rayo. Los rugidos de este Pokémon emiten ondas de choque que se esparcen vibrando por el aire y sacuden el suelo como si fueran auténticas descargas de rayo.", electrico);
+        pokemons.add(raikou);
+        Pokemon entei = new Pokemon(244, "Entei",
+                "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego);
+        pokemons.add(entei);
+        Pokemon suicune = new Pokemon(245, "Suicune",
+                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua);
+        pokemons.add(suicune);
+        Pokemon larvitar = new Pokemon(246, "Larvitar",
+                "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra));
+        pokemons.add(larvitar);
+        Pokemon pupitar = new Pokemon(247, "Pupitar",
+                "Pupitar crea un gas en su interior que comprime y expulsa violentamente a modo de autopropulsión. Tiene un cuerpo resistente que se mantiene inalterable hasta cuando se golpea contra duro acero.", new TipoDual(roca, tierra));
+        pokemons.add(pupitar);
+        Pokemon tyranitar = new Pokemon(248, "Tyranitar",
+                "Tyranitar tiene una fuerza imponente; es capaz de echar abajo una montaña para hacer su nido. Este Pokémon suele merodear por las zonas de montaña en busca de nuevos rivales contra los que luchar.", new TipoDual(roca, siniestro));
+        pokemons.add(tyranitar);
+        Pokemon lugia = new Pokemon(249, "Lugia",
+                "La fuerza que tiene Lugia en las alas es devastadora; con nada que las bata es capaz de derribar edificios enteros. Por eso mismo, prefiere vivir donde no haya nadie, en lo más profundo del mar.", new TipoDual(psiquico, volador));
+        pokemons.add(lugia);
+        Pokemon hooh = new Pokemon(250, "Ho-Oh",
+                "El plumaje de Ho-Oh contiene siete colores que pueden apreciarse según el ángulo desde el que les dé la luz. Dicen que sus plumas dan felicidad a quienes las llevan y, también, que este Pokémon vive a los pies del arco iris.", new TipoDual(fuego, volador));
+        pokemons.add(hooh);
+        Pokemon celebi = new Pokemon(251, "Celebi",
+                "Este Pokémon vino del futuro haciendo un viaje en el tiempo. Hay quien piensa que, mientras Celebi siga apareciendo, hay un futuro brillante y esperanzador.", new TipoDual(psiquico,planta));
+        pokemons.add(celebi);
+
+
 
         return pokemons;
     }
