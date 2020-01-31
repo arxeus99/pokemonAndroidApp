@@ -39,6 +39,7 @@ public class InfoFragment extends Fragment {
     public void onActivityCreated(Bundle state) {
         super.onActivityCreated(state);
     }
+
     public void mostrarDetall(String id) {
         TextView idn = getView().findViewById(R.id.IDPokemon);
         TextView nombreP = getView().findViewById(R.id.NombrePokemon);

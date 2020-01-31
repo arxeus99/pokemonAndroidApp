@@ -86,9 +86,15 @@ public class PokedexActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String idPokemon = ((TextView) view.findViewById(R.id.Numero)).getText().toString();
-                Intent info = new Intent(PokedexActivity.this, Pokemon_Info.class);
-                info.putExtra("id", idPokemon);
-                startActivity(info);
+                boolean
+                        horitzontal=getResources().getBoolean(R.bool.modeHoritzontal);
+                if(horitzontal) {
+                    Intent info = new Intent(PokedexActivity.this, Pokemon_Info.class);
+                    info.putExtra("id", idPokemon);
+                    startActivity(info);
+                } else {
+                    ((InfoFragment) getSupportFragmentManager().findFragmentById(R.id.Frgdetall)).mostrarDetall(idPokemon);
+                }
             }
         });
     }
