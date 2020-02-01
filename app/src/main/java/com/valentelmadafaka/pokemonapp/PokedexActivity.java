@@ -2,11 +2,16 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +29,7 @@ public class PokedexActivity extends AppCompatActivity {
     DBInterface db;
     ArrayList<Pokemon> pokemons = new ArrayList<>();
     ArrayList<Tipo> tipos = new ArrayList<>();
+    ImageView pokedex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +37,6 @@ public class PokedexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pokedex);
         db = new DBInterface(this);
         db.obre();
-
-//
-
-
         Cursor c = db.obtenirTotsElsTipus();
         c.moveToFirst();
         while(!c.isAfterLast()){
@@ -71,12 +73,10 @@ public class PokedexActivity extends AppCompatActivity {
             }
             c.moveToNext();
         }
-
-
         db.tanca();
 
 
-
+        pokedex = findViewById(R.id.imageView3);
 
         PokemonsArray pokemonsArray = new PokemonsArray(this, R.layout.pokemon_pokedex, pokemons);
         ListView listView = findViewById(R.id.list_view);
@@ -94,8 +94,14 @@ public class PokedexActivity extends AppCompatActivity {
                     startActivity(info);
                 } else {
                     ((InfoFragment) getSupportFragmentManager().findFragmentById(R.id.Frgdetall)).mostrarDetall(idPokemon);
+                    moveAnimation();
                 }
             }
         });
+    }
+    public void moveAnimation() {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(pokedex, "translationX", 1000f);
+        animation.setDuration(1500);
+        animation.start();
     }
 }

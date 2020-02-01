@@ -735,9 +735,9 @@ public class MainActivity extends AppCompatActivity {
         Pokemon pineco = new Pokemon(204, "Pineco",
                 "Pineco permanece colgado de la rama de un árbol esperando pacientemente a su presa. Si alguien sacude el árbol en el que está mientras come y le molesta, se tira al suelo y explota sin dar ningún tipo de aviso.", bicho);
         pokemons.add(pineco);
-        Pokemon forrefest = new Pokemon(205, "Forrefest",
+        Pokemon forretrest = new Pokemon(205, "Forretrest",
                 "Forretress se esconde dentro de su concha de acero reforzada. Solo la abre cuando va a atrapar a su presa, pero ocurre tan rápido que no da tiempo de ver su interior.", new TipoDual(bicho, acero));
-        pokemons.add(forrefest);
+        pokemons.add(forretrest);
         Pokemon dunsparce =  new Pokemon(206, "Dusnparce",
                 "La cola de Dunsparce es un taladro que usa para enterrarse en el suelo de espaldas. De todos es sabido que este Pokémon hace su nido a gran profundidad y con una forma muy compleja.", normal);
         pokemons.add(dunsparce);

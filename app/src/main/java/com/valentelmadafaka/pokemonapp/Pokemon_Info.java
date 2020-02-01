@@ -2,6 +2,7 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -24,7 +25,9 @@ public class Pokemon_Info extends AppCompatActivity {
     String tipo1;
     String tipo2;
     String img;
+    ImageView pokedex;
     private List<Pokemon> pokemonList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class Pokemon_Info extends AppCompatActivity {
         TextView desc = findViewById(R.id.DescripcionPokemon);
         ImageView type1 = findViewById(R.id.Tipo1);
         ImageView type2 = findViewById(R.id.Tipo2);
+        pokedex = findViewById(R.id.imageView3);
 
         idPokemon = Long.parseLong(id);
         db = new DBInterface(this);
@@ -75,7 +79,13 @@ public class Pokemon_Info extends AppCompatActivity {
             int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
             type2.setImageResource(t2);
         }
+        moveAnimation();
 
+    }
 
+    public void moveAnimation() {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(pokedex, "translationX", 1300f);
+        animation.setDuration(2000);
+        animation.start();
     }
 }

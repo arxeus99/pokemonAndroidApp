@@ -73,16 +73,17 @@ public class InfoFragment extends Fragment {
         nombreP.setText(nombre);
         desc.setText(descripcion);
         Resources res = getResources();
-        /*int resID = res.getIdentifier(img , "drawable", getPackageName());
+        int resID = res.getIdentifier(img , "drawable", getActivity().getPackageName());
         pokemonI.setImageResource(resID);
         if(cant.equals("0")) {
-            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+            int t1 = res.getIdentifier(tipo1 , "drawable", getActivity().getPackageName());
             type1.setImageResource(t1);
+            type2.setImageResource(0);
         } else {
-            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+            int t1 = res.getIdentifier(tipo1 , "drawable", getActivity().getPackageName());
             type1.setImageResource(t1);
-            int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+            int t2 = res.getIdentifier(tipo2 , "drawable", getActivity().getPackageName());
             type2.setImageResource(t2);
-        }*/
+        }
     }
 }
