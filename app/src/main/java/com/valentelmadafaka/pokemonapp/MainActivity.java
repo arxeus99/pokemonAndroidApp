@@ -1279,7 +1279,7 @@ public class MainActivity extends AppCompatActivity {
         Pokemon jirachi = new Pokemon(385, "Jirachi",
                 "Cuenta la leyenda que Jirachi hará realidad cualquier deseo que se le escriba en las notas que lleva en la cabeza cuando las lea tras salir de su letargo. Si este Pokémon siente peligro, luchará sin haber llegado a despertarse.", new TipoDual(acero, psiquico));
         pokemons.add(jirachi);
-        Pokemon deoxys = new Pokemon(286, "Deoxys",
+        Pokemon deoxys = new Pokemon(386, "Deoxys",
                 "Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.", psiquico);
         pokemons.add(deoxys);
 
