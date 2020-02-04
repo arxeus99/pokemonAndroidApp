@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Pokemon;
