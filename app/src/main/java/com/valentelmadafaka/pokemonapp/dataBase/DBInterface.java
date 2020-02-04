@@ -102,6 +102,51 @@ public class DBInterface  {
         }
         return mCursor;
     }
+    public Cursor obtenirPokemon(String nom) throws SQLException{
+        Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_NOM+" LIKE '"+nom+"%'", null,null,null,null,
+        null);
+        if(mCursor != null){
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+    public Cursor obtenirPokemon(String nom, Tipo tipo) throws SQLException{
+        Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
+                        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_NOM+" LIKE '"+nom+"%' AND ("+CLAU_TIPO+" = "+tipo.getId()+" or "+CLAU_TIPO+" LIKE '"+tipo.getId()+",%'"+ " or "+CLAU_TIPO+" LIKE '%,"+tipo.getId()+"')", null,null,null,null,
+                null);
+        if(mCursor != null){
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+    public Cursor obtenirPokemon(String nom, Tipo tipo1, Tipo tipo2) throws SQLException{
+        Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
+                        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_NOM+" LIKE '"+nom+"%' AND ("+CLAU_TIPO+" = '"+tipo1.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo1.getId()+"')", null,null,null,null,
+                null);
+        if(mCursor != null){
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+    public Cursor obtenirPokemon(Tipo tipo) throws SQLException{
+        Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_TIPO+" = "+tipo.getId()+" or "+CLAU_TIPO+" LIKE '"+tipo.getId()+",%'"+ " or "+CLAU_TIPO+" LIKE '%,"+tipo.getId()+"'", null,null,null,null,
+        null);
+        if(mCursor != null){
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+    public Cursor obtenirPokemon(Tipo tipo, Tipo tipo2) throws SQLException{
+        Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_TIPO+" = '"+tipo.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo.getId()+"'", null,null,null,null,
+        null);
+        if(mCursor != null){
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
 
     public Cursor obtenirTipus(long IDFila) throws SQLException {
         Cursor mCursor = bd.query(true, BD_TAULA_TIPOS, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG},CLAU_ID + " = " + IDFila, null, null, null, null,
