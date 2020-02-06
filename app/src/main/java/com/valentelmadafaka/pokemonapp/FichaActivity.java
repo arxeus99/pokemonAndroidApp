@@ -19,6 +19,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Entrenador;
 import com.valentelmadafaka.pokemonapp.model.EntrenadorsArray;
@@ -290,47 +291,55 @@ public class FichaActivity extends AppCompatActivity {
     }
 
     public void crearVoid(View view) {
-        Pokemon p1 = new Pokemon();
-        Pokemon p2 = new Pokemon();
-        Pokemon p3 = new Pokemon();
-        Pokemon p4 = new Pokemon();
-        Pokemon p5 = new Pokemon();
-        Pokemon p6 = new Pokemon();
-        for(Pokemon p: pokemons){
-            if(p.getNombre().equals(pokemon1.getText().toString())){
-                p1 = p;
-            }else if(p.getNombre().equals(pokemon2.getText().toString())){
-                p2 = p;
-            }else if(p.getNombre().equals(pokemon3.getText().toString())){
-                p3 = p;
-            }else if(p.getNombre().equals(pokemon4.getText().toString())){
-                p4 = p;
-            }else if(p.getNombre().equals(pokemon5.getText().toString())){
-                p5 = p;
-            }else if(p.getNombre().equals(pokemon6.getText().toString())){
-                p6 = p;
+        if(pokemon1.getText().toString().isEmpty() || pokemon2.getText().toString().isEmpty() || pokemon3.getText().toString().isEmpty() || pokemon4.getText().toString().isEmpty() ||
+        pokemon5.getText().toString().isEmpty() || pokemon6.getText().toString().isEmpty() || nombre.getText().toString().isEmpty()){
+            Snackbar.make(view, "NO PUEDE DEJAR NINGUN CAMPO EN BLANCO!", Snackbar.LENGTH_LONG).show();
+        }else{
+            Pokemon p1 = new Pokemon();
+            Pokemon p2 = new Pokemon();
+            Pokemon p3 = new Pokemon();
+            Pokemon p4 = new Pokemon();
+            Pokemon p5 = new Pokemon();
+            Pokemon p6 = new Pokemon();
+            for(Pokemon p: pokemons){
+                if(p.getNombre().equals(pokemon1.getText().toString())){
+                    p1 = p;
+                }else if(p.getNombre().equals(pokemon2.getText().toString())){
+                    p2 = p;
+                }else if(p.getNombre().equals(pokemon3.getText().toString())){
+                    p3 = p;
+                }else if(p.getNombre().equals(pokemon4.getText().toString())){
+                    p4 = p;
+                }else if(p.getNombre().equals(pokemon5.getText().toString())){
+                    p5 = p;
+                }else if(p.getNombre().equals(pokemon6.getText().toString())){
+                    p6 = p;
+                }
             }
-        }
-
-        Pokemon[] equipo = {p1,p2,p3,p4,p5,p6};
-        Entrenador entrenador = new Entrenador(nombre.getText().toString(), picture, equipo);
-        String equipoPokemon = "";
-        for(Pokemon p: equipo){
-            if(equipoPokemon.isEmpty()){
-                equipoPokemon = p.getId();
+            if(p1.getId() == null || p2.getId() == null || p3.getId() == null || p4.getId() == null || p5.getId() == null || p6.getId() == null){
+                Snackbar.make(view, "DEBE INTRODUCIR ALGUNO DE LOS POKEMON SUGERIDOS!", Snackbar.LENGTH_LONG).show();
             }else{
-                equipoPokemon = equipoPokemon+","+p.getId();
-            }
+                Pokemon[] equipo = {p1,p2,p3,p4,p5,p6};
+                Entrenador entrenador = new Entrenador(nombre.getText().toString(), picture, equipo);
+                String equipoPokemon = "";
+                for(Pokemon p: equipo){
+                    if(equipoPokemon.isEmpty()){
+                        equipoPokemon = p.getId();
+                    }else{
+                        equipoPokemon = equipoPokemon+","+p.getId();
+                    }
 
-        }
-        db.obre();
-        if (db.insereixEntrenador(entrenador.getNombre(), entrenador.getImagen(), equipoPokemon) == -1) {
-                Toast.makeText(this, "Error a l’afegir",
-                        Toast.LENGTH_SHORT).show();
+                }
+                db.obre();
+                if (db.insereixEntrenador(entrenador.getNombre(), entrenador.getImagen(), equipoPokemon) == -1) {
+                    Toast.makeText(this, "Error a l’afegir",
+                            Toast.LENGTH_SHORT).show();
+                }
+                db.tanca();
+                Toast.makeText(FichaActivity.this,"Entrenador creado", Toast.LENGTH_SHORT).show();
+                finish();
             }
-        db.tanca();
-        Toast.makeText(FichaActivity.this,"Entrenador creado", Toast.LENGTH_SHORT).show();
-        finish();
+        }
     }
 
 
