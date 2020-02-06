@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.valentelmadafaka.pokemonapp.dataBase.DBInterface;
 import com.valentelmadafaka.pokemonapp.model.Pokemon;
 import com.valentelmadafaka.pokemonapp.model.Tipo;
@@ -145,8 +146,7 @@ public class QuizzActivity extends AppCompatActivity {
             puntuacion++;
             respuesta.setText("Puntuacion: "+puntuacion);
             loadGame();
-            Toast toast1 = Toast.makeText(getApplicationContext(), "CORRECTO!", Toast.LENGTH_SHORT);
-            toast1.show();
+            Snackbar.make(view, "CORRECTO!", Snackbar.LENGTH_LONG).show();
         }else{
             if(puntuacion>record){
                 SharedPreferences prefs =getApplicationContext().getSharedPreferences("RECORD", Context.MODE_PRIVATE);
@@ -168,8 +168,7 @@ public class QuizzActivity extends AppCompatActivity {
             puntuacion++;
             respuesta.setText("Puntuacion: "+puntuacion);
             loadGame();
-            Toast toast1 = Toast.makeText(getApplicationContext(), "CORRECTO!", Toast.LENGTH_SHORT);
-            toast1.show();
+            Snackbar.make(view, "CORRECTO!", Snackbar.LENGTH_LONG).show();
         }else{
             if(puntuacion>record){
                 SharedPreferences prefs =getApplicationContext().getSharedPreferences("RECORD", Context.MODE_PRIVATE);
@@ -190,8 +189,7 @@ public class QuizzActivity extends AppCompatActivity {
             puntuacion++;
             respuesta.setText("Puntuacion: "+puntuacion);
             loadGame();
-            Toast toast1 = Toast.makeText(getApplicationContext(), "CORRECTO!", Toast.LENGTH_SHORT);
-            toast1.show();
+            Snackbar.make(view, "CORRECTO!", Snackbar.LENGTH_LONG).show();
         }else{
             if(puntuacion>record){
                 SharedPreferences prefs =getApplicationContext().getSharedPreferences("RECORD", Context.MODE_PRIVATE);
@@ -212,8 +210,7 @@ public class QuizzActivity extends AppCompatActivity {
             puntuacion++;
             respuesta.setText("Puntuacion: "+puntuacion);
             loadGame();
-            Toast toast1 = Toast.makeText(getApplicationContext(), "CORRECTO!", Toast.LENGTH_SHORT);
-            toast1.show();
+            Snackbar.make(view, "CORRECTO!", Snackbar.LENGTH_LONG).show();
         }else{
             if(puntuacion>record){
                 SharedPreferences prefs =getApplicationContext().getSharedPreferences("RECORD", Context.MODE_PRIVATE);
@@ -222,6 +219,7 @@ public class QuizzActivity extends AppCompatActivity {
                 editor.commit();
                 Toast toast1 = Toast.makeText(getApplicationContext(), "ES UN NUEVO RECORD!", Toast.LENGTH_SHORT);
                 toast1.show();
+                Snackbar.make(view, "ES UN NUEVO RECORD!", Snackbar.LENGTH_LONG).show();
             }else{
                 Toast toast1 = Toast.makeText(getApplicationContext(), "RESPUESTA INCORRECTA!", Toast.LENGTH_SHORT);
                 toast1.show();
