@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         pokemons.add(nidoqueen);
         Pokemon nidoranM = new Pokemon(32, "Nidoran♂",
                 "Sus largas orejas se mantienen siempre alerta. Si siente peligro, atacará con su venenoso cuerno.", veneno, "p32,Nivel 16,p33,Piedra Lunar,p34");
-        pokemons.add(nidoranH);
+        pokemons.add(nidoranM);
         Pokemon nidorino = new Pokemon(33,"Nidorino",
                 "Sus cuernos contienen veneno. Si se introducen en el cuerpo del enemigo, soltarán su tóxica carga.", veneno, "p32,Nivel 16,p33,Piedra Lunar,p34");
         pokemons.add(nidorino);
@@ -640,7 +640,7 @@ public class MainActivity extends AppCompatActivity {
                 "Chinchou libera cargas eléctricas positivas y negativas a través de las dos antenas que tiene para que su rival pierda el conocimiento. Asimismo, usa los destellos de electricidad para comunicarse con otros.", new TipoDual(agua,electrico), "p170,Nivel 27,p171");
         pokemons.add(chinchou);
         Pokemon lanturn = new Pokemon(171, "Lanturn",
-                "A Lanturn lo llaman la Estrella del Fondo del Mar por la antena iluminada que tiene. Este Pokémon produce luz creando una reacción química entre una bacteria y los fluidos corporales de la antena.", new TipoDual(agua,veneno), "p170,Nivel 27,p171");
+                "A Lanturn lo llaman la Estrella del Fondo del Mar por la antena iluminada que tiene. Este Pokémon produce luz creando una reacción química entre una bacteria y los fluidos corporales de la antena.", new TipoDual(agua,electrico), "p170,Nivel 27,p171");
         pokemons.add(lanturn);
         Pokemon pichu = new Pokemon(172, "Pichu",
                 "A Pichu le resulta más fácil cargarse de electricidad en días de nubarrones o cuando sopla un aire muy seco. Es posible oír la electricidad estática que emana de este Pokémon.", electrico, "p172,Amistad + subir un nivel,p25,Piedra Trueno,p26");
@@ -685,7 +685,7 @@ public class MainActivity extends AppCompatActivity {
                 "Sudowoodo se camufla adoptando la imagen de un árbol para que no le ataque ningún enemigo. El problema viene en invierno, ya que las extremidades superiores tienen color verde y es fácil identificarle.",  roca, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(sudowoodo);
         Pokemon politoed = new Pokemon(186, "Politoed",
-                "El mechón rizado de Politoed confirma su condición de rey. Dicen que cuanto más le crece y más se le riza, mayor es el respeto que recibe de sus súbditos.", agua);
+                "El mechón rizado de Politoed confirma su condición de rey. Dicen que cuanto más le crece y más se le riza, mayor es el respeto que recibe de sus súbditos.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(politoed);
         Pokemon hoppip = new Pokemon(187, "Hoppip",
                 "Este Pokémon flota en el aire y se deja llevar. Cuando percibe que el viento va a cambiar a fuerte, Hoppip entrelaza sus hojas con otros Hoppip para hacer resistencia y evitar salir volando por la fuerza de la corriente.", new TipoDual(planta, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
@@ -703,7 +703,7 @@ public class MainActivity extends AppCompatActivity {
                 "Sunkern intenta moverse lo menos posible para conservar todos los nutrientes que ha guardado en su interior y poder evolucionar. Ni come siquiera; se alimenta solo del rocío de la mañana.", planta, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(sunkern);
         Pokemon sunflora = new Pokemon(192, "Sunflora",
-                "Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.", planta);
+                "Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.", planta, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(sunflora);
         Pokemon yanma = new Pokemon(193, "Yanma",
                 "Yanma tiene un ángulo de visión de 360° sin mover los ojos. Es un gran volador, experto en hacer repentinas paradas y cambios de dirección en el aire. Aprovecha la habilidad que tiene de volar para lanzarse sobre su presa.", new TipoDual(bicho, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
@@ -862,7 +862,7 @@ public class MainActivity extends AppCompatActivity {
                 "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(entei);
         Pokemon suicune = new Pokemon(245, "Suicune",
-                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua);
+                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(suicune);
         Pokemon larvitar = new Pokemon(246, "Larvitar",
                 "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
