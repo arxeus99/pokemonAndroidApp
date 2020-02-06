@@ -21,6 +21,7 @@ public class DBInterface  {
     public static final String CLAU_TIPO = "tipos";
     public static final String CLAU_IMG = "imagen";
     public static final String CLAU_EQUIPO = "equipo_pokemon";
+    public static final String CLAU_LINEAEVO = "linea_evolutiva";
     public static final String TAG = "DBInterface";
     public static final String BD_NOM = "PokemonApp";
     public static final String BD_TAULA_POKEMONS = "pokemons";
@@ -29,7 +30,7 @@ public class DBInterface  {
     public static final int VERSIO = 1;
     public static final String BD_CREATE_POKEMON ="create table if not exists " + BD_TAULA_POKEMONS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_DESCRIPCIO + " text not null, "
-            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null, "+CLAU_IMGG+" text not null);";
+            + CLAU_DUAL + " text not null, "+CLAU_TIPO+" text not null, "+CLAU_IMG+" text not null, "+CLAU_IMGG+" text not null, "+CLAU_LINEAEVO+" text not null);";
     public static final String BD_CREATE_TIPOS ="create table if not exists " + BD_TAULA_TIPOS + "( "
             + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, "+CLAU_IMG+" text not null);";
     public static final String BD_CREATE_ENTRENADOR = "create table if not exists "+BD_TAULA_ENTRENADOR+"( "+CLAU_ID+" integer primary key autoincrement, "+CLAU_NOM+" text not null, "+CLAU_IMG+" text not null, "+
@@ -58,7 +59,7 @@ public class DBInterface  {
         return this.bd;
     }
 
-    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo, String imagen, String imagenG) {
+    public long insereixPokemon (String nom, String descripcion, TipoDual tipoDual, Tipo tipo, String imagen, String imagenG, String lineaevo) {
         ContentValues initialValues = new ContentValues();
         initialValues.put(CLAU_NOM, nom);
         initialValues.put(CLAU_DESCRIPCIO, descripcion);
@@ -71,6 +72,7 @@ public class DBInterface  {
         }
         initialValues.put(CLAU_IMG, imagen);
         initialValues.put(CLAU_IMGG, imagenG);
+        initialValues.put(CLAU_LINEAEVO, lineaevo);
         return bd.insert(BD_TAULA_POKEMONS,null, initialValues);
     }
 
@@ -95,7 +97,7 @@ public class DBInterface  {
 
     public Cursor obtenirPokemon(long IDFila) throws SQLException {
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[] {CLAU_ID,
-                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG},CLAU_ID + " = " + IDFila, null, null, null, null,
+                        CLAU_NOM,CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO},CLAU_ID + " = " + IDFila, null, null, null, null,
                 null);
         if(mCursor != null) {
             mCursor.moveToFirst();
@@ -104,7 +106,7 @@ public class DBInterface  {
     }
     public Cursor obtenirPokemon(String nom) throws SQLException{
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
-        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_NOM+" LIKE '"+nom+"%'", null,null,null,null,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO}, CLAU_NOM+" LIKE '"+nom+"%'", null,null,null,null,
         null);
         if(mCursor != null){
             mCursor.moveToFirst();
@@ -122,7 +124,7 @@ public class DBInterface  {
     }
     public Cursor obtenirPokemon(String nom, Tipo tipo1, Tipo tipo2) throws SQLException{
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
-                        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_NOM+" LIKE '"+nom+"%' AND ("+CLAU_TIPO+" = '"+tipo1.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo1.getId()+"')", null,null,null,null,
+                        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO}, CLAU_NOM+" LIKE '"+nom+"%' AND ("+CLAU_TIPO+" = '"+tipo1.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo1.getId()+"')", null,null,null,null,
                 null);
         if(mCursor != null){
             mCursor.moveToFirst();
@@ -131,7 +133,7 @@ public class DBInterface  {
     }
     public Cursor obtenirPokemon(Tipo tipo) throws SQLException{
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
-        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_TIPO+" = "+tipo.getId()+" or "+CLAU_TIPO+" LIKE '"+tipo.getId()+",%'"+ " or "+CLAU_TIPO+" LIKE '%,"+tipo.getId()+"'", null,null,null,null,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO}, CLAU_TIPO+" = "+tipo.getId()+" or "+CLAU_TIPO+" LIKE '"+tipo.getId()+",%'"+ " or "+CLAU_TIPO+" LIKE '%,"+tipo.getId()+"'", null,null,null,null,
         null);
         if(mCursor != null){
             mCursor.moveToFirst();
@@ -140,7 +142,7 @@ public class DBInterface  {
     }
     public Cursor obtenirPokemon(Tipo tipo, Tipo tipo2) throws SQLException{
         Cursor mCursor = bd.query(true, BD_TAULA_POKEMONS, new String[]{CLAU_ID,
-        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG}, CLAU_TIPO+" = '"+tipo.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo.getId()+"'", null,null,null,null,
+        CLAU_NOM, CLAU_DESCRIPCIO, CLAU_DUAL,  CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO}, CLAU_TIPO+" = '"+tipo.getId()+","+tipo2.getId()+"' OR "+CLAU_TIPO+" = '"+tipo2.getId()+","+tipo.getId()+"'", null,null,null,null,
         null);
         if(mCursor != null){
             mCursor.moveToFirst();
@@ -183,7 +185,7 @@ public class DBInterface  {
     }
 
     public Cursor obtenirTotsElsPokemon() {
-        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG},
+        return bd.query(BD_TAULA_POKEMONS, new String[] {CLAU_ID, CLAU_NOM, CLAU_DESCRIPCIO,CLAU_DUAL,CLAU_TIPO, CLAU_IMG, CLAU_IMGG, CLAU_LINEAEVO},
                 null,null, null, null, null);
     }
 

@@ -138,7 +138,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="234dp"
         android:layout_marginTop="158dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
@@ -156,7 +156,100 @@
             android:textSize="24sp" />
     </LinearLayout>
 
-    <ImageView
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="291dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/p1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/condicion2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="bottom|center_horizontal"
+                android:text="TextView"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="30dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/flecha" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="39dp" />
+
+            <TextView
+                android:id="@+id/condicion3"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="bottom|center_horizontal"
+                android:text="TextView"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="30dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/flecha" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="150dp"
+                android:layout_height="129dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="39dp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<ImageView
         android:id="@+id/imageView3"
         android:layout_width="709dp"
         android:layout_height="847dp"
@@ -165,6 +258,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pokedexclosed"
         tools:layout_editor_absoluteY="-34dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

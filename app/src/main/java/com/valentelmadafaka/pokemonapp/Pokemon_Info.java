@@ -32,16 +32,8 @@ public class Pokemon_Info extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pokemon__info);
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-        TextView idn = findViewById(R.id.IDPokemon);
-        TextView nombreP = findViewById(R.id.NombrePokemon);
-        ImageView pokemonI = findViewById(R.id.ImagenPokemon);
-        TextView desc = findViewById(R.id.DescripcionPokemon);
-        ImageView type1 = findViewById(R.id.Tipo1);
-        ImageView type2 = findViewById(R.id.Tipo2);
-        pokedex = findViewById(R.id.imageView3);
 
         idPokemon = Long.parseLong(id);
         db = new DBInterface(this);
@@ -51,6 +43,7 @@ public class Pokemon_Info extends AppCompatActivity {
         nombre = c.getString(1);
         descripcion = c.getString(2);
         String cant = c.getString(3);
+        String linea = c.getString(7);
         if(c.getString(3).equals("0")){
             //solo un tipo
             tipo1 = "t" + c.getString(4);
@@ -64,23 +57,290 @@ public class Pokemon_Info extends AppCompatActivity {
         }
         img = c.getString(6);
         db.tanca();
-        idn.setText(Long.toString(idPokemon));
-        nombreP.setText(nombre);
-        desc.setText(descripcion);
-        Resources res = getResources();
-        int resID = res.getIdentifier(img , "drawable", getPackageName());
-        pokemonI.setImageResource(resID);
-        if(cant.equals("0")) {
-            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
-            type1.setImageResource(t1);
-        } else {
-            int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
-            type1.setImageResource(t1);
-            int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
-            type2.setImageResource(t2);
-        }
-        moveAnimation();
+        String[] line = linea.split(",");
 
+
+        if(line.length == 1) {
+            setContentView(R.layout.activity_pokemon__info1ev);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            pokedex = findViewById(R.id.imageView3);
+            moveAnimation();
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            moveAnimation();
+
+        } else if(line.length == 3) {
+            setContentView(R.layout.activity_pokemon__info2ev);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView6);
+            TextView cond = findViewById(R.id.condicion);
+            pokedex = findViewById(R.id.imageView3);
+
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            moveAnimation();
+
+        } else if(line.length == 5) {
+            setContentView(R.layout.activity_pokemon__info3ev);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView6);
+            ImageView evo3 = findViewById(R.id.imageView7);
+            TextView cond = findViewById(R.id.condicion);
+            TextView cond2 = findViewById(R.id.condicion2);
+            pokedex = findViewById(R.id.imageView3);
+
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            cond2.setText(line[3]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            resID = res.getIdentifier(line[4] , "drawable", getPackageName());
+            evo3.setImageResource(resID);
+            moveAnimation();
+
+        } else if(line[5].equals("odd")) {
+            setContentView(R.layout.activity_pokemon__infoodd);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView6);
+            ImageView evo3 = findViewById(R.id.imageView11);
+            ImageView evo4 = findViewById(R.id.imageView12);
+            TextView cond = findViewById(R.id.condicion);
+            TextView cond2 = findViewById(R.id.condicion2);
+            TextView cond3 = findViewById(R.id.condicion3);
+            pokedex = findViewById(R.id.imageView3);
+
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            cond2.setText(line[3]);
+            cond3.setText(line[6]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            resID = res.getIdentifier(line[4] , "drawable", getPackageName());
+            evo3.setImageResource(resID);
+            resID = res.getIdentifier(line[7] , "drawable", getPackageName());
+            evo4.setImageResource(resID);
+            moveAnimation();
+        } else if(line[5].equals("slow")) {
+            setContentView(R.layout.activity_pokemon__infoslow);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView11);
+            ImageView evo3 = findViewById(R.id.imageView12);
+            TextView cond = findViewById(R.id.condicion2);
+            TextView cond2 = findViewById(R.id.condicion3);
+            pokedex = findViewById(R.id.imageView3);
+
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            cond2.setText(line[3]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            resID = res.getIdentifier(line[4] , "drawable", getPackageName());
+            evo3.setImageResource(resID);
+            moveAnimation();
+
+        } else if(line[5].equals("tyr")) {
+            setContentView(R.layout.activity_pokemon__infotyr);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView11);
+            ImageView evo3 = findViewById(R.id.imageView12);
+            ImageView evo4 = findViewById(R.id.imageView14);
+            TextView cond = findViewById(R.id.condicion2);
+            TextView cond2 = findViewById(R.id.condicion3);
+            TextView cond3 = findViewById(R.id.condicion4);
+            pokedex = findViewById(R.id.imageView3);
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            cond2.setText(line[3]);
+            cond3.setText(line[6]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            resID = res.getIdentifier(line[4] , "drawable", getPackageName());
+            evo3.setImageResource(resID);
+            resID = res.getIdentifier(line[7] , "drawable", getPackageName());
+            evo4.setImageResource(resID);
+        } else if(line[5].equals("eve")) {
+            setContentView(R.layout.activity_pokemon__infoeve);
+            TextView idn = findViewById(R.id.IDPokemon);
+            TextView nombreP = findViewById(R.id.NombrePokemon);
+            ImageView pokemonI = findViewById(R.id.ImagenPokemon);
+            TextView desc = findViewById(R.id.DescripcionPokemon);
+            ImageView type1 = findViewById(R.id.Tipo1);
+            ImageView type2 = findViewById(R.id.Tipo2);
+            ImageView evo1 = findViewById(R.id.imageView4);
+            ImageView evo2 = findViewById(R.id.imageView5);
+            ImageView evo3 = findViewById(R.id.imageView6);
+            ImageView evo4 = findViewById(R.id.imageView7);
+            ImageView evo5 = findViewById(R.id.imageView8);
+            ImageView evo6 = findViewById(R.id.imageView9);
+            TextView cond = findViewById(R.id.condicion);
+            TextView cond2 = findViewById(R.id.condicion2);
+            TextView cond3 = findViewById(R.id.condicion3);
+            TextView cond4 = findViewById(R.id.condicion4);
+            TextView cond5 = findViewById(R.id.condicion5);
+            pokedex = findViewById(R.id.imageView3);
+            idn.setText(Long.toString(idPokemon));
+            nombreP.setText(nombre);
+            desc.setText(descripcion);
+            Resources res = getResources();
+            int resID = res.getIdentifier(img , "drawable", getPackageName());
+            pokemonI.setImageResource(resID);
+            if(cant.equals("0")) {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+            } else {
+                int t1 = res.getIdentifier(tipo1 , "drawable", getPackageName());
+                type1.setImageResource(t1);
+                int t2 = res.getIdentifier(tipo2 , "drawable", getPackageName());
+                type2.setImageResource(t2);
+            }
+            cond.setText(line[1]);
+            cond2.setText(line[3]);
+            cond3.setText(line[6]);
+            cond4.setText(line[8]);
+            cond5.setText(line[10]);
+            resID = res.getIdentifier(line[0] , "drawable", getPackageName());
+            evo1.setImageResource(resID);
+            resID = res.getIdentifier(line[2] , "drawable", getPackageName());
+            evo2.setImageResource(resID);
+            resID = res.getIdentifier(line[4] , "drawable", getPackageName());
+            evo3.setImageResource(resID);
+            resID = res.getIdentifier(line[7] , "drawable", getPackageName());
+            evo4.setImageResource(resID);
+            resID = res.getIdentifier(line[9] , "drawable", getPackageName());
+            evo5.setImageResource(resID);
+            resID = res.getIdentifier(line[11] , "drawable", getPackageName());
+            evo6.setImageResource(resID);
+        }
     }
 
     public void moveAnimation() {
