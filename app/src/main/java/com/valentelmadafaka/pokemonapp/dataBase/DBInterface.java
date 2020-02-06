@@ -161,6 +161,12 @@ public class DBInterface  {
         return bd.query(BD_TAULA_ENTRENADOR, new String[] {CLAU_ID, CLAU_NOM, CLAU_IMG, CLAU_EQUIPO}, null, null, null, null, null);
     }
 
+    public int obtenirNombreDePokemon(){
+        Cursor c = bd.rawQuery("SELECT Count(*) FROM "+BD_TAULA_POKEMONS, null);
+        c.moveToFirst();
+        return  c.getInt(0);
+    }
+
     public boolean isEntrenadorEmpty() {
         Cursor cursor = bd.rawQuery("SELECT count(*) FROM " + BD_TAULA_ENTRENADOR, null);
         cursor.moveToFirst();
