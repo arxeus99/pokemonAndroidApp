@@ -1302,4 +1302,7 @@ public class MainActivity extends AppCompatActivity {
     public void runFicha(View view){
         startActivity(new Intent(this, FichaActivity.class));
     }
+
+    public void runQuizz(View view) { startActivity(new Intent(this, QuizzActivity.class));
+    }
 }
