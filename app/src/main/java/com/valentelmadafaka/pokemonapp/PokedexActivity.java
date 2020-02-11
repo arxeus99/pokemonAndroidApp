@@ -2,6 +2,7 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -392,4 +393,5 @@ public class PokedexActivity extends AppCompatActivity {
         animation.setDuration(1500);
         animation.start();
     }
+
 }

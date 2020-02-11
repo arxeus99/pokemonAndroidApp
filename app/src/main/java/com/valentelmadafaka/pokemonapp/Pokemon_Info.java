@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,7 +34,7 @@ public class Pokemon_Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        String id = intent.getStringExtra("id");
+        final String id = intent.getStringExtra("id");
 
         idPokemon = Long.parseLong(id);
         db = new DBInterface(this);
@@ -57,7 +58,7 @@ public class Pokemon_Info extends AppCompatActivity {
         }
         img = c.getString(6);
         db.tanca();
-        String[] line = linea.split(",");
+        final String[] line = linea.split(",");
 
 
         if(line.length == 1) {
@@ -118,6 +119,19 @@ public class Pokemon_Info extends AppCompatActivity {
             cond.setText(line[1]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
             moveAnimation();
