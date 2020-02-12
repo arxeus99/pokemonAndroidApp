@@ -436,6 +436,7 @@ public class Pokemon_Info extends AppCompatActivity {
             evo5.setImageResource(resID);
             resID = res.getIdentifier(line[11] , "drawable", getPackageName());
             evo6.setImageResource(resID);
+
             moveAnimation();
         }else if(line[5].equals("wurm")) {
             setContentView(R.layout.activity_pokemon__infowurm);
