@@ -23,6 +23,7 @@ public class QuizzActivity extends AppCompatActivity {
 
     DBInterface db;
     ArrayList<Tipo> tipos;
+    ArrayList<Integer> pokemonsUsados;
     Pokemon p;
     TextView respuesta;
     int tipoCorrecto;
@@ -49,6 +50,7 @@ public class QuizzActivity extends AppCompatActivity {
         record = prefs.getInt("record", 0);
         TextView recordTV = (TextView) findViewById(R.id.record);
         recordTV.setText("Record: "+record);
+        pokemonsUsados = new ArrayList<>();
         loadGame();
 
     }
@@ -57,7 +59,13 @@ public class QuizzActivity extends AppCompatActivity {
         db.obre();
         int max = db.obtenirNombreDePokemon()+1;
         int id = (int)(Math.random() * (max - 1 + 1) + 1);
-
+        while(pokemonsUsados.contains(id)){
+            id = (int)(Math.random() * (max - 1 + 1) + 1);
+        }
+        pokemonsUsados.add(id);
+        if(pokemonsUsados.size() == max){
+            pokemonsUsados.clear();
+        }
         Cursor c = db.obtenirPokemon(id);
         c.moveToFirst();
         while(!c.isAfterLast()){
