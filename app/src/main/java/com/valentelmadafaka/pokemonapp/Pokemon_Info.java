@@ -211,6 +211,7 @@ public class Pokemon_Info extends AppCompatActivity {
                         Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
                         i.putExtra("id", aux.replace("p", ""));
                         startActivity(i);
+                        finish();
                     }
                 }
             });
@@ -594,6 +595,7 @@ public class Pokemon_Info extends AppCompatActivity {
                     }
                 }
             });
+            moveAnimation();
         } else if(line[5].equals("eve")) {
             setContentView(R.layout.activity_pokemon__infoeve);
             TextView idn = findViewById(R.id.IDPokemon);
