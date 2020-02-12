@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -856,31 +857,31 @@ public class MainActivity extends AppCompatActivity {
                 "Blissey es capaz de sentir la tristeza a través del sedoso pelaje. Si detecta que alguien está apenado, irá hasta donde esté y compartirá un Huevo Suerte para devolverle la sonrisa.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
         pokemons.add(blissey);
         Pokemon raikou = new Pokemon(243, "Raikou",
-                "Raikou tiene la velocidad del rayo. Los rugidos de este Pokémon emiten ondas de choque que se esparcen vibrando por el aire y sacuden el suelo como si fueran auténticas descargas de rayo.", electrico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Raikou tiene la velocidad del rayo. Los rugidos de este Pokémon emiten ondas de choque que se esparcen vibrando por el aire y sacuden el suelo como si fueran auténticas descargas de rayo.", electrico, "p243");
         pokemons.add(raikou);
         Pokemon entei = new Pokemon(244, "Entei",
-                "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego, "p244");
         pokemons.add(entei);
         Pokemon suicune = new Pokemon(245, "Suicune",
-                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua, "p245");
         pokemons.add(suicune);
         Pokemon larvitar = new Pokemon(246, "Larvitar",
-                "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(larvitar);
         Pokemon pupitar = new Pokemon(247, "Pupitar",
-                "Pupitar crea un gas en su interior que comprime y expulsa violentamente a modo de autopropulsión. Tiene un cuerpo resistente que se mantiene inalterable hasta cuando se golpea contra duro acero.", new TipoDual(roca, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Pupitar crea un gas en su interior que comprime y expulsa violentamente a modo de autopropulsión. Tiene un cuerpo resistente que se mantiene inalterable hasta cuando se golpea contra duro acero.", new TipoDual(roca, tierra), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(pupitar);
         Pokemon tyranitar = new Pokemon(248, "Tyranitar",
-                "Tyranitar tiene una fuerza imponente; es capaz de echar abajo una montaña para hacer su nido. Este Pokémon suele merodear por las zonas de montaña en busca de nuevos rivales contra los que luchar.", new TipoDual(roca, siniestro), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Tyranitar tiene una fuerza imponente; es capaz de echar abajo una montaña para hacer su nido. Este Pokémon suele merodear por las zonas de montaña en busca de nuevos rivales contra los que luchar.", new TipoDual(roca, siniestro), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(tyranitar);
         Pokemon lugia = new Pokemon(249, "Lugia",
-                "La fuerza que tiene Lugia en las alas es devastadora; con nada que las bata es capaz de derribar edificios enteros. Por eso mismo, prefiere vivir donde no haya nadie, en lo más profundo del mar.", new TipoDual(psiquico, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La fuerza que tiene Lugia en las alas es devastadora; con nada que las bata es capaz de derribar edificios enteros. Por eso mismo, prefiere vivir donde no haya nadie, en lo más profundo del mar.", new TipoDual(psiquico, volador), "p249");
         pokemons.add(lugia);
         Pokemon hooh = new Pokemon(250, "Ho-Oh",
-                "El plumaje de Ho-Oh contiene siete colores que pueden apreciarse según el ángulo desde el que les dé la luz. Dicen que sus plumas dan felicidad a quienes las llevan y, también, que este Pokémon vive a los pies del arco iris.", new TipoDual(fuego, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "El plumaje de Ho-Oh contiene siete colores que pueden apreciarse según el ángulo desde el que les dé la luz. Dicen que sus plumas dan felicidad a quienes las llevan y, también, que este Pokémon vive a los pies del arco iris.", new TipoDual(fuego, volador), "p250");
         pokemons.add(hooh);
         Pokemon celebi = new Pokemon(251, "Celebi",
-                "Este Pokémon vino del futuro haciendo un viaje en el tiempo. Hay quien piensa que, mientras Celebi siga apareciendo, hay un futuro brillante y esperanzador.", new TipoDual(psiquico,planta), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Este Pokémon vino del futuro haciendo un viaje en el tiempo. Hay quien piensa que, mientras Celebi siga apareciendo, hay un futuro brillante y esperanzador.", new TipoDual(psiquico,planta), "p251");
         pokemons.add(celebi);
 
         //Tercera Generacion

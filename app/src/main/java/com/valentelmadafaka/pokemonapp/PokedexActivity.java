@@ -117,7 +117,6 @@ public class PokedexActivity extends AppCompatActivity {
         }
 
         pokedex = findViewById(R.id.imageView3);
-
         pokemonsArray = new PokemonsArray(this, R.layout.pokemon_pokedex, pokemons);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(pokemonsArray);

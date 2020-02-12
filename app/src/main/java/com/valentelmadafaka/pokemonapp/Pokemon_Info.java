@@ -26,6 +26,7 @@ public class Pokemon_Info extends AppCompatActivity {
     String tipo1;
     String tipo2;
     String img;
+    String linea;
     ImageView pokedex;
     private List<Pokemon> pokemonList;
 
@@ -44,7 +45,7 @@ public class Pokemon_Info extends AppCompatActivity {
         nombre = c.getString(1);
         descripcion = c.getString(2);
         String cant = c.getString(3);
-        String linea = c.getString(7);
+        linea = c.getString(7);
         if(c.getString(3).equals("0")){
             //solo un tipo
             tipo1 = "t" + c.getString(4);
@@ -129,11 +130,26 @@ public class Pokemon_Info extends AppCompatActivity {
                         Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
                         i.putExtra("id", aux.replace("p", ""));
                         startActivity(i);
+                        finish();
                     }
                 }
             });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             moveAnimation();
 
         } else if(line.length == 5) {
@@ -170,10 +186,52 @@ public class Pokemon_Info extends AppCompatActivity {
             cond2.setText(line[3]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[4] , "drawable", getPackageName());
             evo3.setImageResource(resID);
+            evo3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[4];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             moveAnimation();
 
         } else if(line[5].equals("odd")) {
@@ -213,12 +271,68 @@ public class Pokemon_Info extends AppCompatActivity {
             cond3.setText(line[6]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[4] , "drawable", getPackageName());
             evo3.setImageResource(resID);
+            evo3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[4];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[7] , "drawable", getPackageName());
             evo4.setImageResource(resID);
+            evo4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[7];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             moveAnimation();
         } else if(line[5].equals("slow")) {
             setContentView(R.layout.activity_pokemon__infoslow);
@@ -254,10 +368,52 @@ public class Pokemon_Info extends AppCompatActivity {
             cond2.setText(line[3]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[4] , "drawable", getPackageName());
             evo3.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[4];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             moveAnimation();
 
         } else if(line[5].equals("tyr")) {
@@ -296,12 +452,68 @@ public class Pokemon_Info extends AppCompatActivity {
             cond3.setText(line[6]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[4] , "drawable", getPackageName());
             evo3.setImageResource(resID);
+            evo3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[4];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[7] , "drawable", getPackageName());
             evo4.setImageResource(resID);
+            evo4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[7];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
         } else if(line[5].equals("eve")) {
             setContentView(R.layout.activity_pokemon__infoeve);
             TextView idn = findViewById(R.id.IDPokemon);
@@ -344,16 +556,100 @@ public class Pokemon_Info extends AppCompatActivity {
             cond5.setText(line[10]);
             resID = res.getIdentifier(line[0] , "drawable", getPackageName());
             evo1.setImageResource(resID);
+            evo1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[0];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[2] , "drawable", getPackageName());
             evo2.setImageResource(resID);
+            evo2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[2];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[4] , "drawable", getPackageName());
             evo3.setImageResource(resID);
+            evo3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[4];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[7] , "drawable", getPackageName());
             evo4.setImageResource(resID);
+            evo4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[7];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[9] , "drawable", getPackageName());
             evo5.setImageResource(resID);
+            evo5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[9];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
             resID = res.getIdentifier(line[11] , "drawable", getPackageName());
             evo6.setImageResource(resID);
+            evo6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String aux = line[11];
+                    if(id.equals(aux.replace("p",""))){
+
+                    }else {
+                        Intent i = new Intent(Pokemon_Info.this, Pokemon_Info.class);
+                        i.putExtra("id", aux.replace("p", ""));
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            });
         }
     }
 
