@@ -82,7 +82,7 @@
             android:layout_height="42dp" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/pokeball"
             android:layout_width="match_parent"
             android:layout_height="217dp"
             android:src="@drawable/pokeball" />
