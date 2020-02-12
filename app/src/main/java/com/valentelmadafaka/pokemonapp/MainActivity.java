@@ -2,10 +2,12 @@ package com.valentelmadafaka.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -676,625 +678,623 @@ public class MainActivity extends AppCompatActivity {
                 "Cuando Bellossom se expone a gran cantidad de luz solar, le empiezan a girar las hojas que le rodean. La danza de este Pokémon es famosa en las zonas del sur.", planta, "p43,Nivel 21,p44,Piedra hoja,p45,odd,Piedra solar,p182");
         pokemons.add(bellossom);
         Pokemon marill = new Pokemon(183, "Marill",
-                "La cola de Marill contiene un aceite que hace las veces de chaleco salvavidas. Si ves una moviéndose en el agua, seguro que debajo hay un Marill medio sumergido buscando plantas acuáticas para comer.", new TipoDual(agua,hada), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La cola de Marill contiene un aceite que hace las veces de chaleco salvavidas. Si ves una moviéndose en el agua, seguro que debajo hay un Marill medio sumergido buscando plantas acuáticas para comer.", new TipoDual(agua,hada), "p298,Amistad + subir nivel,p183,Piedra hoja,p184");
         pokemons.add(marill);
         Pokemon azumarill = new Pokemon(184, "Azumarill",
-                "Azumarill puede hacer burbujas de aire si ve a algún Pokémon que esté a punto de ahogarse. Estas burbujas de aire son básicas para que los Pokémon puedan seguir respirando.", new TipoDual(agua, hada), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Azumarill puede hacer burbujas de aire si ve a algún Pokémon que esté a punto de ahogarse. Estas burbujas de aire son básicas para que los Pokémon puedan seguir respirando.", new TipoDual(agua, hada), "p298,Amistad + subir nivel,p183,Piedra hoja,p184");
         pokemons.add(azumarill);
         Pokemon sudowoodo = new Pokemon(185, "Sudowoodo",
-                "Sudowoodo se camufla adoptando la imagen de un árbol para que no le ataque ningún enemigo. El problema viene en invierno, ya que las extremidades superiores tienen color verde y es fácil identificarle.",  roca, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Sudowoodo se camufla adoptando la imagen de un árbol para que no le ataque ningún enemigo. El problema viene en invierno, ya que las extremidades superiores tienen color verde y es fácil identificarle.",  roca, "p185");
         pokemons.add(sudowoodo);
         Pokemon politoed = new Pokemon(186, "Politoed",
-                "El mechón rizado de Politoed confirma su condición de rey. Dicen que cuanto más le crece y más se le riza, mayor es el respeto que recibe de sus súbditos.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "El mechón rizado de Politoed confirma su condición de rey. Dicen que cuanto más le crece y más se le riza, mayor es el respeto que recibe de sus súbditos.", agua, "p60,Nivel 25,p61,Piedra agua,p62,odd,Intercambio con Roca del rey,p186");
         pokemons.add(politoed);
         Pokemon hoppip = new Pokemon(187, "Hoppip",
-                "Este Pokémon flota en el aire y se deja llevar. Cuando percibe que el viento va a cambiar a fuerte, Hoppip entrelaza sus hojas con otros Hoppip para hacer resistencia y evitar salir volando por la fuerza de la corriente.", new TipoDual(planta, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Este Pokémon flota en el aire y se deja llevar. Cuando percibe que el viento va a cambiar a fuerte, Hoppip entrelaza sus hojas con otros Hoppip para hacer resistencia y evitar salir volando por la fuerza de la corriente.", new TipoDual(planta, volador), "p187,Nivel 18,p188,Nivel 27,p189");
         pokemons.add(hoppip);
         Pokemon skiplooom = new Pokemon (188, "Skiploom",
-                "Skiploom florece cuando la temperatura llega a 18 °C. La apertura de los pétalos varía según la temperatura que haga. Por este motivo, la gente lo usa a veces a modo de termómetro.", new TipoDual(planta,volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Skiploom florece cuando la temperatura llega a 18 °C. La apertura de los pétalos varía según la temperatura que haga. Por este motivo, la gente lo usa a veces a modo de termómetro.", new TipoDual(planta,volador), "p187,Nivel 18,p188,Nivel 27,p189");
         pokemons.add(skiplooom);
         Pokemon jumpluff = new Pokemon(189, "Jumpluff",
-                "Jumpluff se vale de los cálidos vientos del sur para volar a tierras lejanas. Si llega a zonas de aire frío en pleno vuelo, descenderá y tomará tierra.", new TipoDual(planta, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Jumpluff se vale de los cálidos vientos del sur para volar a tierras lejanas. Si llega a zonas de aire frío en pleno vuelo, descenderá y tomará tierra.", new TipoDual(planta, volador), "p187,Nivel 18,p188,Nivel 27,p189");
         pokemons.add(jumpluff);
         Pokemon aipom = new Pokemon(190, "Aipom",
-                "La cola de Aipom termina en una especie de mano a la que, con un poco de cabeza, se le puede dar muy buen uso. Pero hay un problema: como se ha acostumbrado a usarla mucho, las de verdad se le han vuelto algo torponas.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La cola de Aipom termina en una especie de mano a la que, con un poco de cabeza, se le puede dar muy buen uso. Pero hay un problema: como se ha acostumbrado a usarla mucho, las de verdad se le han vuelto algo torponas.", normal, "p190");
         pokemons.add(aipom);
         Pokemon sunkern = new Pokemon(191, "Sunkern",
-                "Sunkern intenta moverse lo menos posible para conservar todos los nutrientes que ha guardado en su interior y poder evolucionar. Ni come siquiera; se alimenta solo del rocío de la mañana.", planta, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Sunkern intenta moverse lo menos posible para conservar todos los nutrientes que ha guardado en su interior y poder evolucionar. Ni come siquiera; se alimenta solo del rocío de la mañana.", planta, "p191,Piedra Solar,p192");
         pokemons.add(sunkern);
         Pokemon sunflora = new Pokemon(192, "Sunflora",
-                "Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.", planta, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.", planta, "p191,Piedra Solar,p192");
         pokemons.add(sunflora);
         Pokemon yanma = new Pokemon(193, "Yanma",
-                "Yanma tiene un ángulo de visión de 360° sin mover los ojos. Es un gran volador, experto en hacer repentinas paradas y cambios de dirección en el aire. Aprovecha la habilidad que tiene de volar para lanzarse sobre su presa.", new TipoDual(bicho, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Yanma tiene un ángulo de visión de 360° sin mover los ojos. Es un gran volador, experto en hacer repentinas paradas y cambios de dirección en el aire. Aprovecha la habilidad que tiene de volar para lanzarse sobre su presa.", new TipoDual(bicho, volador), "p193");
         pokemons.add(yanma);
         Pokemon wooper = new Pokemon(194, "Wooper",
-                "Wooper suele vivir en el agua, pero es posible también verle en tierra en busca de comida. Cuando está en terreno firme, se cubre con una película viscosa tóxica.", new TipoDual(agua, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Wooper suele vivir en el agua, pero es posible también verle en tierra en busca de comida. Cuando está en terreno firme, se cubre con una película viscosa tóxica.", new TipoDual(agua, tierra), "p194,Nivel 20,p195");
         pokemons.add(wooper);
         Pokemon quagsire = new Pokemon(195, "Quagsire",
-                "Quagsire caza dejando las fauces abiertas en el agua y esperando a que su presa entre sin darse cuenta. Como se queda quieto, el Pokémon no pasa mucha hambre.", new TipoDual(agua, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Quagsire caza dejando las fauces abiertas en el agua y esperando a que su presa entre sin darse cuenta. Como se queda quieto, el Pokémon no pasa mucha hambre.", new TipoDual(agua, tierra), "p194,Nivel 20,p195");
         pokemons.add(quagsire);
         Pokemon espeon = new Pokemon(196, "Espeon",
-                "Espeon es tremendamente leal al Entrenador al que considera digno de ello. Dicen que este Pokémon desarrolló sus poderes adivinatorios para evitar que su Entrenador sufra daño alguno.", psiquico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Espeon es tremendamente leal al Entrenador al que considera digno de ello. Dicen que este Pokémon desarrolló sus poderes adivinatorios para evitar que su Entrenador sufra daño alguno.", psiquico, "p133,Piedra agua,p134,Piedra trueno,p135,eve,Piedra fuego,p136,Amistad + subir nivel(dia),p196,Amistad + subir nivel(noche),p197");
         pokemons.add(espeon);
         Pokemon umbreon = new Pokemon(197, "Umbreon",
-                "Umbreon evolucionó tras haber estado expuesto a ondas lunares. Suele esconderse en la oscuridad en silencio y esperar a que su presa se mueva. Cuando se lanza al ataque, le brillan los anillos del cuerpo.", siniestro, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Umbreon evolucionó tras haber estado expuesto a ondas lunares. Suele esconderse en la oscuridad en silencio y esperar a que su presa se mueva. Cuando se lanza al ataque, le brillan los anillos del cuerpo.", siniestro, "p133,Piedra agua,p134,Piedra trueno,p135,eve,Piedra fuego,p136,Amistad + subir nivel(dia),p196,Amistad + subir nivel(noche),p197");
         pokemons.add(umbreon);
         Pokemon murkrow = new Pokemon(198, "Murkrow",
-                "Murkrow ha sido temido y repudiado por todos por ser supuestamente fuente de mala suerte. Este Pokémon siente debilidad por todo lo que brilla y resplandece. A las mujeres les roba los anillos.", new TipoDual(siniestro, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Murkrow ha sido temido y repudiado por todos por ser supuestamente fuente de mala suerte. Este Pokémon siente debilidad por todo lo que brilla y resplandece. A las mujeres les roba los anillos.", new TipoDual(siniestro, volador), "p198");
         pokemons.add(murkrow);
         Pokemon slowking = new Pokemon(199, "Slowking",
-                "Slowking dedica cada día tiempo a investigar, en un intento por resolver los misterios del mundo. Aunque, según parece, a este Pokémon se le olvida todo lo que ha aprendido si se separa del Shellder que lleva en la cabeza.", new TipoDual(agua, psiquico), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Slowking dedica cada día tiempo a investigar, en un intento por resolver los misterios del mundo. Aunque, según parece, a este Pokémon se le olvida todo lo que ha aprendido si se separa del Shellder que lleva en la cabeza.", new TipoDual(agua, psiquico), "p79,Nivel 37,p80,Intercambio con Roca del rey,p199,slow");
         pokemons.add(slowking);
         Pokemon misdreavus = new Pokemon(200, "Misdreavus",
-                "Misdreavus asusta a la gente con un chillido escalofriante y sollozante. Y, al parecer, usa las esferas rojas para absorber los sentimientos de miedo de los enemigos y usarlos como alimento.", fantastma, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Misdreavus asusta a la gente con un chillido escalofriante y sollozante. Y, al parecer, usa las esferas rojas para absorber los sentimientos de miedo de los enemigos y usarlos como alimento.", fantastma, "p200");
         pokemons.add(misdreavus);
         Pokemon unown = new Pokemon(201, "Unown",
-                "Estos Pokémon tienen forma de caracteres antiguos. No se sabe qué surgió primero, si la vieja escritura o los distintos Unown. Esta cuestión sigue siendo objeto de estudio, pero aún no se ha averiguado nada.", psiquico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Estos Pokémon tienen forma de caracteres antiguos. No se sabe qué surgió primero, si la vieja escritura o los distintos Unown. Esta cuestión sigue siendo objeto de estudio, pero aún no se ha averiguado nada.", psiquico, "p201,uno");
         pokemons.add(unown);
         Pokemon wobbuffet = new Pokemon(202, "Wobbuffet",
-                "Si dos o más Wobbuffet se encuentran, se volverán competitivos e intentarán superarse en resistencia. Pero también puede que intenten aguantar sin comer; algo que los Entrenadores deben tener muy en cuenta.", psiquico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Si dos o más Wobbuffet se encuentran, se volverán competitivos e intentarán superarse en resistencia. Pero también puede que intenten aguantar sin comer; algo que los Entrenadores deben tener muy en cuenta.", psiquico, "p360,Nivel 15,p202");
         pokemons.add(wobbuffet);
         Pokemon girafarig = new Pokemon(203, "Girafarig",
-                "Girafarig tiene un cerebro también en la cabeza de la cola que reacciona atacando ante olores y sonidos. Cuando alguien se acerca a este Pokémon por la espalda, puede provocar que la cabeza trasera se abalance y lo muerda.", new TipoDual(normal,psiquico), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Girafarig tiene un cerebro también en la cabeza de la cola que reacciona atacando ante olores y sonidos. Cuando alguien se acerca a este Pokémon por la espalda, puede provocar que la cabeza trasera se abalance y lo muerda.", new TipoDual(normal,psiquico), "p203");
         pokemons.add(girafarig);
         Pokemon pineco = new Pokemon(204, "Pineco",
-                "Pineco permanece colgado de la rama de un árbol esperando pacientemente a su presa. Si alguien sacude el árbol en el que está mientras come y le molesta, se tira al suelo y explota sin dar ningún tipo de aviso.", bicho, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Pineco permanece colgado de la rama de un árbol esperando pacientemente a su presa. Si alguien sacude el árbol en el que está mientras come y le molesta, se tira al suelo y explota sin dar ningún tipo de aviso.", bicho, "p204,Nivel 31,p205");
         pokemons.add(pineco);
         Pokemon forretrest = new Pokemon(205, "Forretrest",
-                "Forretress se esconde dentro de su concha de acero reforzada. Solo la abre cuando va a atrapar a su presa, pero ocurre tan rápido que no da tiempo de ver su interior.", new TipoDual(bicho, acero), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Forretress se esconde dentro de su concha de acero reforzada. Solo la abre cuando va a atrapar a su presa, pero ocurre tan rápido que no da tiempo de ver su interior.", new TipoDual(bicho, acero), "p204,Nivel 31,p205");
         pokemons.add(forretrest);
         Pokemon dunsparce =  new Pokemon(206, "Dusnparce",
-                "La cola de Dunsparce es un taladro que usa para enterrarse en el suelo de espaldas. De todos es sabido que este Pokémon hace su nido a gran profundidad y con una forma muy compleja.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La cola de Dunsparce es un taladro que usa para enterrarse en el suelo de espaldas. De todos es sabido que este Pokémon hace su nido a gran profundidad y con una forma muy compleja.", normal, "p206");
         pokemons.add(dunsparce);
         Pokemon gligar = new Pokemon(207, "Gligar",
-                "Gligar planea por el aire sin hacer ningún ruido, como si fuera patinando. Este Pokémon se agarra a la cara de su rival con las patas traseras, con forma de garra, y las pinzas de las delanteras y le inyecta veneno por el aguijón.", new TipoDual(tierra, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Gligar planea por el aire sin hacer ningún ruido, como si fuera patinando. Este Pokémon se agarra a la cara de su rival con las patas traseras, con forma de garra, y las pinzas de las delanteras y le inyecta veneno por el aguijón.", new TipoDual(tierra, volador), "p207");
         pokemons.add(gligar);
         Pokemon steelix = new Pokemon(208, "Steelix",
-                "Steelix vive a mayor profundidad aún que Onix. Se le conoce por su tendencia a excavar hacia el interior del planeta. Hay datos que muestran que este Pokémon ha llegado a alcanzar 1 km de profundidad.", new TipoDual(acero, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Steelix vive a mayor profundidad aún que Onix. Se le conoce por su tendencia a excavar hacia el interior del planeta. Hay datos que muestran que este Pokémon ha llegado a alcanzar 1 km de profundidad.", new TipoDual(acero, tierra), "p95,Intercambio con Rev. Metalico,p208");
         pokemons.add(steelix);
         Pokemon snubbull = new Pokemon(209, "Snubbull",
-                "Al tener los colmillos por fuera, Snubbull da miedo y espanta a los Pokémon pequeños, que huyen aterrados. Parece que a él le da un poco de pena que salgan huyendo.", hada, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Al tener los colmillos por fuera, Snubbull da miedo y espanta a los Pokémon pequeños, que huyen aterrados. Parece que a él le da un poco de pena que salgan huyendo.", hada, "p209,Nivel 23,p210");
         pokemons.add(snubbull);
         Pokemon grandbull = new Pokemon(210, "Grandbull",
-                "Granbull tiene la mandíbula inferior demasiado desarrollada y colmillos enormes y pesados que le obligan a inclinar la cabeza hacia atrás para compensar el peso. Si no se le asusta, no muerde.", hada, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Granbull tiene la mandíbula inferior demasiado desarrollada y colmillos enormes y pesados que le obligan a inclinar la cabeza hacia atrás para compensar el peso. Si no se le asusta, no muerde.", hada, "p209,Nivel 23,p210");
         pokemons.add(grandbull);
         Pokemon qwilfish  = new Pokemon(211, "Qwilfish",
-                "Qwilfish bebe agua y se hincha, y a continuación usa la presión del agua que ha tragado para lanzar púas tóxicas por todo el cuerpo. Para este Pokémon nadar es una especie de desafío.", new TipoDual(agua,veneno), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Qwilfish bebe agua y se hincha, y a continuación usa la presión del agua que ha tragado para lanzar púas tóxicas por todo el cuerpo. Para este Pokémon nadar es una especie de desafío.", new TipoDual(agua,veneno), "p211");
         pokemons.add(qwilfish);
         Pokemon scizor = new Pokemon(212, "Scizor",
-                "Scizor tiene un cuerpo duro como el acero que no es fácil de alterar con ningún ataque común. Este Pokémon bate las alas para regular la temperatura corporal.", new TipoDual(bicho, acero), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Scizor tiene un cuerpo duro como el acero que no es fácil de alterar con ningún ataque común. Este Pokémon bate las alas para regular la temperatura corporal.", new TipoDual(bicho, acero), "p123,Intercambio con Rev. Metalico,p212");
         pokemons.add(scizor);
         Pokemon shuckle = new Pokemon(213, "Shuckle",
-                "Shuckle permanece escondido bajo las rocas en silencio y, cuando se pone a comer las bayas que almacena, se encierra en el caparazón. Las bayas se mezclan con sus fluidos corporales y originan zumo.", new TipoDual(bicho, roca), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Shuckle permanece escondido bajo las rocas en silencio y, cuando se pone a comer las bayas que almacena, se encierra en el caparazón. Las bayas se mezclan con sus fluidos corporales y originan zumo.", new TipoDual(bicho, roca), "p213");
         pokemons.add(shuckle);
         Pokemon heracross = new Pokemon(214, "Heracross",
-                "Heracross carga en línea recta contra el enemigo, se le queda encajado por debajo, lo agarra y lo lanza con ayuda del fuerte cuerno que tiene. Este Pokémon tiene fuerza hasta para echar abajo un árbol descomunal.", new TipoDual(bicho, lucha), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Heracross carga en línea recta contra el enemigo, se le queda encajado por debajo, lo agarra y lo lanza con ayuda del fuerte cuerno que tiene. Este Pokémon tiene fuerza hasta para echar abajo un árbol descomunal.", new TipoDual(bicho, lucha), "p214");
         pokemons.add(heracross);
         Pokemon sneasel = new Pokemon(215, "Sneasel",
-                "Sneasel trepa por los árboles agarrándose a la corteza con las garras curvas que tiene. Este Pokémon busca nidos desprovistos de vigilancia paterna para robar los huevos y comérselos.", new TipoDual(siniestro,hielo), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Sneasel trepa por los árboles agarrándose a la corteza con las garras curvas que tiene. Este Pokémon busca nidos desprovistos de vigilancia paterna para robar los huevos y comérselos.", new TipoDual(siniestro,hielo), "p215");
         pokemons.add(sneasel);
         Pokemon teddiursa = new Pokemon(216, "Teddiursa",
-                "A Teddiursa le encanta chuparse las palmas impregnadas de dulce miel. Este Pokémon fabrica su propia miel mezclando frutos y el polen que recoge Beedrill.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "A Teddiursa le encanta chuparse las palmas impregnadas de dulce miel. Este Pokémon fabrica su propia miel mezclando frutos y el polen que recoge Beedrill.", normal, "p216,Nivel 30,p217");
         pokemons.add(teddiursa);
         Pokemon ursaring = new Pokemon(217, "Ursaring",
-                "En los bosques habitados por Ursaring, dicen que abundan los arroyos y árboles gigantes en los que guardan su alimento. Este Pokémon se dedica todos los días a pasear por el bosque para buscar comida y guardarla.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "En los bosques habitados por Ursaring, dicen que abundan los arroyos y árboles gigantes en los que guardan su alimento. Este Pokémon se dedica todos los días a pasear por el bosque para buscar comida y guardarla.", normal, "p216,Nivel 30,p217");
         pokemons.add(ursaring);
         Pokemon slugma = new Pokemon(218, "Slugma",
-                "Por el sistema circulatorio de Slugma corre magma líquido. Si este Pokémon se enfriara, el magma perdería el calor y se solidificaría, por lo que se resquebrajaría por completo, perdería algunos trozos y reduciría su tamaño.", fuego, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Por el sistema circulatorio de Slugma corre magma líquido. Si este Pokémon se enfriara, el magma perdería el calor y se solidificaría, por lo que se resquebrajaría por completo, perdería algunos trozos y reduciría su tamaño.", fuego, "p218,Nivel 38,p219");
         pokemons.add(slugma);
         Pokemon magcargo = new Pokemon(219, "Magcargo",
-                "La coraza de Magcargo es en realidad su propia piel que quedó endurecida al enfriarse. Está muy resquebrajada y es muy frágil; se desharía solo con tocarla. Este Pokémon debe sumergirse en magma para recuperar su forma.", new TipoDual(fuego, roca), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La coraza de Magcargo es en realidad su propia piel que quedó endurecida al enfriarse. Está muy resquebrajada y es muy frágil; se desharía solo con tocarla. Este Pokémon debe sumergirse en magma para recuperar su forma.", new TipoDual(fuego, roca), "p218,Nivel 38,p219");
         pokemons.add(magcargo);
         Pokemon swinub = new Pokemon(220, "Swinub",
-                "Swinub busca el alimento frotando el hocico contra el suelo. Su comida preferida es una seta que crece bajo la hierba marchita. A veces, al frotar, descubre fuentes termales.", new TipoDual(hielo, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Swinub busca el alimento frotando el hocico contra el suelo. Su comida preferida es una seta que crece bajo la hierba marchita. A veces, al frotar, descubre fuentes termales.", new TipoDual(hielo, tierra), "p220,Nivel 33,p221");
         pokemons.add(swinub);
         Pokemon piloswine = new Pokemon(221, "Piloswine",
-                "Piloswine está cubierto por un pelaje tupido y de largas cerdas que le permite soportar el frío polar. Este Pokémon usa los colmillos para desenterrar los alimentos que hayan podido quedar bajo el hielo.", new TipoDual(hielo, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Piloswine está cubierto por un pelaje tupido y de largas cerdas que le permite soportar el frío polar. Este Pokémon usa los colmillos para desenterrar los alimentos que hayan podido quedar bajo el hielo.", new TipoDual(hielo, tierra), "p220,Nivel 33,p221");
         pokemons.add(piloswine);
         Pokemon corsola = new Pokemon(222, "Corsola",
-                "Las ramas de Corsola brillan con belleza hasta en siete colores cuando les da el sol. Si se le rompe alguna, el Pokémon la regenera en tan solo una noche.", new TipoDual(agua, roca), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Las ramas de Corsola brillan con belleza hasta en siete colores cuando les da el sol. Si se le rompe alguna, el Pokémon la regenera en tan solo una noche.", new TipoDual(agua, roca), "p222");
         pokemons.add(corsola);
         Pokemon remoraid = new Pokemon(223, "Remoraid",
-                "Remoraid traga agua y usa los abdominales para lanzarla a gran velocidad contra una presa que esté en el aire. Cuando está a punto de evolucionar, este Pokémon nada en los ríos corriente abajo.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Remoraid traga agua y usa los abdominales para lanzarla a gran velocidad contra una presa que esté en el aire. Cuando está a punto de evolucionar, este Pokémon nada en los ríos corriente abajo.", agua, "p223,Nivel 25,p224");
         pokemons.add(remoraid);
         Pokemon octillery = new Pokemon(224, "Octillery",
-                "Octillery se apodera de su enemigo con los tentáculos y lo deja inmovilizado antes de propinarle el golpe final. Si el enemigo resulta ser demasiado fuerte, Octillery expulsará tinta para escapar.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Octillery se apodera de su enemigo con los tentáculos y lo deja inmovilizado antes de propinarle el golpe final. Si el enemigo resulta ser demasiado fuerte, Octillery expulsará tinta para escapar.", agua, "p223,Nivel 25,p224");
         pokemons.add(octillery);
         Pokemon delibird = new Pokemon(225, "Delibird",
-                "Delibird usa la cola a modo de saco para llevar su alimento. En una ocasión, un famoso escalador consiguió alcanzar la cima más alta del mundo gracias a que uno de estos Pokémon compartió sus alimentos con él.", new TipoDual(hielo, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Delibird usa la cola a modo de saco para llevar su alimento. En una ocasión, un famoso escalador consiguió alcanzar la cima más alta del mundo gracias a que uno de estos Pokémon compartió sus alimentos con él.", new TipoDual(hielo, volador), "p225");
         pokemons.add(delibird);
         Pokemon mantine = new Pokemon(226, "Mantine",
-                "En los días que hace sol, es posible ver bancos de Mantine saltando con elegancia por entre las olas del mar. A estos Pokémon no les molestan los Remoraid que se les pegan.", new TipoDual(agua, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "En los días que hace sol, es posible ver bancos de Mantine saltando con elegancia por entre las olas del mar. A estos Pokémon no les molestan los Remoraid que se les pegan.", new TipoDual(agua, volador), "p226");
         pokemons.add(mantine);
         Pokemon skarmory = new Pokemon(227, "Skaromry",
-                "Skarmory está totalmente encerrado en el interior de una fuerte coraza protectora. En vuelo, puede llegar a alcanzar los 300 km/h y usa las afiladas alas que tiene para azotar al rival.", new TipoDual(acero, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Skarmory está totalmente encerrado en el interior de una fuerte coraza protectora. En vuelo, puede llegar a alcanzar los 300 km/h y usa las afiladas alas que tiene para azotar al rival.", new TipoDual(acero, volador), "p227");
         pokemons.add(skarmory);
         Pokemon hondour = new Pokemon(228, "Hondour",
-                "Houndour sale a cazar con el resto de la manada con total coordinación. Estos Pokémon se comunican unos con otros usando una serie de aullidos para acorralar a su presa. El compañerismo que existe entre ellos es incomparable.", new TipoDual(siniestro, fuego), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Houndour sale a cazar con el resto de la manada con total coordinación. Estos Pokémon se comunican unos con otros usando una serie de aullidos para acorralar a su presa. El compañerismo que existe entre ellos es incomparable.", new TipoDual(siniestro, fuego), "p228,Nivel 24,p229");
         pokemons.add(hondour);
         Pokemon houndoom = new Pokemon(229, "Houndoom",
-                "En la manada de Houndoom, el que tiene los cuernos más arqueados hacia atrás tiene un mayor papel de liderazgo. Estos Pokémon suelen elegir al jefe en duelo.", new TipoDual(siniestro, fuego), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "En la manada de Houndoom, el que tiene los cuernos más arqueados hacia atrás tiene un mayor papel de liderazgo. Estos Pokémon suelen elegir al jefe en duelo.", new TipoDual(siniestro, fuego), "p228,Nivel 24,p229");
         pokemons.add(houndoom);
         Pokemon kingdra = new Pokemon(230, "Kingdra",
-                "Kingdra vive en lo más profundo del océano, donde no habita ninguna otra especie. Siempre se ha pensado que su bostezo causaba las corrientes en remolino que se dan en el océano.", new TipoDual(agua, dragon), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Kingdra vive en lo más profundo del océano, donde no habita ninguna otra especie. Siempre se ha pensado que su bostezo causaba las corrientes en remolino que se dan en el océano.", new TipoDual(agua, dragon), "p116,Nivel 32,p117,Intercambio con Escamadragon,p230");
         pokemons.add(kingdra);
         Pokemon phanpy = new Pokemon(231, "Phanpy",
-                "Phanpy cava un agujero profundo para hacer su nido en el suelo, en la ribera de los ríos, y marca con la trompa la zona para que el resto vea que ese terreno ya está ocupado.", tierra, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Phanpy cava un agujero profundo para hacer su nido en el suelo, en la ribera de los ríos, y marca con la trompa la zona para que el resto vea que ese terreno ya está ocupado.", tierra, "p231,Nivel 25,p232");
         pokemons.add(phanpy);
         Pokemon donphan = new Pokemon(232, "Donphan",
-                "A Donphan le encanta enrollarse como una pelota y cargar contra el enemigo rodando a toda velocidad. Una vez que ha comenzado a rodar, no es fácil pararlo.", tierra, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "A Donphan le encanta enrollarse como una pelota y cargar contra el enemigo rodando a toda velocidad. Una vez que ha comenzado a rodar, no es fácil pararlo.", tierra, "p231,Nivel 25,p232");
         pokemons.add(donphan);
         Pokemon porygon2 = new Pokemon(233, "Porygon2",
-                "Porygon2 fue creado por el hombre gracias a los avances de la ciencia. Esta obra humana ha sido provista de inteligencia artificial que le permite aprender gestos y sensaciones nuevas por su cuenta.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Porygon2 fue creado por el hombre gracias a los avances de la ciencia. Esta obra humana ha sido provista de inteligencia artificial que le permite aprender gestos y sensaciones nuevas por su cuenta.", normal, "p137,Intercambio con Mejora,p233");
         pokemons.add(porygon2);
         Pokemon stantler = new Pokemon(234, "Stantler",
-                "Hace tiempo, se comerciaba con la magnífica cornamenta de Stantler. Se vendía como obra de arte a alto precio. Los interesados en cornamentas de valor incalculable empezaron a cazarlos y casi provocan su extinción.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Hace tiempo, se comerciaba con la magnífica cornamenta de Stantler. Se vendía como obra de arte a alto precio. Los interesados en cornamentas de valor incalculable empezaron a cazarlos y casi provocan su extinción.", normal, "p234");
         pokemons.add(stantler);
         Pokemon smeargle = new Pokemon(235, "Smeargle",
-                "Smeargle marca los límites de su territorio liberando un fluido corporal por el extremo de la cola. En la actualidad se han encontrado más de 5000 tipos de marcas distintas dejadas por este Pokémon.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Smeargle marca los límites de su territorio liberando un fluido corporal por el extremo de la cola. En la actualidad se han encontrado más de 5000 tipos de marcas distintas dejadas por este Pokémon.", normal, "p235");
         pokemons.add(smeargle);
         Pokemon tyrogue = new Pokemon(236, "Tyrogue",
-                "Tyrogue se pone demasiado nervioso si no lo sacan a entrenarse cada día. Su Entrenador debe establecer y mantener ciertos métodos de entrenamiento durante la cría.", lucha, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Tyrogue se pone demasiado nervioso si no lo sacan a entrenarse cada día. Su Entrenador debe establecer y mantener ciertos métodos de entrenamiento durante la cría.", lucha, "p236,Nivel 20 Ataque > Defensa,p106,Nivel 20 Ataque < Defensa,p107,tyr,Nivel 20 Ataque = Defensa,p237");
         pokemons.add(tyrogue);
         Pokemon hitmontop = new Pokemon(237, "Hitmontop",
-                "Hitmontop hace el pino con la cabeza y se pone a girar rápido al tiempo que reparte patadas. Esta es una técnica ofensiva y defensiva a la vez. Este Pokémon se desplaza más rápido girando sobre sí que caminando.", lucha, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Hitmontop hace el pino con la cabeza y se pone a girar rápido al tiempo que reparte patadas. Esta es una técnica ofensiva y defensiva a la vez. Este Pokémon se desplaza más rápido girando sobre sí que caminando.", lucha, "p236,Nivel 20 Ataque > Defensa,p106,Nivel 20 Ataque < Defensa,p107,tyr,Nivel 20 Ataque = Defensa,p237");
         pokemons.add(hitmontop);
         Pokemon smoochum = new Pokemon(238, "Smoochum",
-                "Smoochum va corriendo por todos lados, pero se cae también con frecuencia. Y, en cuanto tiene ocasión, se mira en algún sitio para ver si se ha manchado la cara.", new TipoDual(hielo, psiquico), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Smoochum va corriendo por todos lados, pero se cae también con frecuencia. Y, en cuanto tiene ocasión, se mira en algún sitio para ver si se ha manchado la cara.", new TipoDual(hielo, psiquico), "p238,Nivel 30,p124");
         pokemons.add(smoochum);
         Pokemon elekid = new Pokemon(239, "Elekid",
-                "Elekid acumula electricidad. Si entra en contacto con algo de metal y descarga accidentalmente toda la electricidad almacenada, empieza a agitar los brazos en círculo para volver a cargarse.", electrico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Elekid acumula electricidad. Si entra en contacto con algo de metal y descarga accidentalmente toda la electricidad almacenada, empieza a agitar los brazos en círculo para volver a cargarse.", electrico, "p239,Nivel 30,p125");
         pokemons.add(elekid);
         Pokemon magby = new Pokemon(240, "Magby",
-                "El estado de salud de Magby se puede determinar observando el fuego que emana al respirar. Si las llamas que echa por la boca son amarillas, está bien. Pero, si además de las llamas sale humo negro, está cansado.", fuego, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "El estado de salud de Magby se puede determinar observando el fuego que emana al respirar. Si las llamas que echa por la boca son amarillas, está bien. Pero, si además de las llamas sale humo negro, está cansado.", fuego, "p240,Nivel 30,p126");
         pokemons.add(magby);
         Pokemon miltank = new Pokemon(241, "Miltank",
-                "Miltank da al día 20 l de una leche dulce que es la delicia de pequeños y mayores. Aquellos que no pueden tomarla, se decantan por los yogures.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Miltank da al día 20 l de una leche dulce que es la delicia de pequeños y mayores. Aquellos que no pueden tomarla, se decantan por los yogures.", normal, "p241");
         pokemons.add(miltank);
         Pokemon blissey = new Pokemon(242, "Blissey",
-                "Blissey es capaz de sentir la tristeza a través del sedoso pelaje. Si detecta que alguien está apenado, irá hasta donde esté y compartirá un Huevo Suerte para devolverle la sonrisa.", normal, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Blissey es capaz de sentir la tristeza a través del sedoso pelaje. Si detecta que alguien está apenado, irá hasta donde esté y compartirá un Huevo Suerte para devolverle la sonrisa.", normal, "p113,Amistad + Nivel,p242");
         pokemons.add(blissey);
         Pokemon raikou = new Pokemon(243, "Raikou",
-                "Raikou tiene la velocidad del rayo. Los rugidos de este Pokémon emiten ondas de choque que se esparcen vibrando por el aire y sacuden el suelo como si fueran auténticas descargas de rayo.", electrico, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Raikou tiene la velocidad del rayo. Los rugidos de este Pokémon emiten ondas de choque que se esparcen vibrando por el aire y sacuden el suelo como si fueran auténticas descargas de rayo.", electrico, "p243");
         pokemons.add(raikou);
         Pokemon entei = new Pokemon(244, "Entei",
-                "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Entei contiene el fulgor del magma en su interior. Se cree que este Pokémon nació de la erupción de un volcán. Escupe numerosas ráfagas de fuego que devoran y reducen a cenizas todo lo que tocan.", fuego, "p244");
         pokemons.add(entei);
         Pokemon suicune = new Pokemon(245, "Suicune",
-                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua, "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.", agua, "p245");
         pokemons.add(suicune);
         Pokemon larvitar = new Pokemon(246, "Larvitar",
-                "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Larvitar nace bajo tierra a gran profundidad. Para subir a la superficie, este Pokémon debe comer lo que encuentra en su camino para abrirse paso. Y, hasta que no está arriba, no puede verles la cara a sus padres.", new TipoDual(roca, tierra), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(larvitar);
         Pokemon pupitar = new Pokemon(247, "Pupitar",
-                "Pupitar crea un gas en su interior que comprime y expulsa violentamente a modo de autopropulsión. Tiene un cuerpo resistente que se mantiene inalterable hasta cuando se golpea contra duro acero.", new TipoDual(roca, tierra), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Pupitar crea un gas en su interior que comprime y expulsa violentamente a modo de autopropulsión. Tiene un cuerpo resistente que se mantiene inalterable hasta cuando se golpea contra duro acero.", new TipoDual(roca, tierra), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(pupitar);
         Pokemon tyranitar = new Pokemon(248, "Tyranitar",
-                "Tyranitar tiene una fuerza imponente; es capaz de echar abajo una montaña para hacer su nido. Este Pokémon suele merodear por las zonas de montaña en busca de nuevos rivales contra los que luchar.", new TipoDual(roca, siniestro), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Tyranitar tiene una fuerza imponente; es capaz de echar abajo una montaña para hacer su nido. Este Pokémon suele merodear por las zonas de montaña en busca de nuevos rivales contra los que luchar.", new TipoDual(roca, siniestro), "p246,Nivel 30,p247,Nivel 55,p248");
         pokemons.add(tyranitar);
         Pokemon lugia = new Pokemon(249, "Lugia",
-                "La fuerza que tiene Lugia en las alas es devastadora; con nada que las bata es capaz de derribar edificios enteros. Por eso mismo, prefiere vivir donde no haya nadie, en lo más profundo del mar.", new TipoDual(psiquico, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "La fuerza que tiene Lugia en las alas es devastadora; con nada que las bata es capaz de derribar edificios enteros. Por eso mismo, prefiere vivir donde no haya nadie, en lo más profundo del mar.", new TipoDual(psiquico, volador), "p249");
         pokemons.add(lugia);
         Pokemon hooh = new Pokemon(250, "Ho-Oh",
-                "El plumaje de Ho-Oh contiene siete colores que pueden apreciarse según el ángulo desde el que les dé la luz. Dicen que sus plumas dan felicidad a quienes las llevan y, también, que este Pokémon vive a los pies del arco iris.", new TipoDual(fuego, volador), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "El plumaje de Ho-Oh contiene siete colores que pueden apreciarse según el ángulo desde el que les dé la luz. Dicen que sus plumas dan felicidad a quienes las llevan y, también, que este Pokémon vive a los pies del arco iris.", new TipoDual(fuego, volador), "p250");
         pokemons.add(hooh);
         Pokemon celebi = new Pokemon(251, "Celebi",
-                "Este Pokémon vino del futuro haciendo un viaje en el tiempo. Hay quien piensa que, mientras Celebi siga apareciendo, hay un futuro brillante y esperanzador.", new TipoDual(psiquico,planta), "p69,Nivel 21,p70,Piedra hoja,p71");
+                "Este Pokémon vino del futuro haciendo un viaje en el tiempo. Hay quien piensa que, mientras Celebi siga apareciendo, hay un futuro brillante y esperanzador.", new TipoDual(psiquico,planta), "p251");
         pokemons.add(celebi);
 
         //Tercera Generacion
 
-        /*Pokemon treecko = new Pokemon(252, "Treecko",
-                "Treecko tiene unos ganchos pequeños en las plantas de los pies con los que puede escalar superficies verticales. Este Pokémon ataca dando un golpetazo con la cola.", planta);
+        Pokemon treecko = new Pokemon(252, "Treecko",
+                "Treecko tiene unos ganchos pequeños en las plantas de los pies con los que puede escalar superficies verticales. Este Pokémon ataca dando un golpetazo con la cola.", planta, "p252,Nivel 16,p253,Nivel 36,p254");
         pokemons.add(treecko);
         Pokemon grovyle = new Pokemon(253, "Grovyle",
-                "Las hojas que Grovyle tiene por el cuerpo le resultan muy útiles para camuflarse en el bosque y esconderse de los enemigos. A este Pokémon no hay quien lo supere subiendo a los árboles del bosque.", planta);
+                "Las hojas que Grovyle tiene por el cuerpo le resultan muy útiles para camuflarse en el bosque y esconderse de los enemigos. A este Pokémon no hay quien lo supere subiendo a los árboles del bosque.", planta, "p252,Nivel 16,p253,Nivel 36,p254");
         pokemons.add(grovyle);
         Pokemon sceptile = new Pokemon(254, "Sceptile",
-                "Las hojas que le salen a Sceptile del cuerpo tienen unos bordes muy afilados. Este Pokémon es muy ágil, va saltando de rama en rama y se lanza sobre el enemigo por la espalda.", planta);
+                "Las hojas que le salen a Sceptile del cuerpo tienen unos bordes muy afilados. Este Pokémon es muy ágil, va saltando de rama en rama y se lanza sobre el enemigo por la espalda.", planta, "p252,Nivel 16,p253,Nivel 36,p254");
         pokemons.add(sceptile);
         Pokemon torchic = new Pokemon(255, "Torchic",
-                "Torchic no se separa de su Entrenador. Siempre va tras él con sus pasitos inseguros. Este Pokémon escupe bolas de fuego que pueden alcanzar los 1000 °C y carbonizar al enemigo.", fuego);
+                "Torchic no se separa de su Entrenador. Siempre va tras él con sus pasitos inseguros. Este Pokémon escupe bolas de fuego que pueden alcanzar los 1000 °C y carbonizar al enemigo.", fuego, "p255,Nivel 16,p256,Nivel 36,p257");
         pokemons.add(torchic);
         Pokemon combusken = new Pokemon(256, "Combusken",
-                "Combusken fortalece las piernas corriendo por llanos y montañas. Este Pokémon tiene en las extremidades inferiores tanto fuerza como velocidad. Puede dar hasta diez patadas por segundo.", new TipoDual(fuego, lucha));
+                "Combusken fortalece las piernas corriendo por llanos y montañas. Este Pokémon tiene en las extremidades inferiores tanto fuerza como velocidad. Puede dar hasta diez patadas por segundo.", new TipoDual(fuego, lucha), "p255,Nivel 16,p256,Nivel 36,p257");
         pokemons.add(combusken);
         Pokemon blaziken = new Pokemon(257, "Blaziken",
-                "En combate, Blaziken expulsa vivas llamas por las muñecas y ataca al enemigo con fiereza. Cuanto más fuerte sea el enemigo, más intensas serán las llamas.", new TipoDual(fuego, lucha));
+                "En combate, Blaziken expulsa vivas llamas por las muñecas y ataca al enemigo con fiereza. Cuanto más fuerte sea el enemigo, más intensas serán las llamas.", new TipoDual(fuego, lucha), "p255,Nivel 16,p256,Nivel 36,p257");
         pokemons.add(blaziken);
         Pokemon mudkip = new Pokemon(258, "Mudkip",
-                "La aleta que tiene Mudkip en la cabeza actúa de radar y es muy sensible. Puede captar movimientos que se produzcan en el agua y en el aire, y todo lo que ocurra a su alrededor, sin necesidad de abrir los ojos.", agua);
+                "La aleta que tiene Mudkip en la cabeza actúa de radar y es muy sensible. Puede captar movimientos que se produzcan en el agua y en el aire, y todo lo que ocurra a su alrededor, sin necesidad de abrir los ojos.", agua, "p258,Nivel 16,p259,Nivel 36,p260");
         pokemons.add(mudkip);
         Pokemon marshtomp = new Pokemon(259, "Marshtomp",
-                "El cuerpo de Marshtomp está cubierto por una fina película pegajosa gracias a la cual puede vivir en tierra. Cuando la marea está baja, a este Pokémon le encanta jugar en el fango.", new TipoDual(agua, tierra));
+                "El cuerpo de Marshtomp está cubierto por una fina película pegajosa gracias a la cual puede vivir en tierra. Cuando la marea está baja, a este Pokémon le encanta jugar en el fango.", new TipoDual(agua, tierra), "p258,Nivel 16,p259,Nivel 36,p260");
         pokemons.add(marshtomp);
         Pokemon swampert = new Pokemon(260, "Swampert",
-                "Swampert es muy fuerte. Puede arrastrar una roca que pese más de una tonelada sin ningún problema. Este Pokémon tiene el sentido de la vista muy desarrollado. Es capaz de ver hasta en aguas cenagosas.", new TipoDual(agua, tierra));
+                "Swampert es muy fuerte. Puede arrastrar una roca que pese más de una tonelada sin ningún problema. Este Pokémon tiene el sentido de la vista muy desarrollado. Es capaz de ver hasta en aguas cenagosas.", new TipoDual(agua, tierra), "p258,Nivel 16,p259,Nivel 36,p260");
         pokemons.add(swampert);
         Pokemon poochyena = new Pokemon(261, "Poochyena",
-                "La primera reacción que Poochyena tiene al ver algo moverse es darle un mordisco. Este Pokémon persigue a su presa hasta que cae agotada. Aunque, a veces, sale huyendo si su presa le responde con un ataque.", siniestro);
+                "La primera reacción que Poochyena tiene al ver algo moverse es darle un mordisco. Este Pokémon persigue a su presa hasta que cae agotada. Aunque, a veces, sale huyendo si su presa le responde con un ataque.", siniestro, "p261,Nivel 18,p262");
         pokemons.add(poochyena);
         Pokemon mightyena = new Pokemon(262, "Mightyena",
-                "Es muy fácil prever cuándo va a atacar Mightyena; se pone a gruñir con fuerza y se estira. Este Pokémon da unos mordiscos tremendos con los afilados colmillos que tiene.", siniestro);
+                "Es muy fácil prever cuándo va a atacar Mightyena; se pone a gruñir con fuerza y se estira. Este Pokémon da unos mordiscos tremendos con los afilados colmillos que tiene.", siniestro, "p261,Nivel 18,p262");
         pokemons.add(mightyena);
         Pokemon zigzagoon = new Pokemon(263, "Zigzagoon",
-                "Zigzagoon está todo el día dando vueltas de aquí para allá. Es un Pokémon muy inquieto. Se interesa por todo lo que se encuentra en su camino.", normal);
+                "Zigzagoon está todo el día dando vueltas de aquí para allá. Es un Pokémon muy inquieto. Se interesa por todo lo que se encuentra en su camino.", normal, "p263,Nivel 20,p264");
         pokemons.add(zigzagoon);
         Pokemon linoone = new Pokemon(264, "Linoone",
-                "Linoone siempre corre todo lo rápido que puede y solo en línea recta. Si encuentra un obstáculo en el camino, girará en ángulo recto para esquivarlo. Correr bien por caminos tortuosos es todo un reto para él.", normal);
+                "Linoone siempre corre todo lo rápido que puede y solo en línea recta. Si encuentra un obstáculo en el camino, girará en ángulo recto para esquivarlo. Correr bien por caminos tortuosos es todo un reto para él.", normal, "p263,Nivel 20,p264");
         pokemons.add(linoone);
         Pokemon wurmple = new Pokemon(265, "Wurmple",
-                "Wurmple usa las púas del lomo para raspar los troncos de los árboles, quitarles la corteza y beber la savia que emanan. Este Pokémon tiene unas ventosas rematándole los pies, con las que se adhiere al cristal sin resbalarse.", bicho);
+                "Wurmple usa las púas del lomo para raspar los troncos de los árboles, quitarles la corteza y beber la savia que emanan. Este Pokémon tiene unas ventosas rematándole los pies, con las que se adhiere al cristal sin resbalarse.", bicho, "p265,Nivel 7,p266,Nivel 10,p267,wurm,Nivel 7,p268,Nivel 10,p269");
         pokemons.add(wurmple);
         Pokemon silcoon = new Pokemon(266, "Silcoon",
-                "Silcoon usa la seda que produce para aferrarse a la rama de un árbol y sujetarse bien. Se queda ahí colgado a la espera de su evolución, mientras lo observa todo a través de dos pequeños agujeros en su capullo de seda.", bicho);
+                "Silcoon usa la seda que produce para aferrarse a la rama de un árbol y sujetarse bien. Se queda ahí colgado a la espera de su evolución, mientras lo observa todo a través de dos pequeños agujeros en su capullo de seda.", bicho, "p265,Nivel 7,p266,Nivel 10,p267,wurm,Nivel 7,p268,Nivel 10,p269");
         pokemons.add(silcoon);
         Pokemon beautifly = new Pokemon(267, "Beautifly",
-                "La comida favorita de Beautifly es el dulce polen de las flores. Si quieres ver a este Pokémon, deja una maceta con flores al lado de la ventana y verás cómo aparece un ejemplar de Beautifly en busca de polen.", new TipoDual(bicho, volador));
+                "La comida favorita de Beautifly es el dulce polen de las flores. Si quieres ver a este Pokémon, deja una maceta con flores al lado de la ventana y verás cómo aparece un ejemplar de Beautifly en busca de polen.", new TipoDual(bicho, volador), "p265,Nivel 7,p266,Nivel 10,p267,wurm,Nivel 7,p268,Nivel 10,p269");
         pokemons.add(beautifly);
         Pokemon cascoon = new Pokemon(268, "Cascoon",
-                "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo.", bicho);
+                "Cascoon forma el capullo que lo protege enrollándose por completo en la seda que libera por la boca. Cuando está totalmente recubierto, se prepara para evolucionar en el interior del capullo.", bicho, "p265,Nivel 7,p266,Nivel 10,p267,wurm,Nivel 7,p268,Nivel 10,p269");
         pokemons.add(cascoon);
         Pokemon dustox = new Pokemon(269, "Dustox",
-                "Los Dustox se acercan a la luz de forma instintiva. De hecho, se agrupan en enjambres alrededor de las luces de las ciudades y causan estragos en las hojas de los árboles que están a pie de calle para alimentarse.", new TipoDual(bicho,veneno));
+                "Los Dustox se acercan a la luz de forma instintiva. De hecho, se agrupan en enjambres alrededor de las luces de las ciudades y causan estragos en las hojas de los árboles que están a pie de calle para alimentarse.", new TipoDual(bicho,veneno), "p265,Nivel 7,p266,Nivel 10,p267,wurm,Nivel 7,p268,Nivel 10,p269");
         pokemons.add(dustox);
         Pokemon lotad = new Pokemon(270, "Lotad",
-                "Lotad vive en estanques y lagos, donde permanece flotando. Si se le marchita la ancha hoja que tiene en la cabeza, se debilitará. De vez en cuando, se desplaza en busca de agua limpia.", new TipoDual(agua, planta));
+                "Lotad vive en estanques y lagos, donde permanece flotando. Si se le marchita la ancha hoja que tiene en la cabeza, se debilitará. De vez en cuando, se desplaza en busca de agua limpia.", new TipoDual(agua, planta), "p270,Nivel 14,p271,Piedra Agua,p272");
         pokemons.add(lotad);
         Pokemon lombre = new Pokemon(271, "Lombre",
-                "Lombre es, además de travieso, nocturno; entra en acción de noche. Cuando ve a gente pescando, se pone a tirar del sedal por debajo del agua y se divierte viendo la cara de enfado que se les queda.", new TipoDual(agua, planta));
+                "Lombre es, además de travieso, nocturno; entra en acción de noche. Cuando ve a gente pescando, se pone a tirar del sedal por debajo del agua y se divierte viendo la cara de enfado que se les queda.", new TipoDual(agua, planta), "p270,Nivel 14,p271,Piedra Agua,p272");
         pokemons.add(lombre);
         Pokemon ludicolo = new Pokemon(272, "Ludicolo",
-                "Ludicolo empieza a bailar en cuanto oye música alegre y de fiesta. Dicen que este Pokémon aparece cuando oye cantar a los niños que van de excursión para hacer senderismo.", new TipoDual(agua, planta));
+                "Ludicolo empieza a bailar en cuanto oye música alegre y de fiesta. Dicen que este Pokémon aparece cuando oye cantar a los niños que van de excursión para hacer senderismo.", new TipoDual(agua, planta), "p270,Nivel 14,p271,Piedra Agua,p272");
         pokemons.add(ludicolo);
         Pokemon seedot = new Pokemon(273, "Seedot",
-                "Seedot se queda enganchado a las ramas de los árboles por el extremo que tiene en la cabeza. Mientras está ahí colgado, aprovecha para tomar la humedad del árbol. Cuanta más agua bebe, más lustroso se le ve.", planta);
+                "Seedot se queda enganchado a las ramas de los árboles por el extremo que tiene en la cabeza. Mientras está ahí colgado, aprovecha para tomar la humedad del árbol. Cuanta más agua bebe, más lustroso se le ve.", planta, "p273,Nivel 14,p274,Piedra Hoja,p275");
         pokemons.add(seedot);
         Pokemon nuzleaf = new Pokemon(274, "Nuzleaf",
-                "Nuzleaf habita bosques muy poblados y, en ocasiones, se atreve a salir para asustar a la gente. A este Pokémon no le gusta nada que le pellizquen la nariz.", new TipoDual(planta,siniestro));
+                "Nuzleaf habita bosques muy poblados y, en ocasiones, se atreve a salir para asustar a la gente. A este Pokémon no le gusta nada que le pellizquen la nariz.", new TipoDual(planta,siniestro), "p273,Nivel 14,p274,Piedra Hoja,p275");
         pokemons.add(nuzleaf);
         Pokemon shiftry = new Pokemon(275, "Shiftry",
-                "Shiftry es un enigmático Pokémon que vive, dicen, en las copas de los árboles milenarios. Este Pokémon genera fuertes corrientes de aire con los abanicos que lleva en las manos.", new TipoDual(planta,siniestro));
+                "Shiftry es un enigmático Pokémon que vive, dicen, en las copas de los árboles milenarios. Este Pokémon genera fuertes corrientes de aire con los abanicos que lleva en las manos.", new TipoDual(planta,siniestro), "p273,Nivel 14,p274,Piedra Hoja,p275");
         pokemons.add(shiftry);
         Pokemon taillow = new Pokemon(276, "Taillow",
-                "Taillow se mantiene firme ante sus rivales, sean lo fuertes que sean. Este valiente Pokémon seguirá mostrándose desafiante, aunque pierda en combate. Además, si se enfada, se pondrá a gritar con energía.", new TipoDual(normal,volador));
+                "Taillow se mantiene firme ante sus rivales, sean lo fuertes que sean. Este valiente Pokémon seguirá mostrándose desafiante, aunque pierda en combate. Además, si se enfada, se pondrá a gritar con energía.", new TipoDual(normal,volador), "p276,Nivel 22,p277");
         pokemons.add(taillow);
         Pokemon swellow = new Pokemon(277, "Swellow",
-                "Swellow vuela muy alto dibujando elegantes arcos en el cielo. Este Pokémon se sumerge en el agua con rapidez y eficacia en cuanto detecta una presa. Con las garras, atrapa a la desdichada víctima y no la deja huir.", new TipoDual(normal, volador));
+                "Swellow vuela muy alto dibujando elegantes arcos en el cielo. Este Pokémon se sumerge en el agua con rapidez y eficacia en cuanto detecta una presa. Con las garras, atrapa a la desdichada víctima y no la deja huir.", new TipoDual(normal, volador), "p276,Nivel 22,p277");
         pokemons.add(swellow);
         Pokemon wingull = new Pokemon(278, "Wingull",
-                "Wingull tiene la costumbre de llevar a su presa y objetos de valor en el pico, y esconderlos en distintos sitios. Este Pokémon vuela dejándose llevar por las corrientes de aire como si fuera patinando por el cielo.", new TipoDual(agua, volador));
+                "Wingull tiene la costumbre de llevar a su presa y objetos de valor en el pico, y esconderlos en distintos sitios. Este Pokémon vuela dejándose llevar por las corrientes de aire como si fuera patinando por el cielo.", new TipoDual(agua, volador), "p278,Nivel 25,p279");
         pokemons.add(wingull);
         Pokemon pelipper = new Pokemon(279, "Pelipper",
-                "Pelipper vuela transportando pequeños huevos y Pokémon dentro del descomunal pico que tiene. Este Pokémon construye su nido en escarpados acantilados frente al mar.", new TipoDual(agua, volador));
+                "Pelipper vuela transportando pequeños huevos y Pokémon dentro del descomunal pico que tiene. Este Pokémon construye su nido en escarpados acantilados frente al mar.", new TipoDual(agua, volador), "p278,Nivel 25,p279");
         pokemons.add(pelipper);
         Pokemon ralts = new Pokemon(280, "Ralts",
-                "Ralts percibe las sensaciones de la gente por los cuernos que tiene encima y detrás de la cabeza. No es común que este Pokémon aparezca en público, pero cuando lo hace, se acerca si ve buena disposición en la gente.", new TipoDual(psiquico, hada));
+                "Ralts percibe las sensaciones de la gente por los cuernos que tiene encima y detrás de la cabeza. No es común que este Pokémon aparezca en público, pero cuando lo hace, se acerca si ve buena disposición en la gente.", new TipoDual(psiquico, hada), "p280,Nivel 20,p281,Nivel 30,p282");
         pokemons.add(ralts);
         Pokemon kirlia = new Pokemon(281, "Kirlia",
-                "Dicen que, al recibir los sentimientos positivos de su Entrenador, Kirlia crece con gran belleza. Este Pokémon controla poderes psicoquinéticos gracias al desarrollado cerebro que tiene.", new TipoDual(psiquico, hada));
+                "Dicen que, al recibir los sentimientos positivos de su Entrenador, Kirlia crece con gran belleza. Este Pokémon controla poderes psicoquinéticos gracias al desarrollado cerebro que tiene.", new TipoDual(psiquico, hada), "p280,Nivel 20,p281,Nivel 30,p282");
         pokemons.add(kirlia);
         Pokemon gardevoir = new Pokemon(282, "Gardevoir",
-                "Gardevoir es capaz de leer el futuro. Si siente que su Entrenador está en peligro inminente, dicen que libera automáticamente toda su energía psicoquinética.", new TipoDual(psiquico, hada));
+                "Gardevoir es capaz de leer el futuro. Si siente que su Entrenador está en peligro inminente, dicen que libera automáticamente toda su energía psicoquinética.", new TipoDual(psiquico, hada), "p280,Nivel 20,p281,Nivel 30,p282");
         pokemons.add(gardevoir);
         Pokemon surskit = new Pokemon(283, "Surskit",
-                "Surskit segrega un aceite por la punta de las patas que le permite caminar sobre el agua como si fuera patinando. Este Pokémon se alimenta de microorganismos en charcas y lagos.", new TipoDual(bicho, agua));
+                "Surskit segrega un aceite por la punta de las patas que le permite caminar sobre el agua como si fuera patinando. Este Pokémon se alimenta de microorganismos en charcas y lagos.", new TipoDual(bicho, agua), "p283,Nivel 22,p284");
         pokemons.add(surskit);
         Pokemon masquerain = new Pokemon(284, "Masquerain",
-                "Masquerain intimida a sus enemigos con los ojos que tiene dibujados en las antenas. Este Pokémon bate las cuatro alas que tiene para volar libremente en cualquier dirección, hasta de lado y hacia atrás, como un helicóptero.", new TipoDual(bicho, volador));
+                "Masquerain intimida a sus enemigos con los ojos que tiene dibujados en las antenas. Este Pokémon bate las cuatro alas que tiene para volar libremente en cualquier dirección, hasta de lado y hacia atrás, como un helicóptero.", new TipoDual(bicho, volador), "p283,Nivel 22,p284");
         pokemons.add(masquerain);
         Pokemon shroomish = new Pokemon(285, "Shroomish",
-                "Los Shroomish viven en zonas húmedas en la profunda oscuridad del bosque. Suelen quedarse tranquilamente bajo las hojas caídas. Se alimentan del abono que estas generan al empezar a pudrirse.", planta);
+                "Los Shroomish viven en zonas húmedas en la profunda oscuridad del bosque. Suelen quedarse tranquilamente bajo las hojas caídas. Se alimentan del abono que estas generan al empezar a pudrirse.", planta, "p285,Nivel 23,p286");
         pokemons.add(shroomish);
         Pokemon breloom = new Pokemon(286, "Breloom",
-                "Breloom se acerca al enemigo realizando un juego de piernas ágil y enérgico. Y, a continuación, le da unos puñetazos con los brazos elásticos que tiene. Las técnicas de lucha que usa dejan en ridículo al boxeador más profesional.", new TipoDual(planta, lucha));
+                "Breloom se acerca al enemigo realizando un juego de piernas ágil y enérgico. Y, a continuación, le da unos puñetazos con los brazos elásticos que tiene. Las técnicas de lucha que usa dejan en ridículo al boxeador más profesional.", new TipoDual(planta, lucha), "p285,Nivel 23,p286");
         pokemons.add(breloom);
         Pokemon slakoth = new Pokemon(287, "Slakoth",
-                "Slakoth se pasa más de veinte horas al día tumbado. Como se mueve tan poco, necesita muy poca comida. De hecho, la única toma que hace al día la componen tan solo tres hojas.", normal);
+                "Slakoth se pasa más de veinte horas al día tumbado. Como se mueve tan poco, necesita muy poca comida. De hecho, la única toma que hace al día la componen tan solo tres hojas.", normal, "p287,Nivel 18,p288,Nivel 36,p289");
         pokemons.add(slakoth);
         Pokemon vigoroth = new Pokemon(288, "Vigoroth",
-                "Vigoroth está continuamente inquieto, rabiando por salir corriendo sin control. Estar quieto un solo minuto es superior a sus fuerzas. Si no puede estar en continuo movimiento, el nivel de estrés de este Pokémon se dispara.", normal);
+                "Vigoroth está continuamente inquieto, rabiando por salir corriendo sin control. Estar quieto un solo minuto es superior a sus fuerzas. Si no puede estar en continuo movimiento, el nivel de estrés de este Pokémon se dispara.", normal, "p287,Nivel 18,p288,Nivel 36,p289");
         pokemons.add(vigoroth);
         Pokemon slaking = new Pokemon(289, "Slaking",
-                "Slaking se pasa todo el día tumbado vagueando. Se come la hierba que tiene a su alcance y, una vez que ha acabado con ella, se va de mala gana a otro sitio.", normal);
+                "Slaking se pasa todo el día tumbado vagueando. Se come la hierba que tiene a su alcance y, una vez que ha acabado con ella, se va de mala gana a otro sitio.", normal, "p287,Nivel 18,p288,Nivel 36,p289");
         pokemons.add(slaking);
         Pokemon nincada = new Pokemon(290, "Nincada",
-                "Nincada vive bajo tierra en la más absoluta oscuridad durante años. Este Pokémon absorbe nutrientes de las raíces de los árboles y permanece inmóvil a la espera de su evolución.", new TipoDual(bicho, tierra));
+                "Nincada vive bajo tierra en la más absoluta oscuridad durante años. Este Pokémon absorbe nutrientes de las raíces de los árboles y permanece inmóvil a la espera de su evolución.", new TipoDual(bicho, tierra), "p290,Nivel 20,p291,+ (si hay espacio en el equipo y teniendo una PokéBall),p292,slow");
         pokemons.add(nincada);
         Pokemon ninjask = new Pokemon(291, "Ninjask",
-                "Ninjask se mueve de un lado a otro a tal velocidad que es imposible verlo. Sin embargo, como su zumbido no deja de oírse, se pensó durante mucho tiempo que este Pokémon era invisible.", new TipoDual(bicho,volador));
+                "Ninjask se mueve de un lado a otro a tal velocidad que es imposible verlo. Sin embargo, como su zumbido no deja de oírse, se pensó durante mucho tiempo que este Pokémon era invisible.", new TipoDual(bicho,volador), "p290,Nivel 20,p291,+ (si hay espacio en el equipo y teniendo una PokéBall),p292,slow");
         pokemons.add(ninjask);
         Pokemon shedinja = new Pokemon(292, "Shedinja",
-                "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma.", new TipoDual(bicho, fantastma));
+                "Shedinja tiene un cuerpo robusto que no mueve en absoluto. De hecho, parece una especie de caparazón hueco. Se cree que, si alguien se atreviera a mirarle por la espalda lo que tiene en su interior, Shedinja le robaría el alma.", new TipoDual(bicho, fantastma), "p290,Nivel 20,p291,+ (si hay espacio en el equipo y teniendo una PokéBall),p292,slow");
         pokemons.add(shedinja);
         Pokemon whismur = new Pokemon(293, "Whismur",
-                "Normalmente, Whismur tiene una voz tenue, casi inaudible, aunque se preste atención. No obstante, si este Pokémon siente que el peligro acecha, puede ponerse a chillar con un volumen ensordecedor.", normal);
+                "Normalmente, Whismur tiene una voz tenue, casi inaudible, aunque se preste atención. No obstante, si este Pokémon siente que el peligro acecha, puede ponerse a chillar con un volumen ensordecedor.", normal, "p293,Nivel 20,p294,Nivel 40,p295");
         pokemons.add(whismur);
         Pokemon loudred = new Pokemon(294, "Loudred",
-                "Los bramidos de Loudred pueden echar abajo una casa reforzada con vigas de madera. Este Pokémon usa el vozarrón que tiene para castigar a sus rivales. Las orejas redondas le sirven de altavoces.", normal);
+                "Los bramidos de Loudred pueden echar abajo una casa reforzada con vigas de madera. Este Pokémon usa el vozarrón que tiene para castigar a sus rivales. Las orejas redondas le sirven de altavoces.", normal, "p293,Nivel 20,p294,Nivel 40,p295");
         pokemons.add(loudred);
         Pokemon exploud = new Pokemon(295, "Exploud",
-                "Exploud provoca terremotos con el temblor que causa al levantar la voz. Cuando inhala aire por los tubos, hay que prestar atención, ya que está a punto de soltar un buen bramido.", normal);
+                "Exploud provoca terremotos con el temblor que causa al levantar la voz. Cuando inhala aire por los tubos, hay que prestar atención, ya que está a punto de soltar un buen bramido.", normal, "p293,Nivel 20,p294,Nivel 40,p295");
         pokemons.add(exploud);
         Pokemon makuhita = new Pokemon(296, "Makuhita",
-                "Makuhita es tenaz. Da igual las veces que le venzan; volverá a ponerse en pie y a atacar. De hecho, cada vez que se recupera, acumula más energía para poder evolucionar.", lucha);
+                "Makuhita es tenaz. Da igual las veces que le venzan; volverá a ponerse en pie y a atacar. De hecho, cada vez que se recupera, acumula más energía para poder evolucionar.", lucha, "p296,Nivel 24,p297");
         pokemons.add(makuhita);
         Pokemon hariyama = new Pokemon(297, "Hariyama",
-                "Hariyama practica los empujones que da estirando los brazos allá por donde va. Este Pokémon puede partir por la mitad un poste de teléfono de un enérgico golpe con los brazos estirados y las manos abiertas.", lucha);
+                "Hariyama practica los empujones que da estirando los brazos allá por donde va. Este Pokémon puede partir por la mitad un poste de teléfono de un enérgico golpe con los brazos estirados y las manos abiertas.", lucha, "p296,Nivel 24,p297");
         pokemons.add(hariyama);
         Pokemon azurill = new Pokemon(298, "Azurill",
-                "Azurill enrolla la cola como si fuera un lazo y la despliega a continuación todo lo que puede. De esta forma, un Azurill llegó a lanzarse a sí mismo hasta 10 m.", new TipoDual(normal, hada));
+                "Azurill enrolla la cola como si fuera un lazo y la despliega a continuación todo lo que puede. De esta forma, un Azurill llegó a lanzarse a sí mismo hasta 10 m.", new TipoDual(normal, hada), "p298,Amistad + nivel,p183,Nivel 18,p184");
         pokemons.add(azurill);
         Pokemon nosepass = new Pokemon(299, "Nosepass",
-                "Nosepass siempre está con la nariz magnética que tiene orientada hacia el norte. Si se encuentra con otro ejemplar de su especie, no puede mirarle de frente porque sus polos magnéticos se repelen.", roca);
+                "Nosepass siempre está con la nariz magnética que tiene orientada hacia el norte. Si se encuentra con otro ejemplar de su especie, no puede mirarle de frente porque sus polos magnéticos se repelen.", roca, "p299");
         pokemons.add(nosepass);
         Pokemon skitty = new Pokemon(300, "Skitty",
-                "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.", normal);
+                "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.", normal, "p300,Piedra Lunar,p301");
         pokemons.add(skitty);
         Pokemon delcatty = new Pokemon(301, "Delcatty",
-                "Delcatty prefiere llevar una vida independiente y hacer lo que se le antoje. Como este Pokémon come y duerme según vea en cada momento, no se puede decir que tenga unos hábitos regulares en el día a día.", normal);
+                "Delcatty prefiere llevar una vida independiente y hacer lo que se le antoje. Como este Pokémon come y duerme según vea en cada momento, no se puede decir que tenga unos hábitos regulares en el día a día.", normal, "p300,Piedra Lunar,p301");
         pokemons.add(delcatty);
         Pokemon sableye = new Pokemon(302, "Sableye",
-                "Los Sableye hacen una vida muy tranquila en cavernas, pero son muy temidos. Se dice que, cuando los ojos les brillan de manera siniestra, están robándole el alma a alguien.", new TipoDual(siniestro, fantastma));
+                "Los Sableye hacen una vida muy tranquila en cavernas, pero son muy temidos. Se dice que, cuando los ojos les brillan de manera siniestra, están robándole el alma a alguien.", new TipoDual(siniestro, fantastma), "p302");
         pokemons.add(sableye);
         Pokemon mawile = new Pokemon(303, "Mawile",
-                "Las descomunales fauces de acero de Mawile son la evolución de unos cuernos que tuvo en su día. Con su expresión dócil puede engañar al enemigo y hacer que baje la guardia para sorprenderle con las fauces.", new TipoDual(acero, hada));
+                "Las descomunales fauces de acero de Mawile son la evolución de unos cuernos que tuvo en su día. Con su expresión dócil puede engañar al enemigo y hacer que baje la guardia para sorprenderle con las fauces.", new TipoDual(acero, hada), "p303");
         pokemons.add(mawile);
         Pokemon aron = new Pokemon(304, "Aron",
-                "Este Pokémon tiene el cuerpo de acero. Para mantenerlo, se alimenta del hierro que saca de las montañas. A veces, causa verdaderos problemas, pues se come puentes y vías de tren.", new TipoDual(acero, roca));
+                "Este Pokémon tiene el cuerpo de acero. Para mantenerlo, se alimenta del hierro que saca de las montañas. A veces, causa verdaderos problemas, pues se come puentes y vías de tren.", new TipoDual(acero, roca), "p304,Nivel 32,p305,Nivel 42,p306");
         pokemons.add(aron);
         Pokemon lairon = new Pokemon(305, "Lairon",
-                "Lairon templa su cuerpo de acero bebiendo agua mineral muy rica en nutrientes hasta que no puede más. Este Pokémon suele crear su nido cerca de manantiales de rica agua.", new TipoDual(acero, roca));
+                "Lairon templa su cuerpo de acero bebiendo agua mineral muy rica en nutrientes hasta que no puede más. Este Pokémon suele crear su nido cerca de manantiales de rica agua.", new TipoDual(acero, roca), "p304,Nivel 32,p305,Nivel 42,p306");
         pokemons.add(lairon);
         Pokemon aggron = new Pokemon(306, "Aggron",
-                "Aggron marca una montaña entera como su territorio y acaba con todo lo que pueda ponerlo en peligro. Este Pokémon está continuamente patrullando la zona en defensa de su terreno.", new TipoDual(acero, roca));
+                "Aggron marca una montaña entera como su territorio y acaba con todo lo que pueda ponerlo en peligro. Este Pokémon está continuamente patrullando la zona en defensa de su terreno.", new TipoDual(acero, roca), "p304,Nivel 32,p305,Nivel 42,p306");
         pokemons.add(aggron);
         Pokemon meditite = new Pokemon(307, "Meditite",
-                "Meditite lleva a cabo un entrenamiento mental exhaustivo en lo más profundo de las montañas. Aunque, cuando medita, pierde toda la concentración y se descentra. Por eso, no deja nunca de entrenarse.", new TipoDual(lucha, psiquico));
+                "Meditite lleva a cabo un entrenamiento mental exhaustivo en lo más profundo de las montañas. Aunque, cuando medita, pierde toda la concentración y se descentra. Por eso, no deja nunca de entrenarse.", new TipoDual(lucha, psiquico), "p307,Nivel 37,p308");
         pokemons.add(meditite);
         Pokemon medicham = new Pokemon(308, "Medicham",
-                "Dicen que, a través de la meditación, Medicham aumenta su energía interior y agudiza su sexto sentido. Este Pokémon suele pasar desapercibido mimetizándose con el campo y las montañas.", new TipoDual(lucha ,psiquico));
+                "Dicen que, a través de la meditación, Medicham aumenta su energía interior y agudiza su sexto sentido. Este Pokémon suele pasar desapercibido mimetizándose con el campo y las montañas.", new TipoDual(lucha ,psiquico), "p307,Nivel 37,p308");
         pokemons.add(medicham);
         Pokemon electrike = new Pokemon(309, "Electrike",
-                "Electrike acumula electricidad en el largo pelaje que tiene. Este Pokémon estimula los músculos de las patas mediante descargas eléctricas. Estas explosiones de energía le permiten acelerar de forma increíble.", electrico);
+                "Electrike acumula electricidad en el largo pelaje que tiene. Este Pokémon estimula los músculos de las patas mediante descargas eléctricas. Estas explosiones de energía le permiten acelerar de forma increíble.", electrico, "p309,Nivel 26,p310");
         pokemons.add(electrike);
         Pokemon macnectric = new Pokemon(310, "Macnectric",
-                "Manectric está continuamente descargando electricidad por las melenas, y a veces causa incendios en el bosque con las chispas que suelta. Cuando entra en combate, este Pokémon crea nubarrones.", electrico);
+                "Manectric está continuamente descargando electricidad por las melenas, y a veces causa incendios en el bosque con las chispas que suelta. Cuando entra en combate, este Pokémon crea nubarrones.", electrico, "p309,Nivel 26,p310");
         pokemons.add(macnectric);
         Pokemon plusle = new Pokemon(311, "Plusle",
-                "Plusle siempre anima a sus compañeros. Cuando algún miembro de su grupo hace un gran esfuerzo en combate, causa un cortocircuito en su interior para mostrar con el chisporroteo su alegría.", electrico);
+                "Plusle siempre anima a sus compañeros. Cuando algún miembro de su grupo hace un gran esfuerzo en combate, causa un cortocircuito en su interior para mostrar con el chisporroteo su alegría.", electrico, "p311");
         pokemons.add(plusle);
         Pokemon minum = new Pokemon(312, "Minum",
-                "Minun se preocupa más por alentar a sus compañeros de equipo que por su propia seguridad. Para animar a los miembros de su grupo, crea un cortocircuito en su interior y libera un chisporroteo espectacular.", electrico);
+                "Minun se preocupa más por alentar a sus compañeros de equipo que por su propia seguridad. Para animar a los miembros de su grupo, crea un cortocircuito en su interior y libera un chisporroteo espectacular.", electrico, "p312");
         pokemons.add(minum);
         Pokemon volbeat = new Pokemon(313, "Volbeat",
-                "Cuando llega la noche, Volbeat emite luz por la cola y regula la intensidad y el destello para comunicarse con el resto. A este Pokémon le atrae el dulce aroma de Illumise.", bicho);
+                "Cuando llega la noche, Volbeat emite luz por la cola y regula la intensidad y el destello para comunicarse con el resto. A este Pokémon le atrae el dulce aroma de Illumise.", bicho, "p313");
         pokemons.add(volbeat);
         Pokemon illumise = new Pokemon(314, "Illumise",
-                "Illumise atrae mediante su dulce aroma a enjambres de Volbeat. Una vez que los ha agrupado, les guía en el vuelo para que dibujen formas geométricas en el lienzo del oscuro cielo.", bicho);
+                "Illumise atrae mediante su dulce aroma a enjambres de Volbeat. Una vez que los ha agrupado, les guía en el vuelo para que dibujen formas geométricas en el lienzo del oscuro cielo.", bicho, "p314");
         pokemons.add(illumise);
         Pokemon roselia = new Pokemon(315, "Roselia",
-                "Roselia lanza finas espinas a todo el que se le acerca con intención de robarle las flores de los brazos. El aroma de este Pokémon resulta relajante a los seres vivos.", new TipoDual(planta, veneno));
+                "Roselia lanza finas espinas a todo el que se le acerca con intención de robarle las flores de los brazos. El aroma de este Pokémon resulta relajante a los seres vivos.", new TipoDual(planta, veneno), "p315");
         pokemons.add(roselia);
         Pokemon gulpin = new Pokemon(316, "Gulpin",
-                "Casi la totalidad del cuerpo de Gulpin está compuesto por el estómago. Por eso, puede tragarse todo lo que tenga su tamaño. En el interior del estómago tiene un fluido capaz de corroerlo todo.", veneno);
+                "Casi la totalidad del cuerpo de Gulpin está compuesto por el estómago. Por eso, puede tragarse todo lo que tenga su tamaño. En el interior del estómago tiene un fluido capaz de corroerlo todo.", veneno, "p316,Nivel 26,p317");
         pokemons.add(gulpin);
         Pokemon swalot = new Pokemon(317, "Swalot",
-                "Cuando Swalot detecta una presa, echa por los poros, y a borbotones, un fluido tóxico espantoso con el que rocía a su víctima. Una vez que la debilita, se la traga entera gracias a la gigantesca boca que tiene.", veneno);
+                "Cuando Swalot detecta una presa, echa por los poros, y a borbotones, un fluido tóxico espantoso con el que rocía a su víctima. Una vez que la debilita, se la traga entera gracias a la gigantesca boca que tiene.", veneno, "p316,Nivel 26,p317");
         pokemons.add(swalot);
         Pokemon carvanha = new Pokemon(318, "Carvanha",
-                "Carvanha, gracias a las descomunales fauces de afilados colmillos que tiene, es capaz de hacer trizas un barco. Son muchas las naves que han sufrido el ataque de este Pokémon y han acabado naufragando.", new TipoDual(agua, siniestro));
+                "Carvanha, gracias a las descomunales fauces de afilados colmillos que tiene, es capaz de hacer trizas un barco. Son muchas las naves que han sufrido el ataque de este Pokémon y han acabado naufragando.", new TipoDual(agua, siniestro), "p318,Nivel 30,p319");
         pokemons.add(carvanha);
         Pokemon sharpedo = new Pokemon(319, "Sharpedo",
-                "Conocido como el Terror de los Mares, Sharpedo es temido por todos. Si este Pokémon pierde los escalofriantes colmillos que tiene, los recupera en breve. Basta con un Sharpedo para destrozar un buque-cisterna.", new TipoDual(agua, siniestro));
+                "Conocido como el Terror de los Mares, Sharpedo es temido por todos. Si este Pokémon pierde los escalofriantes colmillos que tiene, los recupera en breve. Basta con un Sharpedo para destrozar un buque-cisterna.", new TipoDual(agua, siniestro), "p318,Nivel 30,p319");
         pokemons.add(sharpedo);
         Pokemon wailmer = new Pokemon(320, "Wailmer",
-                "Wailmer tiene los espiráculos encima de la cabeza. A este juguetón Pokémon le encanta asustar a la gente expulsando el agua que acumula a través de estos orificios.", agua);
+                "Wailmer tiene los espiráculos encima de la cabeza. A este juguetón Pokémon le encanta asustar a la gente expulsando el agua que acumula a través de estos orificios.", agua, "p320,Nivel 40,p321");
         pokemons.add(wailmer);
         Pokemon wailord = new Pokemon(321, "Wailord",
-                "Wailord es el mayor Pokémon registrado hasta la fecha. Este coloso va nadando lánguidamente por el ancho mar con la boca abierta para que penetre la mayor cantidad posible de alimento.", agua);
+                "Wailord es el mayor Pokémon registrado hasta la fecha. Este coloso va nadando lánguidamente por el ancho mar con la boca abierta para que penetre la mayor cantidad posible de alimento.", agua, "p320,Nivel 40,p321");
         pokemons.add(wailord);
         Pokemon numel = new Pokemon(322, "Numel",
-                "Numel tarda en percibir las cosas, no se entera ni cuando lo golpean, pero se da cuenta enseguida de si tiene hambre. El cuerpo de este Pokémon es un caldero de magma hirviendo.", new TipoDual(fuego, tierra));
+                "Numel tarda en percibir las cosas, no se entera ni cuando lo golpean, pero se da cuenta enseguida de si tiene hambre. El cuerpo de este Pokémon es un caldero de magma hirviendo.", new TipoDual(fuego, tierra), "p322,Nivel 33,p323");
         pokemons.add(numel);
         Pokemon camerupt = new Pokemon(323,"Camerupt",
-                "Camerupt encierra un volcán en su interior y magma de 10 000 °C le recorre el cuerpo. A veces, las jorobas de la espalda entran en erupción y escupen el abrasivo magma.", new TipoDual(fuego, tierra));
+                "Camerupt encierra un volcán en su interior y magma de 10 000 °C le recorre el cuerpo. A veces, las jorobas de la espalda entran en erupción y escupen el abrasivo magma.", new TipoDual(fuego, tierra), "p322,Nivel 33,p323");
         pokemons.add(camerupt);
         Pokemon torkoal = new Pokemon(324, "Torkoal",
-                "Torkoal va cavando por las montañas en busca de carbón. Cuando lo encuentra, rellena los huecos que tiene dentro del caparazón y lo quema. Si le atacan, este Pokémon echa un humo negro que le permite la retirada.", fuego);
+                "Torkoal va cavando por las montañas en busca de carbón. Cuando lo encuentra, rellena los huecos que tiene dentro del caparazón y lo quema. Si le atacan, este Pokémon echa un humo negro que le permite la retirada.", fuego, "p324");
         pokemons.add(torkoal);
         Pokemon spoink = new Pokemon(325, "Spoink",
-                "Spoink se pasa todo el día saltando sobre la cola. Cada salto hace que le lata el corazón. Por eso, no puede permitirse dejar de saltar. Si lo hiciera, se le pararía.", psiquico);
+                "Spoink se pasa todo el día saltando sobre la cola. Cada salto hace que le lata el corazón. Por eso, no puede permitirse dejar de saltar. Si lo hiciera, se le pararía.", psiquico, "p325,Nivel 32,p326");
         pokemons.add(spoink);
         Pokemon grumpig = new Pokemon(326, "Grumpig",
-                "Grumpig usa las perlas negras que tiene para amplificar las ondas de su poder psíquico y controlar del todo al rival. Cuando usa su poder especial, le cuesta respirar y resopla con pesadez.", psiquico);
+                "Grumpig usa las perlas negras que tiene para amplificar las ondas de su poder psíquico y controlar del todo al rival. Cuando usa su poder especial, le cuesta respirar y resopla con pesadez.", psiquico, "p325,Nivel 32,p326");
         pokemons.add(grumpig);
         Pokemon spinda = new Pokemon(327, "Spinda",
-                "Dicen que no hay dos Spinda que tengan los mismos dibujos en el pelaje. Este Pokémon tiene una forma de andar inestable, va tambaleándose. Da la sensación de ir bailando.", normal);
+                "Dicen que no hay dos Spinda que tengan los mismos dibujos en el pelaje. Este Pokémon tiene una forma de andar inestable, va tambaleándose. Da la sensación de ir bailando.", normal, "p327");
         pokemons.add(spinda);
         Pokemon trapinch = new Pokemon(328, "Trapinch",
-                "El nido de Trapinch está situado bajo la arena, en una zona cóncava. Este Pokémon espera con paciencia a que su presa caiga en la misma. Con las fauces que tiene puede destruir hasta piedras.", tierra);
+                "El nido de Trapinch está situado bajo la arena, en una zona cóncava. Este Pokémon espera con paciencia a que su presa caiga en la misma. Con las fauces que tiene puede destruir hasta piedras.", tierra, "p328,Nivel 38,p329,Nivel 45,p330");
         pokemons.add(trapinch);
         Pokemon vibrava = new Pokemon(329, "Vibrava",
-                "Para debilitar a su víctima, Vibrava genera ondas ultrasónicas haciendo vibrar con fuerza las alas. Las ondas que crea son tan fuertes que pueden dar dolor de cabeza a la gente.", new TipoDual(tierra, dragon));
+                "Para debilitar a su víctima, Vibrava genera ondas ultrasónicas haciendo vibrar con fuerza las alas. Las ondas que crea son tan fuertes que pueden dar dolor de cabeza a la gente.", new TipoDual(tierra, dragon), "p328,Nivel 38,p329,Nivel 45,p330");
         pokemons.add(vibrava);
         Pokemon flygon = new Pokemon(330, "Flygon",
-                "A Flygon se le conoce como el Espíritu del Desierto. Al volar, como levanta una nube de arena al batir las alas, está siempre envuelto en una tormenta de arena.", new TipoDual(tierra, dragon));
+                "A Flygon se le conoce como el Espíritu del Desierto. Al volar, como levanta una nube de arena al batir las alas, está siempre envuelto en una tormenta de arena.", new TipoDual(tierra, dragon), "p328,Nivel 38,p329,Nivel 45,p330");
         pokemons.add(flygon);
         Pokemon cacnea = new Pokemon(331, "Cacnea",
-                "Cacnea habita en desiertos y otras zonas áridas. Para atraer a su presa, libera un fuerte aroma por la flor y, cuando se le acerca, le lanza pinchos por todo el cuerpo para reducirla.", planta);
+                "Cacnea habita en desiertos y otras zonas áridas. Para atraer a su presa, libera un fuerte aroma por la flor y, cuando se le acerca, le lanza pinchos por todo el cuerpo para reducirla.", planta, "p331,Nivel 32,p332");
         pokemons.add(cacnea);
         Pokemon cacturne = new Pokemon(332, "Cacturne",
-                "Durante el día, Cacturne permanece inmóvil para no perder nada de humedad bajo el sol de justicia del desierto. Este Pokémon entra en acción por la noche, cuando bajan las temperaturas.", new TipoDual(planta, siniestro));
+                "Durante el día, Cacturne permanece inmóvil para no perder nada de humedad bajo el sol de justicia del desierto. Este Pokémon entra en acción por la noche, cuando bajan las temperaturas.", new TipoDual(planta, siniestro), "p331,Nivel 32,p332");
         pokemons.add(cacturne);
         Pokemon swablu = new Pokemon(333, "Swablu",
-                "Swablu tiene unas alas ligeras y esponjosas que parecen nubes de algodón. A este Pokémon no le asusta la gente. De hecho, puede llegar a posarse en la cabeza de alguien y servirle de gorro sedoso.", new TipoDual(normal, dragon));
+                "Swablu tiene unas alas ligeras y esponjosas que parecen nubes de algodón. A este Pokémon no le asusta la gente. De hecho, puede llegar a posarse en la cabeza de alguien y servirle de gorro sedoso.", new TipoDual(normal, dragon), "p333,Nivel 35,p334");
         pokemons.add(swablu);
         Pokemon altaria = new Pokemon(334, "Altaria",
-                "Altaria baila y revolotea por el cielo entre ondeantes nubes que parecen de algodón. Al entonar melodías con su voz cristalina, este Pokémon deja a sus oyentes embobados y admirados.", new TipoDual(dragon, volador));
+                "Altaria baila y revolotea por el cielo entre ondeantes nubes que parecen de algodón. Al entonar melodías con su voz cristalina, este Pokémon deja a sus oyentes embobados y admirados.", new TipoDual(dragon, volador), "p333,Nivel 35,p334");
         pokemons.add(altaria);
         Pokemon zangoose = new Pokemon(335, "Zangoose",
-                "Los ecos del combate mantenido con su rival más feroz, Seviper, resuenan aún en cada célula de Zangoose. Este Pokémon esquiva los ataques con auténtica destreza.", normal);
+                "Los ecos del combate mantenido con su rival más feroz, Seviper, resuenan aún en cada célula de Zangoose. Este Pokémon esquiva los ataques con auténtica destreza.", normal, "p335");
         pokemons.add(zangoose);
         Pokemon seviper = new Pokemon(336, "Seviper",
-                "Seviper lleva años de gran enemistad con Zangoose. Las cicatrices que tiene por todo el cuerpo dan buena muestra de los encarnizados combates en los que se han enfrentado. Seviper ataca usando su cola con forma de espada.", veneno);
+                "Seviper lleva años de gran enemistad con Zangoose. Las cicatrices que tiene por todo el cuerpo dan buena muestra de los encarnizados combates en los que se han enfrentado. Seviper ataca usando su cola con forma de espada.", veneno, "p336");
         pokemons.add(seviper);
         Pokemon lunatone = new Pokemon(337, "Lunanote",
-                "Lunatone fue descubierto en el lugar de impacto de un meteorito. Por eso, hay quien especula con la idea de que procede del espacio. Con todo, hasta el día de hoy nadie ha podido probar esta teoría.", new TipoDual(roca, psiquico));
+                "Lunatone fue descubierto en el lugar de impacto de un meteorito. Por eso, hay quien especula con la idea de que procede del espacio. Con todo, hasta el día de hoy nadie ha podido probar esta teoría.", new TipoDual(roca, psiquico), "p337");
         pokemons.add(lunatone);
         Pokemon solrock = new Pokemon(338, "Solrock",
-                "Solrock pertenece a una nueva especie de Pokémon a la que se le atribuye una procedencia extraterrestre. Este Pokémon permanece flotando en el aire y se mueve muy despacio. Al luchar, desprende una luz viva e intensa.", new TipoDual(roca, psiquico));
+                "Solrock pertenece a una nueva especie de Pokémon a la que se le atribuye una procedencia extraterrestre. Este Pokémon permanece flotando en el aire y se mueve muy despacio. Al luchar, desprende una luz viva e intensa.", new TipoDual(roca, psiquico), "p338");
         pokemons.add(solrock);
         Pokemon barboach = new Pokemon(339, "Barboach",
-                "Barboach tiene unos bigotes sensibles que le sirven de infalible radar. Este Pokémon se sumerge en lodo y solo deja los bigotes por fuera de la superficie, al acecho, mientras espera a que llegue su presa.", new TipoDual(agua, tierra));
+                "Barboach tiene unos bigotes sensibles que le sirven de infalible radar. Este Pokémon se sumerge en lodo y solo deja los bigotes por fuera de la superficie, al acecho, mientras espera a que llegue su presa.", new TipoDual(agua, tierra), "p339,Nivel 30,p340");
         pokemons.add(barboach);
         Pokemon whiscash = new Pokemon(340, "Whiscash",
-                "Whiscash defiende su territorio a toda costa. Es capaz de apoderarse de un estanque entero para sí solo. Si alguien se le acerca, se revolverá y provocará un terremoto devastador.", new TipoDual(agua, tierra));
+                "Whiscash defiende su territorio a toda costa. Es capaz de apoderarse de un estanque entero para sí solo. Si alguien se le acerca, se revolverá y provocará un terremoto devastador.", new TipoDual(agua, tierra), "p339,Nivel 30,p340");
         pokemons.add(whiscash);
         Pokemon corphish = new Pokemon(341, "Corphish",
-                "En un principio, se importaban Corphish como mascota. Pero, al final, se hicieron salvajes. Este Pokémon es muy resistente y ha aumentado su población de forma considerable.", agua);
+                "En un principio, se importaban Corphish como mascota. Pero, al final, se hicieron salvajes. Este Pokémon es muy resistente y ha aumentado su población de forma considerable.", agua, "p341,Nivel 30,p342");
         pokemons.add(corphish);
         Pokemon crawdaunt = new Pokemon(342, "Crawdaunt",
-                "Crawdaunt es de una naturaleza extremadamente violenta que le lleva a desafiar a otros seres vivos. Hay formas de vida que se niegan a vivir en los estanques donde habitan estos Pokémon, y los dejan medio vacíos.", new TipoDual(agua, siniestro));
+                "Crawdaunt es de una naturaleza extremadamente violenta que le lleva a desafiar a otros seres vivos. Hay formas de vida que se niegan a vivir en los estanques donde habitan estos Pokémon, y los dejan medio vacíos.", new TipoDual(agua, siniestro), "p341,Nivel 30,p342");
         pokemons.add(crawdaunt);
         Pokemon baltoy = new Pokemon(343, "Baltoy",
-                "Baltoy se mueve girando alrededor de sí mismo sobre la extremidad inferior que tiene. En unas ruinas antiguas, descubrieron pinturas rupestres en las que aparecía este Pokémon conviviendo con personas.", new TipoDual(tierra, psiquico));
+                "Baltoy se mueve girando alrededor de sí mismo sobre la extremidad inferior que tiene. En unas ruinas antiguas, descubrieron pinturas rupestres en las que aparecía este Pokémon conviviendo con personas.", new TipoDual(tierra, psiquico), "p343,Nivel 40,p344");
         pokemons.add(baltoy);
         Pokemon claydol = new Pokemon(344, "Claydol",
-                "Se cree que los Claydol son figuras de barro hechas por humanos primitivos y que un misterioso rayo les hizo cobrar vida. Este Pokémon se desplaza levitando.", new TipoDual(tierra, psiquico));
+                "Se cree que los Claydol son figuras de barro hechas por humanos primitivos y que un misterioso rayo les hizo cobrar vida. Este Pokémon se desplaza levitando.", new TipoDual(tierra, psiquico), "p343,Nivel 40,p344");
         pokemons.add(claydol);
         Pokemon lileep = new Pokemon(345, "Lileep",
-                "Los Lileep se extinguieron hace unos cien millones de años aproximadamente. Este Pokémon se ancla a una roca en el fondo del mar y atrapa a las presas que se le acercan con los tentáculos que tiene en forma de pétalos de flor.",  new TipoDual(roca, planta));
+                "Los Lileep se extinguieron hace unos cien millones de años aproximadamente. Este Pokémon se ancla a una roca en el fondo del mar y atrapa a las presas que se le acercan con los tentáculos que tiene en forma de pétalos de flor.",  new TipoDual(roca, planta), "p345,Nivel 40,p346");
         pokemons.add(lileep);
         Pokemon cradily = new Pokemon(346, "Cradily",
-                "Cradily va por el fondo oceánico sin rumbo fijo en busca de comida. El cuello de este Pokémon se parece al tronco de un árbol. Cuando quiere atrapar a su presa desprevenida, lo estira y usa los ocho tentáculos que tiene.", new TipoDual(roca, planta));
+                "Cradily va por el fondo oceánico sin rumbo fijo en busca de comida. El cuello de este Pokémon se parece al tronco de un árbol. Cuando quiere atrapar a su presa desprevenida, lo estira y usa los ocho tentáculos que tiene.", new TipoDual(roca, planta), "p345,Nivel 40,p346");
         pokemons.add(cradily);
         Pokemon anorith = new Pokemon(347, "Anorith",
-                "Anorith se regeneró a partir de un fósil prehistórico. Este Pokémon primitivo vivía en mares cálidos. Gracias a sus enormes pinzas puede agarrar a su presa con firmeza.", new TipoDual(roca, bicho));
+                "Anorith se regeneró a partir de un fósil prehistórico. Este Pokémon primitivo vivía en mares cálidos. Gracias a sus enormes pinzas puede agarrar a su presa con firmeza.", new TipoDual(roca, bicho), "p347,Nivel 40,p348");
         pokemons.add(anorith);
         Pokemon armaldo = new Pokemon(348, "Armaldo",
-                "Armaldo tiene una sólida armadura que repele cualquier ataque. Este Pokémon puede estirar o encoger todo lo que quiera las pinzas que tiene. Con ellas, puede atravesar una plancha de acero.", new TipoDual(roca, bicho));
+                "Armaldo tiene una sólida armadura que repele cualquier ataque. Este Pokémon puede estirar o encoger todo lo que quiera las pinzas que tiene. Con ellas, puede atravesar una plancha de acero.", new TipoDual(roca, bicho), "p347,Nivel 40,p348");
         pokemons.add(armaldo);
         Pokemon feebad = new Pokemon(349, "Feebas",
-                "Feebas tiene las aletas melladas y rasgadas desde que nace. Debido a este aspecto poco imponente, son pocos los que lo tienen en cuenta. Este Pokémon puede vivir tanto en agua salada como dulce.", agua);
+                "Feebas tiene las aletas melladas y rasgadas desde que nace. Debido a este aspecto poco imponente, son pocos los que lo tienen en cuenta. Este Pokémon puede vivir tanto en agua salada como dulce.", agua, "p349,Belleza alta + nivel o intercambio con escama bella,p350");
         pokemons.add(feebad);
         Pokemon milotic = new Pokemon(350, "Milotic",
-                "De Milotic se dice que es el Pokémon más bello. Tiene la capacidad de calmar sentimientos tales como el miedo y la hostilidad, y apaciguar las relaciones de áspera enemistad.", agua);
+                "De Milotic se dice que es el Pokémon más bello. Tiene la capacidad de calmar sentimientos tales como el miedo y la hostilidad, y apaciguar las relaciones de áspera enemistad.", agua, "p349,Belleza alta + nivel o intercambio con escama bella,p350");
         pokemons.add(milotic);
         Pokemon castform = new Pokemon(351, "Castform",
-                "La forma de Castform cambia con las variaciones del tiempo. Este Pokémon consiguió aprender a usar el gran poder de la naturaleza para proteger el pequeño cuerpo que tiene.", normal);
+                "La forma de Castform cambia con las variaciones del tiempo. Este Pokémon consiguió aprender a usar el gran poder de la naturaleza para proteger el pequeño cuerpo que tiene.", normal, "p351,cast");
         pokemons.add(castform);
         Pokemon kecleon = new Pokemon(352, "Kecleon",
-                "Kecleon puede alterar la pigmentación de la piel para mezclarse con su entorno. Lo único que no es capaz de cambiar es el trazado en zigzag que tiene en la panza.", normal);
+                "Kecleon puede alterar la pigmentación de la piel para mezclarse con su entorno. Lo único que no es capaz de cambiar es el trazado en zigzag que tiene en la panza.", normal, "p352");
         pokemons.add(kecleon);
         Pokemon shuppet = new Pokemon(353, "Shuppet",
-                "A Shuppet le atraen los sentimientos de celos y rencor. Si alguien desarrolla fuertes sentimientos de venganza, aparecerá una multitud de Shuppet que se quedará bajo los aleros de su casa.", fantastma);
+                "A Shuppet le atraen los sentimientos de celos y rencor. Si alguien desarrolla fuertes sentimientos de venganza, aparecerá una multitud de Shuppet que se quedará bajo los aleros de su casa.", fantastma, "p353,Nivel 37,p354");
         pokemons.add(shuppet);
         Pokemon banette = new Pokemon(354, "Banette",
-                "Banette genera energía para echar un infalible hechizo clavándose púas a sí mismo. Los orígenes de este Pokémon son algo tristes: era un muñeco de felpa al que tiraron a la basura.", fantastma);
+                "Banette genera energía para echar un infalible hechizo clavándose púas a sí mismo. Los orígenes de este Pokémon son algo tristes: era un muñeco de felpa al que tiraron a la basura.", fantastma, "p353,Nivel 37,p354");
         pokemons.add(banette);
         Pokemon duskull = new Pokemon(355, "Duskull",
-                "Duskull puede atravesar los muros, sea cual sea el grosor que tengan. Cuando este Pokémon elige su objetivo, lo persigue hábilmente hasta el amanecer.", fantastma);
+                "Duskull puede atravesar los muros, sea cual sea el grosor que tengan. Cuando este Pokémon elige su objetivo, lo persigue hábilmente hasta el amanecer.", fantastma, "p355,Nivel 37,p356");
         pokemons.add(duskull);
         Pokemon dusclops = new Pokemon(356, "Dusclops",
-                "Dusclops está completamente hueco por dentro. Dicen que su cuerpo es como un agujero negro. Este Pokémon es capaz de absorber cualquier cosa, pero cosa que absorba, cosa que no dejará salir nunca más.", fantastma);
+                "Dusclops está completamente hueco por dentro. Dicen que su cuerpo es como un agujero negro. Este Pokémon es capaz de absorber cualquier cosa, pero cosa que absorba, cosa que no dejará salir nunca más.", fantastma, "p355,Nivel 37,p356");
         pokemons.add(dusclops);
         Pokemon tropius = new Pokemon(357, "Tropius",
-                "A los niños les encantan los racimos de fruta que Tropius tiene en el cuello. Este Pokémon siempre come fruta; le encanta. De hecho, ese parece ser el motivo por el que él mismo da fruta.", new TipoDual(planta, volador));
+                "A los niños les encantan los racimos de fruta que Tropius tiene en el cuello. Este Pokémon siempre come fruta; le encanta. De hecho, ese parece ser el motivo por el que él mismo da fruta.", new TipoDual(planta, volador), "p357");
         pokemons.add(tropius);
         Pokemon chimeco = new Pokemon(358, "Chimeco",
-                "Chimecho hace que sus gritos resuenen con eco en su interior. Cuando se enfada, los chillidos se convierten en ondas ultrasónicas capaces de derribar a los enemigos voladores.", psiquico);
+                "Chimecho hace que sus gritos resuenen con eco en su interior. Cuando se enfada, los chillidos se convierten en ondas ultrasónicas capaces de derribar a los enemigos voladores.", psiquico, "p358");
         pokemons.add(chimeco);
         Pokemon absol = new Pokemon(359, "Absol",
-                "Cada vez que Absol aparece ante la gente, ocurre una catástrofe natural como un terremoto o un maremoto. Por esta razón se le conoce como el Pokémon de las catástrofes.", siniestro);
+                "Cada vez que Absol aparece ante la gente, ocurre una catástrofe natural como un terremoto o un maremoto. Por esta razón se le conoce como el Pokémon de las catástrofes.", siniestro, "p359");
         pokemons.add(absol);
         Pokemon wynaut = new Pokemon(360, "Wynaut",
-                "Wynaut está siempre con una gran sonrisa puesta. Para ver si está enfadado, basta con mirarle la cola. Cuando se le molesta, se pone a dar golpetazos en el suelo.", psiquico);
+                "Wynaut está siempre con una gran sonrisa puesta. Para ver si está enfadado, basta con mirarle la cola. Cuando se le molesta, se pone a dar golpetazos en el suelo.", psiquico, "p360,Nivel 15,p202");
         pokemons.add(wynaut);
         Pokemon snorut = new Pokemon(361, "Snorunt",
-                "Snorunt vive en zonas de grandes nevadas. En primavera y verano, cuando no nieva, se retira a las cavernas para vivir tranquilamente entre estalactitas y estalagmitas.", hielo);
+                "Snorunt vive en zonas de grandes nevadas. En primavera y verano, cuando no nieva, se retira a las cavernas para vivir tranquilamente entre estalactitas y estalagmitas.", hielo, "p361,Nivel 42,p362");
         pokemons.add(snorut);
         Pokemon glalie = new Pokemon(362, "Glalie",
-                "Glalie endurece el cuerpo rocoso que tiene con una coraza de hielo. Este Pokémon tiene la habilidad de congelar la humedad del ambiente y formar la figura que se le antoje.", hielo);
+                "Glalie endurece el cuerpo rocoso que tiene con una coraza de hielo. Este Pokémon tiene la habilidad de congelar la humedad del ambiente y formar la figura que se le antoje.", hielo, "p361,Nivel 42,p362");
         pokemons.add(glalie);
         Pokemon spheal = new Pokemon(363, "Spheal",
-                "Spheal se desplaza por el suelo más rápido rodando que caminando. Cuando come con otros de su especie, todos se ponen a aplaudir para expresar su alegría. Por eso, a veces son algo escandalosos.", new TipoDual(hielo,agua));
+                "Spheal se desplaza por el suelo más rápido rodando que caminando. Cuando come con otros de su especie, todos se ponen a aplaudir para expresar su alegría. Por eso, a veces son algo escandalosos.", new TipoDual(hielo,agua), "p363,Nivel 32,p364,Nivel 44,p365");
         pokemons.add(spheal);
         Pokemon sealeo = new Pokemon(364, "Sealeo",
-                "Cada vez que Sealeo ve algo nuevo, se lo pone en el morro y empieza a darle vueltas. A veces, para entretenerse, hace lo mismo con un Spheal.", new TipoDual(hielo, agua));
+                "Cada vez que Sealeo ve algo nuevo, se lo pone en el morro y empieza a darle vueltas. A veces, para entretenerse, hace lo mismo con un Spheal.", new TipoDual(hielo, agua), "p363,Nivel 32,p364,Nivel 44,p365");
         pokemons.add(sealeo);
         Pokemon walrein = new Pokemon(365, "Walrein",
-                "Walrein tiene unos exagerados colmillos con los que puede hacer añicos bloques de hielo de hasta 10 toneladas de una sola dentellada. La gruesa capa de grasa que lo recubre le protege de temperaturas inferiores a 0 °C.", new TipoDual(hielo, agua));
+                "Walrein tiene unos exagerados colmillos con los que puede hacer añicos bloques de hielo de hasta 10 toneladas de una sola dentellada. La gruesa capa de grasa que lo recubre le protege de temperaturas inferiores a 0 °C.", new TipoDual(hielo, agua), "p363,Nivel 32,p364,Nivel 44,p365");
         pokemons.add(walrein);
         Pokemon clamperl = new Pokemon(366, "Clamperl",
-                "La sólida concha que rodea a Clamperl no solo le sirve para protegerse, sino también de cepo para atrapar a su presa. Cuando la concha alcanza su mayor tamaño, presenta muescas y rasguños por todas partes.", agua);
+                "La sólida concha que rodea a Clamperl no solo le sirve para protegerse, sino también de cepo para atrapar a su presa. Cuando la concha alcanza su mayor tamaño, presenta muescas y rasguños por todas partes.", agua, "p366,Intercambio con Diente Marino,p367,Intercambio con escama marina,p368,slow");
         pokemons.add(clamperl);
         Pokemon huntail = new Pokemon(367, "Huntail",
-                "Huntail ha pasado desapercibido durante mucho tiempo por vivir en las profundidades del mar. El sentido de la vista de este Pokémon le permite ver en las oscuras y turbias aguas submarinas.", agua);
+                "Huntail ha pasado desapercibido durante mucho tiempo por vivir en las profundidades del mar. El sentido de la vista de este Pokémon le permite ver en las oscuras y turbias aguas submarinas.", agua, "p366,Intercambio con Diente Marino,p367,Intercambio con escama marina,p368,slow");
         pokemons.add(huntail);
         Pokemon gorebyss = new Pokemon(368, "Gorebyss",
-                "Gorebyss vive en los mares del sur, en lo más profundo; de ahí que tenga el cuerpo preparado para soportar la presión tan grande que hay en el fondo marino, y que no le hagan daño los ataques comunes.", agua);
+                "Gorebyss vive en los mares del sur, en lo más profundo; de ahí que tenga el cuerpo preparado para soportar la presión tan grande que hay en el fondo marino, y que no le hagan daño los ataques comunes.", agua, "p366,Intercambio con Diente Marino,p367,Intercambio con escama marina,p368,slow");
         pokemons.add(gorebyss);
         Pokemon relicanth = new Pokemon(369, "Relicanth",
-                "Relicanth pertenece a una especie de Pokémon que lleva millones de años sin cambiar de forma. Este ancestral Pokémon se alimenta de microorganismos por la boca desdentada que tiene.", new TipoDual(agua, roca));
+                "Relicanth pertenece a una especie de Pokémon que lleva millones de años sin cambiar de forma. Este ancestral Pokémon se alimenta de microorganismos por la boca desdentada que tiene.", new TipoDual(agua, roca), "p369");
         pokemons.add(relicanth);
         Pokemon luvdisc = new Pokemon(370, "Luvdisc",
-                "Luvdisc vive en aguas tropicales poco profundas. Este Pokémon con forma de corazón se ha ganado la reputación que tiene por ir nadando detrás de las parejas de enamorados que veía entre las olas del océano.", agua);
+                "Luvdisc vive en aguas tropicales poco profundas. Este Pokémon con forma de corazón se ha ganado la reputación que tiene por ir nadando detrás de las parejas de enamorados que veía entre las olas del océano.", agua, "p370");
         pokemons.add(luvdisc);
         Pokemon bagon = new Pokemon(371, "Bagon",
-                "Bagon sueña con poder pasar un día volando por el cielo. En vanos intentos por volar, ha llegado a tirarse desde riscos. Como resultado de estas caídas en picado, se le ha puesto la cabeza dura como las piedras.", dragon);
+                "Bagon sueña con poder pasar un día volando por el cielo. En vanos intentos por volar, ha llegado a tirarse desde riscos. Como resultado de estas caídas en picado, se le ha puesto la cabeza dura como las piedras.", dragon, "p371,Nivel 30,p372,Nivel 50,p373");
         pokemons.add(bagon);
         Pokemon shelgon = new Pokemon(372, "Shelgon",
-                "Dentro de la capa acorazada de Shelgon, las células están en pleno proceso de creación de un cuerpo nuevo. El peso de la coraza le hace tener unos movimientos lentos.", dragon);
+                "Dentro de la capa acorazada de Shelgon, las células están en pleno proceso de creación de un cuerpo nuevo. El peso de la coraza le hace tener unos movimientos lentos.", dragon, "p371,Nivel 30,p372,Nivel 50,p373");
         pokemons.add(shelgon);
         Pokemon salamance = new Pokemon(373, "Salamence",
-                "Salamence surgió del profundo deseo de tener alas. Dicen que este fuerte deseo fue lo que causó la repentina mutación de las células y el crecimiento de las alas.", new TipoDual(dragon, volador));
+                "Salamence surgió del profundo deseo de tener alas. Dicen que este fuerte deseo fue lo que causó la repentina mutación de las células y el crecimiento de las alas.", new TipoDual(dragon, volador), "p371,Nivel 30,p372,Nivel 50,p373");
         pokemons.add(salamance);
         Pokemon beldum = new Pokemon(374, "Beldum",
-                "En lugar de sangre, Beldum tiene una poderosa fuerza magnética corriéndole por las venas. Este Pokémon se comunica enviando controlados impulsos magnéticos.", new TipoDual(acero, psiquico));
+                "En lugar de sangre, Beldum tiene una poderosa fuerza magnética corriéndole por las venas. Este Pokémon se comunica enviando controlados impulsos magnéticos.", new TipoDual(acero, psiquico), "p374,Nivel 20,p375,Nivel 45,p376");
         pokemons.add(beldum);
         Pokemon metang = new Pokemon(375, "Metang",
-                "Cuando dos Beldum se fusionan, forman un Metang. Los cerebros de los Beldum se unen mediante un sistema nervioso magnético y generan potente energía psicoquinética.", new TipoDual(acero, psiquico));
+                "Cuando dos Beldum se fusionan, forman un Metang. Los cerebros de los Beldum se unen mediante un sistema nervioso magnético y generan potente energía psicoquinética.", new TipoDual(acero, psiquico), "p374,Nivel 20,p375,Nivel 45,p376");
         pokemons.add(metang);
         Pokemon metagross = new Pokemon(376, "Metagross",
-                "Metagross tiene cuatro cerebros en total que, combinados, son capaces de resolver cálculos complicados más rápido que el mejor ordenador que haya. Metagross puede flotar en el aire si mete las patas hacia adentro.", new TipoDual(acero, psiquico));
+                "Metagross tiene cuatro cerebros en total que, combinados, son capaces de resolver cálculos complicados más rápido que el mejor ordenador que haya. Metagross puede flotar en el aire si mete las patas hacia adentro.", new TipoDual(acero, psiquico), "p374,Nivel 20,p375,Nivel 45,p376");
         pokemons.add(metagross);
         Pokemon regirock = new Pokemon(377, "Regirock",
-                "A Regirock lo mantuvieron encerrado y aislado hace tiempo. Dicen que, si resulta dañado en combate, se pone él mismo a buscar piedras parecidas a las suyas y se las pone para recomponerse.", roca);
+                "A Regirock lo mantuvieron encerrado y aislado hace tiempo. Dicen que, si resulta dañado en combate, se pone él mismo a buscar piedras parecidas a las suyas y se las pone para recomponerse.", roca, "p377");
         pokemons.add(regirock);
         Pokemon regice = new Pokemon(378, "Regice",
-                "Regice surgió durante la edad de hielo. El cuerpo de este Pokémon está totalmente congelado, ni siquiera el fuego puede derretirlo. Regice libera y regula un aire gélido de -200 °C.", hielo);
+                "Regice surgió durante la edad de hielo. El cuerpo de este Pokémon está totalmente congelado, ni siquiera el fuego puede derretirlo. Regice libera y regula un aire gélido de -200 °C.", hielo, "p378");
         pokemons.add(regice);
         Pokemon registeel = new Pokemon(379, "Registeel",
-                "No hay metal que supere en dureza el cuerpo de Registeel, que tiene aspecto de estar hueco. Nadie sabe de qué se alimenta este Pokémon.", acero);
+                "No hay metal que supere en dureza el cuerpo de Registeel, que tiene aspecto de estar hueco. Nadie sabe de qué se alimenta este Pokémon.", acero, "p379");
         pokemons.add(registeel);
         Pokemon latias = new Pokemon(380, "Latias",
-                "Latias es muy sensible a los sentimientos de la gente. Si detecta algún ápice de hostilidad, desplegará las plumas que tiene por todo el cuerpo y se pondrá a chillar para intimidar al enemigo.", new TipoDual(dragon, psiquico));
+                "Latias es muy sensible a los sentimientos de la gente. Si detecta algún ápice de hostilidad, desplegará las plumas que tiene por todo el cuerpo y se pondrá a chillar para intimidar al enemigo.", new TipoDual(dragon, psiquico), "p380");
         pokemons.add(latias);
         Pokemon latios = new Pokemon(381, "Latios",
-                "Latios tiene la habilidad de hacer que los demás vean algo que él ha visto o imaginado. Este Pokémon es muy inteligente. Es capaz de entender el lenguaje humano.", new TipoDual(dragon, psiquico));
+                "Latios tiene la habilidad de hacer que los demás vean algo que él ha visto o imaginado. Este Pokémon es muy inteligente. Es capaz de entender el lenguaje humano.", new TipoDual(dragon, psiquico), "p381");
         pokemons.add(latios);
         Pokemon kyogre = new Pokemon(382, "Kyogre",
-                "Kyogre se sirve de la energía de la naturaleza para realizar su Regresión Primigenia y recobrar su apariencia primitiva. Con tal poder, puede desencadenar tempestades para expandir los océanos.", agua);
+                "Kyogre se sirve de la energía de la naturaleza para realizar su Regresión Primigenia y recobrar su apariencia primitiva. Con tal poder, puede desencadenar tempestades para expandir los océanos.", agua, "p382");
         pokemons.add(kyogre);
         Pokemon groudoun = new Pokemon(383, "Groudoun",
-                "A Groudon siempre se le ha descrito como el Pokémon que expandió los continentes. Varias leyendas cuentan que libró combates contra Kyogre en repetidas ocasiones para tener el control de la energía de la naturaleza.", tierra);
+                "A Groudon siempre se le ha descrito como el Pokémon que expandió los continentes. Varias leyendas cuentan que libró combates contra Kyogre en repetidas ocasiones para tener el control de la energía de la naturaleza.", tierra, "p383");
         pokemons.add(groudoun);
         Pokemon rayquaza = new Pokemon(384, "Rayquaza",
-                "Dicen que Rayquaza ha vivido durante millones de años. Las leyendas cuentan que puso fin al continuo enfrentamiento entre Groudon y Kyogre.", new TipoDual(dragon, volador));
+                "Dicen que Rayquaza ha vivido durante millones de años. Las leyendas cuentan que puso fin al continuo enfrentamiento entre Groudon y Kyogre.", new TipoDual(dragon, volador), "p384");
         pokemons.add(rayquaza);
         Pokemon jirachi = new Pokemon(385, "Jirachi",
-                "Cuenta la leyenda que Jirachi hará realidad cualquier deseo que se le escriba en las notas que lleva en la cabeza cuando las lea tras salir de su letargo. Si este Pokémon siente peligro, luchará sin haber llegado a despertarse.", new TipoDual(acero, psiquico));
+                "Cuenta la leyenda que Jirachi hará realidad cualquier deseo que se le escriba en las notas que lleva en la cabeza cuando las lea tras salir de su letargo. Si este Pokémon siente peligro, luchará sin haber llegado a despertarse.", new TipoDual(acero, psiquico), "p385");
         pokemons.add(jirachi);
         Pokemon deoxys = new Pokemon(386, "Deoxys",
-                "Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.", psiquico);
-        pokemons.add(deoxys);*/
-
+                "Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.", psiquico, "p386,deox");
+        pokemons.add(deoxys);
 
         return pokemons;
     }
-
     public void runPokedex(View view) {
         startActivity(new Intent(this, PokedexActivity.class));
     }

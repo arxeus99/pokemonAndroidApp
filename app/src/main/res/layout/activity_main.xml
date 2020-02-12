@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondopokedex3"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,11 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="178dp"
+            android:layout_height="219dp"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
             app:srcCompat="@drawable/pokemonlogo" />
 
         <Button
@@ -28,9 +32,16 @@
             android:layout_width="321dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/buttonshape"
             android:onClick="runPokedex"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="12"
             android:text="Pokedex"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
             tools:text="Pokedex" />
 
         <Button
@@ -38,9 +49,16 @@
             android:layout_width="321dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/buttonshape"
             android:onClick="runQuizz"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="12"
             android:text="Quizz"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
             tools:text="Quizz" />
 
         <Button
@@ -48,9 +66,20 @@
             android:layout_width="323dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/buttonshape"
             android:onClick="runFicha"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="12"
             android:text="Ficha De Entrenador"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
 
         <ImageView
             android:id="@+id/imageView"

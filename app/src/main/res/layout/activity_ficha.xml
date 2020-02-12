@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fondopokedex2"
     android:layout_height="match_parent"
     tools:context=".FichaActivity">
 
@@ -24,7 +25,8 @@
                 <ListView
                     android:id="@+id/list_view2"
                     android:layout_width="wrap_content"
-                    android:layout_height="674dp">
+                    android:layout_height="674dp"
+                    android:background="#A9000000">
 
                 </ListView>
             </LinearLayout>
@@ -40,8 +42,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/buttonshape"
+                android:onClick="crearNuevaVoid"
                 android:text="Crear Nueva Ficha"
-                android:onClick="crearNuevaVoid"/>
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 

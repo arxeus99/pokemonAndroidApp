@@ -178,7 +178,7 @@
             android:textSize="23sp" />
     </LinearLayout>
 
-    <!--<ImageView
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="709dp"
         android:layout_height="847dp"
@@ -187,6 +187,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pokedexclosed"
         tools:layout_editor_absoluteY="-34dp"
-        tools:srcCompat="@tools:sample/avatars" />-->
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@
         tools:layout_editor_absoluteY="28dp">
 
         <ListView
+            android:background="@drawable/fondopokedex2"
             android:id="@+id/list_view"
             android:layout_width="403dp"
             android:layout_height="match_parent">

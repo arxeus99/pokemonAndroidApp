@@ -7,7 +7,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="58dp"
+        android:background="#99000000"
         android:orientation="horizontal"
         android:weightSum="10">
 
@@ -19,6 +20,7 @@
             android:layout_weight="0.2"
             android:gravity="center"
             android:text="N.º"
+            android:textColor="#DBDBDB"
             android:textStyle="bold" />
 
         <TextView
@@ -29,6 +31,7 @@
             android:layout_weight="0.8"
             android:gravity="center"
             android:text="Numero"
+            android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -49,6 +52,7 @@
             android:gravity="center_horizontal|left|center_vertical"
             android:text="Nombre"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <ImageView

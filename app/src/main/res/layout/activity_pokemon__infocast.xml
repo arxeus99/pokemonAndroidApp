@@ -137,6 +137,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="234dp"
         android:layout_marginTop="158dp"
@@ -158,118 +159,42 @@
 
     <LinearLayout
         android:layout_width="413dp"
-        android:layout_height="291dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
-        <Space
+        <TextView
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            app:srcCompat="@drawable/p1"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:gravity="center"
+            android:text="Sin linea evolutiva"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp" />
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/condicion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="bottom|center_horizontal"
-                android:text="Nivel 25"
-                android:textColor="#FFFFFF" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="30dp"
-                android:layout_height="246dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/flecha" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:layout_editor_absoluteX="91dp">
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/p2"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/condicion2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="bottom|center_horizontal"
-                android:text="Nivel 25"
-                android:textColor="#FFFFFF" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="30dp"
-                android:layout_height="246dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/flecha" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/p3"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:id="@+id/imageView15"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            tools:srcCompat="@drawable/unown"
+            app:srcCompat="@drawable/castform"/>
     </LinearLayout>
 
     <ImageView

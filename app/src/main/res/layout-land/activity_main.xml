@@ -4,64 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondopokedex3"
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/pokeball"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
     <LinearLayout
-        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pokedex"
-            android:layout_width="223dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="runPokedex"
-            android:text="Pokedex"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="Pokedex" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/pokemonlogo" />
 
-        <Button
-            android:id="@+id/quizz"
-            android:layout_width="244dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="runQuizz"
-            android:text="Quizz"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="Quizz" />
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/ficha"
-            android:layout_width="259dp"
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/pokedex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonshape"
+                android:onClick="runPokedex"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="12"
+                android:text="Pokedex"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                tools:text="Pokedex" />
+
+            <Button
+                android:id="@+id/quizz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonshape"
+                android:onClick="runQuizz"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="12"
+                android:text="Quizz"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                tools:text="Quizz" />
+
+            <Button
+                android:id="@+id/ficha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonshape"
+                android:onClick="runFicha"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="12"
+                android:text="Ficha De Entrenador"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="runFicha"
-            android:text="Ficha De Entrenador"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:src="@drawable/pokeball" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="734dp"
-        android:layout_height="156dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/pokemonlogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
