@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/pokeball"
+        android:icon="@drawable/pokeballicon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/pokeball"
+        android:roundIcon="@drawable/pokeballicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".QuizzActivity"></activity>
