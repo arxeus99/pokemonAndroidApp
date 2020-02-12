@@ -848,6 +848,7 @@ public class Pokemon_Info extends AppCompatActivity {
                     }
                 }
             });
+            moveAnimation();
         }
     }
 
